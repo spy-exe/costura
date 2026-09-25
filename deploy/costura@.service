@@ -1,0 +1,24 @@
+# Uma instância por marca: systemctl enable --now costura@alvorada
+[Unit]
+Description=Costura, loja da marca %i
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=costura
+Group=costura
+EnvironmentFile=/etc/costura/%i.env
+WorkingDirectory=/srv/costura/%i/current
+ExecStart=/usr/local/bin/node server.js
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/srv/costura/%i/current/.next/cache
+MemoryMax=768M
+
+[Install]
+WantedBy=multi-user.target

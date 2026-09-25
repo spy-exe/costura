@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    name: Lint, tipos, testes e cobertura
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - name: Core sem referência a marcas
+        run: npm run check:brand
+      - name: Testes de unidade e integração com cobertura
+        run: npm run test:coverage
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: cobertura
+          path: coverage/
+          retention-days: 14
+
+  e2e:
+    name: Build das duas marcas e E2E
+    runs-on: ubuntu-24.04
+    needs: verificar
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Build Alvorada
+        run: node scripts/build-brand.mjs alvorada
+        env:
+          APP_ENV: test
+          SITE_URL: http://127.0.0.1:3100
+      - name: Build OBRA
+        run: node scripts/build-brand.mjs obra
+        env:
+          APP_ENV: test
+          SITE_URL: http://127.0.0.1:3200
+      - name: Navegadores do Playwright
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: E2E (Chromium, Firefox, WebKit e celular)
+        run: >-
+          npx playwright test
+          --project=alvorada-chromium --project=obra-chromium --project=alvorada-mobile
+          --project=alvorada-firefox --project=alvorada-webkit
+      - name: Regressão visual
+        if: hashFiles('tests/e2e/__screenshots__/*.png') != ''
+        run: npx playwright test --project=alvorada-visual --project=obra-visual
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: relatorio-playwright
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14

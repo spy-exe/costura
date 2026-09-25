@@ -1,0 +1,31 @@
+name: Referências visuais
+
+# Gera as capturas de referência no mesmo ambiente da CI. O resultado sai como artifact
+# para revisão humana; só depois de revisado ele é versionado em tests/e2e/__screenshots__.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gerar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: node scripts/build-brand.mjs alvorada
+        env: { APP_ENV: test, SITE_URL: "http://127.0.0.1:3100" }
+      - run: node scripts/build-brand.mjs obra
+        env: { APP_ENV: test, SITE_URL: "http://127.0.0.1:3200" }
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --project=alvorada-visual --project=obra-visual --update-snapshots
+      - uses: actions/upload-artifact@v7
+        with:
+          name: referencias-visuais
+          path: tests/e2e/__screenshots__/
