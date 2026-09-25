@@ -62,7 +62,8 @@ describe("/api/cart", () => {
     expect(res.headers.get("cache-control")).toBe("private, no-store");
     const body = await res.json();
     expect(body.cart.subtotal.amount).toBe(59800);
-    expect([...jar.keys()]).toEqual(["costura_cart_alvorada_test"]);
+    const { brand } = await import("@/server/brand");
+    expect([...jar.keys()]).toEqual([`costura_cart_${brand.id}_test`]);
     const read = await (await getCart()).json();
     expect(read.cart.totalQuantity).toBe(2);
   });
