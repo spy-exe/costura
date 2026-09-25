@@ -40,6 +40,8 @@ const config: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   output: "standalone",
+  // CSS pequeno (menos de 10 KB) vai inline no HTML: uma requisição bloqueante a menos até a primeira pintura.
+  experimental: { inlineCss: true },
   env: { BRAND: brand },
   turbopack: {
     resolveAlias: { "@active-brand": brandEntry },

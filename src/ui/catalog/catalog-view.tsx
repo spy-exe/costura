@@ -84,9 +84,10 @@ export function CatalogView({ basePath, title, intro, query, result, header }: P
 
         <section aria-labelledby="catalog-results">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-3">
-            <p id="catalog-results" className="text-[0.9375rem]" aria-live="polite">
+            {/* H2 entre o título da página e os nomes dos produtos (H3), para a ordem de títulos não pular nível. */}
+            <h2 id="catalog-results" className="text-[0.9375rem] font-normal" aria-live="polite">
               {copy.catalog.results(result.total)}
-            </p>
+            </h2>
             <div className="flex items-center gap-3">
               <FilterDialog activeCount={activeCount}>
                 <FilterForm key={formKey} action={basePath} query={query} facets={result.facets} idPrefix="filtros-movel" />

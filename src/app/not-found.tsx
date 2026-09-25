@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { copy } from "@/ui/copy";
+
+export const metadata: Metadata = { title: copy.notFound.title, robots: { index: false, follow: true } };
 
 export default function NotFound() {
   return (

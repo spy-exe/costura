@@ -260,3 +260,10 @@
   outline: 2px solid var(--c-focus);
   outline-offset: 4px;
 }
+
+/* No celular a barra de compra fica presa à base; o foco rola para acima dela (WCAG 2.4.11). */
+@media (max-width: 47.99rem) {
+  html {
+    scroll-padding-bottom: 5.5rem;
+  }
+}
