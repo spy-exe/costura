@@ -1,0 +1,55 @@
+{
+  "name": "costura",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Core reutilizável de e-commerce de roupas, com marca e operação comercial por configuração.",
+  "license": "UNLICENSED",
+  "packageManager": "npm@11.16.0",
+  "engines": {
+    "node": ">=24.18.0 <25",
+    "npm": ">=11.16.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test --project=alvorada-chromium --project=obra-chromium --project=alvorada-mobile --project=alvorada-firefox --project=alvorada-webkit",
+    "check:brand": "node scripts/check-brand-isolation.mjs",
+    "build:brand": "node scripts/build-brand.mjs",
+    "build:all": "node scripts/build-brand.mjs alvorada && node scripts/build-brand.mjs obra",
+    "test:visual": "playwright test --project=alvorada-visual --project=obra-visual"
+  },
+  "dependencies": {
+    "lucide-react": "1.48.0",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "three": "0.186.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
+    "@types/node": "24.13.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "@vitest/coverage-v8": "5.0.1",
+    "eslint": "10.11.0",
+    "eslint-config-next": "16.3.6",
+    "jsdom": "30.1.1",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "vitest": "5.0.1"
+  }
+}
