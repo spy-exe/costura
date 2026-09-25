@@ -332,3 +332,94 @@ O core precisa expor como tokens pelo menos: proporção da foto, gutter da grad
 - Concordo. Archivo é OFL, variável em peso (100 a 900) e em largura (62 a 125), e uma família só cobre título expandido, rótulos condensados e corpo em largura normal. Isso bate com `brands/obra/fonts.ts`, que já usa o eixo `wdth`.
 - Cuidados: largura condensada em caixa alta abaixo de 14 px perde legibilidade; usar largura 100 para corpo, preço e tamanhos, e reservar 112 a 125 para títulos e 75 a 87 para rótulos curtos.
 - Segunda família opcional: **IBM Plex Mono** (OFL) só para dados técnicos, como referência, composição e medidas. Reforça o tom de etiqueta de fábrica sem competir com Archivo. Se o objetivo for ficar numa família só, Archivo com algarismos tabulares resolve preços e tabelas.
+
+## 2. Direção visual implementada
+
+A pesquisa acima é o insumo; esta seção registra o que foi construído e onde a implementação divergiu das recomendações, com o motivo.
+
+### 2.1 Revisão antes de construir
+
+O primeiro rascunho da Alvorada era fundo creme, serifa de alto contraste e acento terracota; o da OBRA, preto com laranja. Os dois caíam em combinações muito repetidas em lojas genéricas. Revisão:
+
+- **Alvorada:** fundo branco de vitrine (#FFFFFF), superfície de linho cru (#F2F1EC), tinta verde escura (#22261F) e acento verde-folha (#2F5D46). A recomendação de terracota foi descartada por esse motivo.
+- **OBRA:** cinza-concreto (#E4E2DC), preto (#141414) e acento azul de macacão de trabalho (#2A4A8F). O laranja de segurança recomendado foi trocado; o amarelo de segurança (#F2C230) ficou só na faixa de aviso de demonstração, onde sinalizar é o objetivo.
+
+### 2.2 Composição de homepage e produto, e revisão
+
+A homepage e a página de produto foram montadas primeiro, fotografadas em 360, 390, 768, 1280 e 1440 px e revisadas antes das demais páginas. Correções feitas nessa revisão:
+
+| Problema visto | Correção |
+| --- | --- |
+| As duas marcas em grotesca sem serifa: a prova de troca de identidade ficava fraca | Alvorada passou a Instrument Serif + Geist, como a pesquisa recomendou |
+| Fileira de categorias colada na borda esquerda no celular (scroll-snap ignora o padding) | `scroll-padding` no contêiner |
+| Produto com uma foto só deixava um vão à direita no carrossel do celular | Foto única ocupa a largura toda |
+| Três categorias numa grade de quatro colunas deixavam um buraco | A grade acompanha o número de categorias |
+| Aviso de tamanho só em um lugar | Aviso junto do grupo e rótulo do botão "Escolha um tamanho", foco no grupo |
+| Botão de compra some ao rolar pelos detalhes no celular | Barra de compra presa à base da tela no celular |
+| Menu do celular repetia "Todos os produtos" | Links do rodapé que já estão no menu principal saem da lista secundária |
+
+### 2.3 Recomendações da pesquisa que não foram seguidas
+
+| Recomendação | Decisão | Motivo |
+| --- | --- | --- |
+| Proporção 3:4 na OBRA | 4:5 nas duas | As fotos de demonstração foram recortadas em 4:5; a proporção fica fixa no componente. Uma marca com fotos 3:4 precisaria de um token de proporção, ainda não criado |
+| Logo da Alvorada à esquerda no celular | Centralizado com logo compacto | O logo compacto tem 142 px e cabe com os ícones em 360 px (verificado na captura) |
+| Menu do celular com drill-down | Lista de um nível | A navegação tem no máximo 5 itens por marca; um segundo nível não teria conteúdo |
+| Chips de subcategoria e cartão editorial na grade | Não implementados | O catálogo de demonstração não tem subcategorias; cartão editorial sem conteúdo real seria enfeite |
+| Barra de filtro fixa no celular | Botão "Filtrar" no topo da lista | Catálogos pequenos; entra se a listagem crescer |
+| IBM Plex Mono para dados técnicos na OBRA | Não usada | Uma família só (Archivo) resolve com algarismos tabulares; menos fonte para carregar |
+| Rótulos de texto nos ícones do cabeçalho no desktop | Só ícones com nome acessível | Espaço para a navegação principal em 1280 px. Candidato a revisão com teste de usuário |
+
+## 3. Tokens
+
+Definidos em `brands/<marca>/brand.ts`, convertidos em variáveis CSS por `src/core/brand/tokens.ts` e lidos pelo Tailwind via `@theme` em `src/app/globals.css`.
+
+| Token | Alvorada | OBRA | Uso |
+| --- | --- | --- | --- |
+| `--c-bg` | #FFFFFF | #E4E2DC | Fundo |
+| `--c-surface` | #F2F1EC | #D7D4CC | Rodapé, blocos editoriais, fundo de foto |
+| `--c-ink` | #22261F | #141414 | Texto |
+| `--c-muted` | #585E56 | #46443F | Texto secundário (AA sobre fundo e superfície) |
+| `--c-line` | #D6D5CD | #ABA79D | Fios e bordas |
+| `--c-accent` / `--c-accent-ink` | #2F5D46 / #FFFFFF | #2A4A8F / #FFFFFF | Botão principal, seleção |
+| `--c-focus` | #2F5D46 | #2A4A8F | Anel de foco (2 px, 3 px de afastamento) |
+| `--c-danger`, `--c-success` | #A3261B, #2B6A3D | #9A1B12, #1F5A34 | Erros e confirmações |
+| `--c-notice` / `--c-notice-ink` | #22261F / #F2F1EC | #F2C230 / #141414 | Faixa de demonstração |
+| `--radius` | 2 px | 0 | Botões, campos, diálogos |
+| `--button-case` | normal | caixa alta | Botões |
+
+Os pares de contraste são verificados em teste (`tests/unit/brands.test.ts`) a cada mudança.
+
+## 4. Tipografia
+
+| | Alvorada | OBRA |
+| --- | --- | --- |
+| Títulos | Instrument Serif 400, espaçamento −0,015 em, escala 1,08 | Archivo 800 a 125% de largura, caixa alta, escala 0,84 |
+| Interface e texto | Geist | Archivo a 100% |
+
+Escala de títulos fluida com `clamp()`, multiplicada pela escala da marca:
+
+| Classe | Mínimo | Máximo | Uso |
+| --- | --- | --- | --- |
+| `display-xl` | 40 px | 100 px | Abertura da homepage, 404 |
+| `display-lg` | 32 px | 60 px | Título de página, produto |
+| `display-md` | 24 px | 36 px | Títulos de seção |
+
+Corpo de 16 px, texto de leitura de 17 px com entrelinha 1,65 e largura máxima de 38 rem (cerca de 70 caracteres). Metadados em 13 px, nunca abaixo de 12 px. Preços com algarismos tabulares. Campos com 16 px para o iOS não aplicar zoom.
+
+## 5. Texto
+
+Regras aplicadas em `src/ui/copy.ts` e nos conteúdos das marcas:
+
+- Português brasileiro direto, sem travessão e sem frase de efeito.
+- Botão diz o que acontece: "Adicionar à sacola", "Finalizar compra", "Aceitar novo preço", "Ajustar para 2".
+- Erro diz o que houve e o que fazer: "Só restam 2 unidades. Ajuste a quantidade para seguir."
+- Nenhuma condição comercial, avaliação, urgência ou benefício inventado. Estoque baixo só aparece com o número real ("Restam 2 unidades").
+- Composição e cuidados das marcas fictícias são dados de demonstração, e o site inteiro avisa isso.
+- "Sacola" em toda a interface (não "carrinho"); a URL `/carrinho` foi mantida por ser mais conhecida.
+
+## 6. Movimento
+
+- Gaveta e menu deslizam em 220 ms; detalhes giram o ícone de mais. Nada anima sozinho, exceto a cena WebGL da Alvorada, que tem botão de pausa.
+- `prefers-reduced-motion: reduce` zera transições e animações e impede a cena de carregar.
+- A cena usa a foto da trama como textura num plano que ondula; a foto estática é o conteúdo e continua lá se o WebGL faltar.
