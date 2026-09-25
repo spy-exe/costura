@@ -12,3 +12,4 @@ blob-report/
 next-env.d.ts
 .DS_Store
 .next-*/
+lighthouse/

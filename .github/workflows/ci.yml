@@ -78,3 +78,35 @@ jobs:
             playwright-report/
             test-results/
           retention-days: 14
+
+  performance:
+    name: Lighthouse (medição, não bloqueia)
+    runs-on: ubuntu-24.04
+    needs: verificar
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Build de produção da Alvorada (modo demonstração)
+        run: node scripts/build-brand.mjs alvorada
+        env:
+          APP_ENV: production
+          SITE_URL: http://127.0.0.1:3100
+      - name: Servidor
+        run: |
+          APP_ENV=production SITE_URL=http://127.0.0.1:3100 PORT=3100 HOSTNAME=127.0.0.1 node .next-alvorada/standalone/server.js &
+          npx --yes wait-on@8 http://127.0.0.1:3100/loja
+      - name: Lighthouse
+        run: |
+          npm install --no-save --no-audit --no-fund lighthouse@13.5.0
+          node scripts/lighthouse.mjs http://127.0.0.1:3100 / /loja /produto/calca-cintura-alta /carrinho
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: lighthouse
+          path: lighthouse/
+          retention-days: 14
