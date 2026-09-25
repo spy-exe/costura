@@ -1,0 +1,467 @@
+{
+  "categories": [
+    {
+      "handle": "jaquetas-e-camisas",
+      "title": "Jaquetas e camisas",
+      "description": "Jeans, flanela e sarja pesada.",
+      "image": "jaqueta-jeans"
+    },
+    {
+      "handle": "calcas-e-macacoes",
+      "title": "Calças e macacões",
+      "description": "Chino com punho e macacão de trabalho.",
+      "image": "calca-chino"
+    },
+    {
+      "handle": "malhas",
+      "title": "Malhas",
+      "description": "Camiseta, moletom e suéter para o dia a dia.",
+      "image": "camiseta-branca"
+    }
+  ],
+  "collections": [
+    {
+      "handle": "essenciais",
+      "title": "Essenciais",
+      "description": "As peças que combinam com todo o resto."
+    }
+  ],
+  "sizeGuides": [
+    {
+      "id": "superior",
+      "title": "Jaquetas, camisetas e moletons",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Peito",
+        "Comprimento",
+        "Manga"
+      ],
+      "rows": [
+        [
+          "P",
+          "104",
+          "70",
+          "62"
+        ],
+        [
+          "M",
+          "110",
+          "72",
+          "63"
+        ],
+        [
+          "G",
+          "116",
+          "74",
+          "64"
+        ],
+        [
+          "GG",
+          "124",
+          "76",
+          "65"
+        ],
+        [
+          "XG",
+          "132",
+          "78",
+          "66"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Peito",
+          "text": "de uma axila à outra, com a peça fechada e esticada, multiplicado por dois."
+        },
+        {
+          "label": "Manga",
+          "text": "da costura do ombro até o punho."
+        }
+      ]
+    },
+    {
+      "id": "calcas",
+      "title": "Calças",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Cintura",
+        "Quadril",
+        "Entreperna"
+      ],
+      "rows": [
+        [
+          "38",
+          "78",
+          "102",
+          "80"
+        ],
+        [
+          "40",
+          "82",
+          "106",
+          "81"
+        ],
+        [
+          "42",
+          "86",
+          "110",
+          "82"
+        ],
+        [
+          "44",
+          "90",
+          "114",
+          "82"
+        ],
+        [
+          "46",
+          "96",
+          "120",
+          "83"
+        ],
+        [
+          "48",
+          "102",
+          "126",
+          "83"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Cintura",
+          "text": "de um lado ao outro do cós fechado, multiplicado por dois."
+        },
+        {
+          "label": "Entreperna",
+          "text": "do gancho até a barra, pela costura interna."
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "handle": "jaqueta-jeans",
+      "title": "Jaqueta jeans clara",
+      "category": "jaquetas-e-camisas",
+      "colors": [
+        {
+          "images": [
+            "jaqueta-jeans"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG",
+        "XG"
+      ],
+      "price": 49900,
+      "description": "Jaqueta jeans azul-claro com bolsos no peito com lapela e botões de metal.",
+      "details": {
+        "composition": "100% algodão (denim 12 oz)",
+        "care": [
+          "Lavar do avesso, água fria.",
+          "Não usar alvejante.",
+          "Pode secar em secadora em temperatura baixa."
+        ],
+        "fit": "Reta, com espaço para usar sobre moletom."
+      },
+      "sku": "OBR-JJEA",
+      "collections": [
+        "essenciais"
+      ],
+      "publishedAt": "2026-09-12T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "superior"
+    },
+    {
+      "handle": "camisa-jeans-manga-curta",
+      "title": "Camisa jeans de manga curta",
+      "category": "jaquetas-e-camisas",
+      "colors": [
+        {
+          "images": [
+            "camisa-jeans"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG",
+        "XG"
+      ],
+      "price": 27900,
+      "description": "Camisa jeans índigo de manga curta, com dois bolsos no peito e gola de camisa.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, água fria.",
+          "Não usar alvejante.",
+          "Pode secar em secadora em temperatura baixa."
+        ]
+      },
+      "sku": "OBR-CJEA",
+      "collections": [],
+      "publishedAt": "2026-08-02T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "superior"
+    },
+    {
+      "handle": "jaqueta-gola-alta",
+      "title": "Jaqueta de gola alta",
+      "category": "jaquetas-e-camisas",
+      "colors": [
+        {
+          "images": [
+            "jaqueta-preta"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG",
+        "XG"
+      ],
+      "price": 54900,
+      "description": "Jaqueta preta de sarja com gola alta, fechamento embutido e vivos verde-oliva.",
+      "details": {
+        "composition": "100% algodão (sarja)",
+        "care": [
+          "Lavar do avesso, água fria.",
+          "Não usar alvejante.",
+          "Pode secar em secadora em temperatura baixa."
+        ]
+      },
+      "sku": "OBR-JGOL",
+      "collections": [],
+      "publishedAt": "2026-06-22T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "superior"
+    },
+    {
+      "handle": "camisa-de-flanela",
+      "title": "Camisa de flanela xadrez",
+      "category": "jaquetas-e-camisas",
+      "colors": [
+        {
+          "images": [
+            "camisa-flanela"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG",
+        "XG"
+      ],
+      "price": 22900,
+      "description": "Camisa de flanela em xadrez vermelho e azul, com botões de pressão.",
+      "details": {
+        "composition": "100% algodão (flanela)",
+        "care": [
+          "Lavar do avesso, água fria.",
+          "Não usar alvejante.",
+          "Pode secar em secadora em temperatura baixa."
+        ]
+      },
+      "sku": "OBR-CFLA",
+      "collections": [],
+      "publishedAt": "2026-05-14T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "superior",
+      "compareAt": 25900
+    },
+    {
+      "handle": "calca-chino",
+      "title": "Calça chino com punho",
+      "category": "calcas-e-macacoes",
+      "colors": [
+        {
+          "images": [
+            "calca-chino"
+          ]
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48"
+      ],
+      "price": 29900,
+      "description": "Calça chino cáqui de sarja leve, com punho elástico na barra.",
+      "details": {
+        "composition": "98% algodão, 2% elastano",
+        "care": [
+          "Lavar do avesso, água fria.",
+          "Não usar alvejante.",
+          "Pode secar em secadora em temperatura baixa."
+        ],
+        "fit": "Afunila da coxa até a barra."
+      },
+      "sku": "OBR-CHIN",
+      "collections": [
+        "essenciais"
+      ],
+      "publishedAt": "2026-09-03T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "calcas"
+    },
+    {
+      "handle": "macacao-de-trabalho",
+      "title": "Macacão de trabalho",
+      "category": "calcas-e-macacoes",
+      "colors": [
+        {
+          "images": [
+            "macacao"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG",
+        "XG"
+      ],
+      "price": 46900,
+      "description": "Macacão laranja de brim com zíper frontal, bolsos no peito e punho com botão.",
+      "details": {
+        "composition": "100% algodão (brim)",
+        "care": [
+          "Lavar do avesso, água fria.",
+          "Não usar alvejante.",
+          "Pode secar em secadora em temperatura baixa."
+        ]
+      },
+      "sku": "OBR-MACA",
+      "collections": [],
+      "publishedAt": "2026-07-10T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "superior"
+    },
+    {
+      "handle": "camiseta-branca",
+      "title": "Camiseta branca",
+      "category": "malhas",
+      "colors": [
+        {
+          "images": [
+            "camiseta-branca"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG",
+        "XG"
+      ],
+      "price": 12900,
+      "description": "Camiseta branca de malha, gola careca e modelagem reta.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, água fria.",
+          "Não passar sobre a estampa.",
+          "Secar à sombra."
+        ]
+      },
+      "sku": "OBR-CBRA",
+      "collections": [
+        "essenciais"
+      ],
+      "publishedAt": "2026-08-25T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "superior"
+    },
+    {
+      "handle": "moletom-com-capuz",
+      "title": "Moletom com capuz",
+      "category": "malhas",
+      "colors": [
+        {
+          "images": [
+            "moletom-cinza"
+          ]
+        },
+        {
+          "images": [
+            "moletom-rosa"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG",
+        "XG"
+      ],
+      "price": 32900,
+      "description": "Moletom felpado com capuz e punhos canelados.",
+      "details": {
+        "composition": "80% algodão, 20% poliéster",
+        "care": [
+          "Lavar do avesso, água fria.",
+          "Não passar sobre a estampa.",
+          "Secar à sombra."
+        ]
+      },
+      "sku": "OBR-MCAP",
+      "collections": [
+        "essenciais"
+      ],
+      "publishedAt": "2026-09-08T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "superior"
+    },
+    {
+      "handle": "sueter-fino",
+      "title": "Suéter fino de gola careca",
+      "category": "malhas",
+      "colors": [
+        {
+          "images": [
+            "sueter-marinho"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG",
+        "XG"
+      ],
+      "price": 27900,
+      "description": "Suéter azul-marinho de tricô fino, gola careca e punho canelado.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar à mão, água fria.",
+          "Secar deitado, à sombra."
+        ]
+      },
+      "sku": "OBR-SFIN",
+      "collections": [],
+      "publishedAt": "2026-04-18T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "superior"
+    }
+  ]
+}

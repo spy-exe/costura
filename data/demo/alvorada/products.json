@@ -1,0 +1,504 @@
+{
+  "categories": [
+    {
+      "handle": "camisas-e-malhas",
+      "title": "Camisas e malhas",
+      "description": "Camisas de algodão e suéteres de tricô.",
+      "image": "camisa-listrada"
+    },
+    {
+      "handle": "vestidos-e-saias",
+      "title": "Vestidos e saias",
+      "description": "Vestidos e saias de caimento solto.",
+      "image": "vestido-estampado"
+    },
+    {
+      "handle": "calcas-e-shorts",
+      "title": "Calças e shorts",
+      "description": "Calças de cintura alta, retas e shorts para o calor.",
+      "image": "calca-pantalona"
+    },
+    {
+      "handle": "acessorios",
+      "title": "Acessórios",
+      "description": "Chapéus de palha para sol forte.",
+      "image": "chapeu-natural"
+    }
+  ],
+  "collections": [
+    {
+      "handle": "calor",
+      "title": "Para o calor",
+      "description": "Peças leves e claras para os dias mais quentes."
+    }
+  ],
+  "sizeGuides": [
+    {
+      "id": "partes-de-cima",
+      "title": "Camisas, malhas e vestidos",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Busto ou peito",
+        "Comprimento",
+        "Ombro"
+      ],
+      "rows": [
+        [
+          "PP",
+          "92",
+          "66",
+          "38"
+        ],
+        [
+          "P",
+          "98",
+          "68",
+          "40"
+        ],
+        [
+          "M",
+          "104",
+          "70",
+          "42"
+        ],
+        [
+          "G",
+          "112",
+          "72",
+          "44"
+        ],
+        [
+          "GG",
+          "120",
+          "74",
+          "46"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Busto ou peito",
+          "text": "de uma axila à outra, com a peça esticada, multiplicado por dois."
+        },
+        {
+          "label": "Comprimento",
+          "text": "do ponto mais alto do ombro até a barra."
+        }
+      ]
+    },
+    {
+      "id": "partes-de-baixo",
+      "title": "Calças, saias e bermudas",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Cintura",
+        "Quadril",
+        "Comprimento"
+      ],
+      "rows": [
+        [
+          "36",
+          "68",
+          "96",
+          "100"
+        ],
+        [
+          "38",
+          "72",
+          "100",
+          "101"
+        ],
+        [
+          "40",
+          "76",
+          "104",
+          "102"
+        ],
+        [
+          "42",
+          "80",
+          "108",
+          "103"
+        ],
+        [
+          "44",
+          "86",
+          "114",
+          "104"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Cintura",
+          "text": "de um lado ao outro do cós, com a peça fechada, multiplicado por dois."
+        },
+        {
+          "label": "Quadril",
+          "text": "na parte mais larga, 20 cm abaixo do cós, multiplicado por dois."
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "handle": "camisa-listrada",
+      "title": "Camisa listrada de algodão",
+      "category": "camisas-e-malhas",
+      "colors": [
+        {
+          "images": [
+            "camisa-listrada"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 31900,
+      "description": "Camisa de algodão com listras finas azuis sobre fundo branco, gola de camisa e punho com botão.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Reta e folgada."
+      },
+      "sku": "ALV-CLIS",
+      "collections": [
+        "calor"
+      ],
+      "publishedAt": "2026-09-10T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "sueter-de-trico-cru",
+      "title": "Suéter de tricô grosso",
+      "category": "camisas-e-malhas",
+      "colors": [
+        {
+          "images": [
+            "sueter-cru"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 38900,
+      "description": "Suéter de tricô grosso cor cru, com gola careca e barra canelada, para noites frescas.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar à mão, água fria.",
+          "Secar deitado, à sombra, para não deformar."
+        ],
+        "fit": "Ampla, com ombro caído."
+      },
+      "sku": "ALV-STCR",
+      "collections": [],
+      "publishedAt": "2026-06-12T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "sueter-listrado",
+      "title": "Suéter listrado",
+      "category": "camisas-e-malhas",
+      "colors": [
+        {
+          "images": [
+            "sueter-listrado"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 34900,
+      "description": "Suéter de tricô em listras largas azul-marinho e cinza, com etiqueta interna na gola.",
+      "details": {
+        "composition": "70% algodão, 30% acrílico",
+        "care": [
+          "Lavar à mão, água fria.",
+          "Secar deitado, à sombra, para não deformar."
+        ]
+      },
+      "sku": "ALV-SLIS",
+      "collections": [],
+      "publishedAt": "2026-04-20T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima",
+      "compareAt": 39900
+    },
+    {
+      "handle": "vestido-estampado",
+      "title": "Vestido floral de manga curta",
+      "category": "vestidos-e-saias",
+      "colors": [
+        {
+          "images": [
+            "vestido-estampado"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 32900,
+      "description": "Vestido midi azul-marinho com estampa de pequenas flores brancas e manga curta.",
+      "details": {
+        "composition": "100% viscose",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ]
+      },
+      "sku": "ALV-VFLO",
+      "collections": [
+        "calor"
+      ],
+      "publishedAt": "2026-09-01T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "vestido-branco-rodado",
+      "title": "Vestido branco rodado",
+      "category": "vestidos-e-saias",
+      "colors": [
+        {
+          "images": [
+            "vestido-branco"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 45900,
+      "description": "Vestido branco de alças com saia rodada e comprimento abaixo do joelho.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ]
+      },
+      "sku": "ALV-VBRA",
+      "collections": [
+        "calor"
+      ],
+      "publishedAt": "2026-08-18T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "saia-rodada-de-tule",
+      "title": "Saia rodada de tule",
+      "category": "vestidos-e-saias",
+      "colors": [
+        {
+          "images": [
+            "saia-rodada"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 27900,
+      "description": "Saia midi de tule em camadas, com forro de algodão e cós de elástico.",
+      "details": {
+        "composition": "Tule 100% poliamida, forro 100% algodão",
+        "care": [
+          "Lavar à mão, água fria.",
+          "Não torcer.",
+          "Secar pendurada, à sombra."
+        ]
+      },
+      "sku": "ALV-STUL",
+      "collections": [
+        "calor"
+      ],
+      "publishedAt": "2026-07-05T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "calca-cintura-alta",
+      "title": "Calça de cintura alta com pregas",
+      "category": "calcas-e-shorts",
+      "colors": [
+        {
+          "images": [
+            "calca-pantalona"
+          ]
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "price": 39900,
+      "description": "Calça cor cru de cintura alta, com pregas na frente e perna reta ampla.",
+      "details": {
+        "composition": "100% linho",
+        "care": [
+          "Lavar à mão ou na máquina em ciclo delicado, água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra.",
+          "Passar ainda úmido, em temperatura média."
+        ],
+        "fit": "Cintura alta, perna ampla."
+      },
+      "sku": "ALV-CPRE",
+      "collections": [],
+      "publishedAt": "2026-09-05T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-baixo"
+    },
+    {
+      "handle": "calca-reta",
+      "title": "Calça reta off-white",
+      "category": "calcas-e-shorts",
+      "colors": [
+        {
+          "images": [
+            "calca-reta"
+          ]
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "price": 29900,
+      "description": "Calça reta off-white com botões no cós e bolsos embutidos.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ]
+      },
+      "sku": "ALV-CRET",
+      "collections": [],
+      "publishedAt": "2026-05-22T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-baixo"
+    },
+    {
+      "handle": "short-de-cordao",
+      "title": "Short de cordão",
+      "category": "calcas-e-shorts",
+      "colors": [
+        {
+          "images": [
+            "short"
+          ]
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "price": 15900,
+      "description": "Short turquesa com cós de elástico, cordão branco e bolsos laterais.",
+      "details": {
+        "composition": "100% poliéster",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ]
+      },
+      "sku": "ALV-SHRT",
+      "collections": [
+        "calor"
+      ],
+      "publishedAt": "2026-08-26T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-baixo"
+    },
+    {
+      "handle": "chapeu-de-palha",
+      "title": "Chapéu de palha",
+      "category": "acessorios",
+      "colors": [
+        {
+          "images": [
+            "chapeu-natural"
+          ]
+        },
+        {
+          "images": [
+            "chapeu-cinza"
+          ]
+        }
+      ],
+      "sizes": [
+        "U"
+      ],
+      "price": 18900,
+      "description": "Chapéu de palha trançada com aba larga e cordão para ajustar.",
+      "details": {
+        "composition": "100% palha de papel",
+        "care": [
+          "Não molhar.",
+          "Limpar com pano seco.",
+          "Guardar sem apoiar peso sobre a aba."
+        ]
+      },
+      "sku": "ALV-CHAP",
+      "collections": [
+        "calor"
+      ],
+      "publishedAt": "2026-09-12T12:00:00.000Z",
+      "tags": [],
+      "stock": {
+        "natural/U": 8,
+        "cinza/U": 3
+      }
+    }
+  ]
+}

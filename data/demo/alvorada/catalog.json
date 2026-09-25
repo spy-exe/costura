@@ -1,0 +1,1154 @@
+{
+  "products": [
+    {
+      "id": "alvorada-camisa-listrada",
+      "handle": "camisa-listrada",
+      "title": "Camisa listrada de algodão",
+      "description": "Camisa de algodão com listras finas azuis sobre fundo branco, gola de camisa e punho com botão.",
+      "category": "camisas-e-malhas",
+      "collections": [
+        "calor"
+      ],
+      "colors": [
+        {
+          "id": "azul-e-branco",
+          "name": "Azul e branco",
+          "hex": "#C9D3DF"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-camisa-listrada-azul-e-branco-pp",
+          "sku": "ALV-CLIS-AZU-PP",
+          "color": "azul-e-branco",
+          "size": "PP",
+          "price": {
+            "amount": 31900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "alvorada-camisa-listrada-azul-e-branco-p",
+          "sku": "ALV-CLIS-AZU-P",
+          "color": "azul-e-branco",
+          "size": "P",
+          "price": {
+            "amount": 31900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "alvorada-camisa-listrada-azul-e-branco-m",
+          "sku": "ALV-CLIS-AZU-M",
+          "color": "azul-e-branco",
+          "size": "M",
+          "price": {
+            "amount": 31900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "alvorada-camisa-listrada-azul-e-branco-g",
+          "sku": "ALV-CLIS-AZU-G",
+          "color": "azul-e-branco",
+          "size": "G",
+          "price": {
+            "amount": 31900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "alvorada-camisa-listrada-azul-e-branco-gg",
+          "sku": "ALV-CLIS-AZU-GG",
+          "color": "azul-e-branco",
+          "size": "GG",
+          "price": {
+            "amount": 31900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/camisa-listrada.jpg",
+          "alt": "Detalhe da gola de uma camisa branca com listras finas azuis.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Reta e folgada."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-10T12:00:00.000Z"
+    },
+    {
+      "id": "alvorada-sueter-de-trico-cru",
+      "handle": "sueter-de-trico-cru",
+      "title": "Suéter de tricô grosso",
+      "description": "Suéter de tricô grosso cor cru, com gola careca e barra canelada, para noites frescas.",
+      "category": "camisas-e-malhas",
+      "collections": [],
+      "colors": [
+        {
+          "id": "cru",
+          "name": "Cru",
+          "hex": "#D8CCB4"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-sueter-de-trico-cru-cru-pp",
+          "sku": "ALV-STCR-CRU-PP",
+          "color": "cru",
+          "size": "PP",
+          "price": {
+            "amount": 38900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "alvorada-sueter-de-trico-cru-cru-p",
+          "sku": "ALV-STCR-CRU-P",
+          "color": "cru",
+          "size": "P",
+          "price": {
+            "amount": 38900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "alvorada-sueter-de-trico-cru-cru-m",
+          "sku": "ALV-STCR-CRU-M",
+          "color": "cru",
+          "size": "M",
+          "price": {
+            "amount": 38900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "alvorada-sueter-de-trico-cru-cru-g",
+          "sku": "ALV-STCR-CRU-G",
+          "color": "cru",
+          "size": "G",
+          "price": {
+            "amount": 38900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "alvorada-sueter-de-trico-cru-cru-gg",
+          "sku": "ALV-STCR-CRU-GG",
+          "color": "cru",
+          "size": "GG",
+          "price": {
+            "amount": 38900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/sueter-cru.jpg",
+          "alt": "Suéter de tricô grosso cor cru, amassado sobre uma mesa de madeira.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar à mão, água fria.",
+          "Secar deitado, à sombra, para não deformar."
+        ],
+        "fit": "Ampla, com ombro caído."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-06-12T12:00:00.000Z"
+    },
+    {
+      "id": "alvorada-sueter-listrado",
+      "handle": "sueter-listrado",
+      "title": "Suéter listrado",
+      "description": "Suéter de tricô em listras largas azul-marinho e cinza, com etiqueta interna na gola.",
+      "category": "camisas-e-malhas",
+      "collections": [],
+      "colors": [
+        {
+          "id": "marinho-e-cinza",
+          "name": "Marinho e cinza",
+          "hex": "#3A3F5C"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-sueter-listrado-marinho-e-cinza-pp",
+          "sku": "ALV-SLIS-MAR-PP",
+          "color": "marinho-e-cinza",
+          "size": "PP",
+          "price": {
+            "amount": 34900,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "alvorada-sueter-listrado-marinho-e-cinza-p",
+          "sku": "ALV-SLIS-MAR-P",
+          "color": "marinho-e-cinza",
+          "size": "P",
+          "price": {
+            "amount": 34900,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "alvorada-sueter-listrado-marinho-e-cinza-m",
+          "sku": "ALV-SLIS-MAR-M",
+          "color": "marinho-e-cinza",
+          "size": "M",
+          "price": {
+            "amount": 34900,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "alvorada-sueter-listrado-marinho-e-cinza-g",
+          "sku": "ALV-SLIS-MAR-G",
+          "color": "marinho-e-cinza",
+          "size": "G",
+          "price": {
+            "amount": 34900,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "alvorada-sueter-listrado-marinho-e-cinza-gg",
+          "sku": "ALV-SLIS-MAR-GG",
+          "color": "marinho-e-cinza",
+          "size": "GG",
+          "price": {
+            "amount": 34900,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/sueter-listrado.jpg",
+          "alt": "Suéter de tricô com listras largas azul-marinho e cinza, dobrado sobre fundo claro.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "70% algodão, 30% acrílico",
+        "care": [
+          "Lavar à mão, água fria.",
+          "Secar deitado, à sombra, para não deformar."
+        ]
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-04-20T12:00:00.000Z"
+    },
+    {
+      "id": "alvorada-vestido-estampado",
+      "handle": "vestido-estampado",
+      "title": "Vestido floral de manga curta",
+      "description": "Vestido midi azul-marinho com estampa de pequenas flores brancas e manga curta.",
+      "category": "vestidos-e-saias",
+      "collections": [
+        "calor"
+      ],
+      "colors": [
+        {
+          "id": "marinho-floral",
+          "name": "Marinho floral",
+          "hex": "#26304A"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-vestido-estampado-marinho-floral-pp",
+          "sku": "ALV-VFLO-MAR-PP",
+          "color": "marinho-floral",
+          "size": "PP",
+          "price": {
+            "amount": 32900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "alvorada-vestido-estampado-marinho-floral-p",
+          "sku": "ALV-VFLO-MAR-P",
+          "color": "marinho-floral",
+          "size": "P",
+          "price": {
+            "amount": 32900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "alvorada-vestido-estampado-marinho-floral-m",
+          "sku": "ALV-VFLO-MAR-M",
+          "color": "marinho-floral",
+          "size": "M",
+          "price": {
+            "amount": 32900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "alvorada-vestido-estampado-marinho-floral-g",
+          "sku": "ALV-VFLO-MAR-G",
+          "color": "marinho-floral",
+          "size": "G",
+          "price": {
+            "amount": 32900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "alvorada-vestido-estampado-marinho-floral-gg",
+          "sku": "ALV-VFLO-MAR-GG",
+          "color": "marinho-floral",
+          "size": "GG",
+          "price": {
+            "amount": 32900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/vestido-estampado.jpg",
+          "alt": "Vestido azul-marinho com estampa de pequenas flores brancas, visto do busto à cintura.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% viscose",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ]
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-01T12:00:00.000Z"
+    },
+    {
+      "id": "alvorada-vestido-branco-rodado",
+      "handle": "vestido-branco-rodado",
+      "title": "Vestido branco rodado",
+      "description": "Vestido branco de alças com saia rodada e comprimento abaixo do joelho.",
+      "category": "vestidos-e-saias",
+      "collections": [
+        "calor"
+      ],
+      "colors": [
+        {
+          "id": "branco",
+          "name": "Branco",
+          "hex": "#EEECE8"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-vestido-branco-rodado-branco-pp",
+          "sku": "ALV-VBRA-BRA-PP",
+          "color": "branco",
+          "size": "PP",
+          "price": {
+            "amount": 45900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "alvorada-vestido-branco-rodado-branco-p",
+          "sku": "ALV-VBRA-BRA-P",
+          "color": "branco",
+          "size": "P",
+          "price": {
+            "amount": 45900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "alvorada-vestido-branco-rodado-branco-m",
+          "sku": "ALV-VBRA-BRA-M",
+          "color": "branco",
+          "size": "M",
+          "price": {
+            "amount": 45900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "alvorada-vestido-branco-rodado-branco-g",
+          "sku": "ALV-VBRA-BRA-G",
+          "color": "branco",
+          "size": "G",
+          "price": {
+            "amount": 45900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "alvorada-vestido-branco-rodado-branco-gg",
+          "sku": "ALV-VBRA-BRA-GG",
+          "color": "branco",
+          "size": "GG",
+          "price": {
+            "amount": 45900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/vestido-branco.jpg",
+          "alt": "Pessoa de costas em um gramado, segurando a saia de um vestido branco rodado.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ]
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-08-18T12:00:00.000Z"
+    },
+    {
+      "id": "alvorada-saia-rodada-de-tule",
+      "handle": "saia-rodada-de-tule",
+      "title": "Saia rodada de tule",
+      "description": "Saia midi de tule em camadas, com forro de algodão e cós de elástico.",
+      "category": "vestidos-e-saias",
+      "collections": [
+        "calor"
+      ],
+      "colors": [
+        {
+          "id": "branco",
+          "name": "Branco",
+          "hex": "#EEEEEC"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-saia-rodada-de-tule-branco-pp",
+          "sku": "ALV-STUL-BRA-PP",
+          "color": "branco",
+          "size": "PP",
+          "price": {
+            "amount": 27900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "alvorada-saia-rodada-de-tule-branco-p",
+          "sku": "ALV-STUL-BRA-P",
+          "color": "branco",
+          "size": "P",
+          "price": {
+            "amount": 27900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "alvorada-saia-rodada-de-tule-branco-m",
+          "sku": "ALV-STUL-BRA-M",
+          "color": "branco",
+          "size": "M",
+          "price": {
+            "amount": 27900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "alvorada-saia-rodada-de-tule-branco-g",
+          "sku": "ALV-STUL-BRA-G",
+          "color": "branco",
+          "size": "G",
+          "price": {
+            "amount": 27900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "alvorada-saia-rodada-de-tule-branco-gg",
+          "sku": "ALV-STUL-BRA-GG",
+          "color": "branco",
+          "size": "GG",
+          "price": {
+            "amount": 27900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/saia-rodada.jpg",
+          "alt": "Saia branca de tule em movimento, sobre gramado.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "Tule 100% poliamida, forro 100% algodão",
+        "care": [
+          "Lavar à mão, água fria.",
+          "Não torcer.",
+          "Secar pendurada, à sombra."
+        ]
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-07-05T12:00:00.000Z"
+    },
+    {
+      "id": "alvorada-calca-cintura-alta",
+      "handle": "calca-cintura-alta",
+      "title": "Calça de cintura alta com pregas",
+      "description": "Calça cor cru de cintura alta, com pregas na frente e perna reta ampla.",
+      "category": "calcas-e-shorts",
+      "collections": [],
+      "colors": [
+        {
+          "id": "cru",
+          "name": "Cru",
+          "hex": "#E8E0CC"
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-calca-cintura-alta-cru-36",
+          "sku": "ALV-CPRE-CRU-36",
+          "color": "cru",
+          "size": "36",
+          "price": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "alvorada-calca-cintura-alta-cru-38",
+          "sku": "ALV-CPRE-CRU-38",
+          "color": "cru",
+          "size": "38",
+          "price": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "alvorada-calca-cintura-alta-cru-40",
+          "sku": "ALV-CPRE-CRU-40",
+          "color": "cru",
+          "size": "40",
+          "price": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "alvorada-calca-cintura-alta-cru-42",
+          "sku": "ALV-CPRE-CRU-42",
+          "color": "cru",
+          "size": "42",
+          "price": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "alvorada-calca-cintura-alta-cru-44",
+          "sku": "ALV-CPRE-CRU-44",
+          "color": "cru",
+          "size": "44",
+          "price": {
+            "amount": 39900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/calca-pantalona.jpg",
+          "alt": "Calça cor cru de cintura alta, com pregas e perna reta, em manequim sobre fundo cinza.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% linho",
+        "care": [
+          "Lavar à mão ou na máquina em ciclo delicado, água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra.",
+          "Passar ainda úmido, em temperatura média."
+        ],
+        "fit": "Cintura alta, perna ampla."
+      },
+      "sizeGuide": "partes-de-baixo",
+      "tags": [],
+      "publishedAt": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "id": "alvorada-calca-reta",
+      "handle": "calca-reta",
+      "title": "Calça reta off-white",
+      "description": "Calça reta off-white com botões no cós e bolsos embutidos.",
+      "category": "calcas-e-shorts",
+      "collections": [],
+      "colors": [
+        {
+          "id": "off-white",
+          "name": "Off-white",
+          "hex": "#EAE6DA"
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-calca-reta-off-white-36",
+          "sku": "ALV-CRET-OFF-36",
+          "color": "off-white",
+          "size": "36",
+          "price": {
+            "amount": 29900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "alvorada-calca-reta-off-white-38",
+          "sku": "ALV-CRET-OFF-38",
+          "color": "off-white",
+          "size": "38",
+          "price": {
+            "amount": 29900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "alvorada-calca-reta-off-white-40",
+          "sku": "ALV-CRET-OFF-40",
+          "color": "off-white",
+          "size": "40",
+          "price": {
+            "amount": 29900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "alvorada-calca-reta-off-white-42",
+          "sku": "ALV-CRET-OFF-42",
+          "color": "off-white",
+          "size": "42",
+          "price": {
+            "amount": 29900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "alvorada-calca-reta-off-white-44",
+          "sku": "ALV-CRET-OFF-44",
+          "color": "off-white",
+          "size": "44",
+          "price": {
+            "amount": 29900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/calca-reta.jpg",
+          "alt": "Calça reta off-white pendurada em cabide, sobre fundo cinza.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ]
+      },
+      "sizeGuide": "partes-de-baixo",
+      "tags": [],
+      "publishedAt": "2026-05-22T12:00:00.000Z"
+    },
+    {
+      "id": "alvorada-short-de-cordao",
+      "handle": "short-de-cordao",
+      "title": "Short de cordão",
+      "description": "Short turquesa com cós de elástico, cordão branco e bolsos laterais.",
+      "category": "calcas-e-shorts",
+      "collections": [
+        "calor"
+      ],
+      "colors": [
+        {
+          "id": "turquesa",
+          "name": "Turquesa",
+          "hex": "#26C2AE"
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-short-de-cordao-turquesa-36",
+          "sku": "ALV-SHRT-TUR-36",
+          "color": "turquesa",
+          "size": "36",
+          "price": {
+            "amount": 15900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "alvorada-short-de-cordao-turquesa-38",
+          "sku": "ALV-SHRT-TUR-38",
+          "color": "turquesa",
+          "size": "38",
+          "price": {
+            "amount": 15900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "alvorada-short-de-cordao-turquesa-40",
+          "sku": "ALV-SHRT-TUR-40",
+          "color": "turquesa",
+          "size": "40",
+          "price": {
+            "amount": 15900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "alvorada-short-de-cordao-turquesa-42",
+          "sku": "ALV-SHRT-TUR-42",
+          "color": "turquesa",
+          "size": "42",
+          "price": {
+            "amount": 15900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "alvorada-short-de-cordao-turquesa-44",
+          "sku": "ALV-SHRT-TUR-44",
+          "color": "turquesa",
+          "size": "44",
+          "price": {
+            "amount": 15900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/short.jpg",
+          "alt": "Short turquesa com cordão branco na cintura, sobre fundo salmão.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% poliéster",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ]
+      },
+      "sizeGuide": "partes-de-baixo",
+      "tags": [],
+      "publishedAt": "2026-08-26T12:00:00.000Z"
+    },
+    {
+      "id": "alvorada-chapeu-de-palha",
+      "handle": "chapeu-de-palha",
+      "title": "Chapéu de palha",
+      "description": "Chapéu de palha trançada com aba larga e cordão para ajustar.",
+      "category": "acessorios",
+      "collections": [
+        "calor"
+      ],
+      "colors": [
+        {
+          "id": "natural",
+          "name": "Natural",
+          "hex": "#C9A571"
+        },
+        {
+          "id": "cinza",
+          "name": "Cinza",
+          "hex": "#8E8A82"
+        }
+      ],
+      "sizes": [
+        "U"
+      ],
+      "variants": [
+        {
+          "id": "alvorada-chapeu-de-palha-natural-u",
+          "sku": "ALV-CHAP-NAT-U",
+          "color": "natural",
+          "size": "U",
+          "price": {
+            "amount": 18900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 8
+        },
+        {
+          "id": "alvorada-chapeu-de-palha-cinza-u",
+          "sku": "ALV-CHAP-CIN-U",
+          "color": "cinza",
+          "size": "U",
+          "price": {
+            "amount": 18900,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/alvorada/chapeu-natural.jpg",
+          "alt": "Chapéu de palha natural com cordão preto, pousado no meio de um capinzal verde.",
+          "width": 1280,
+          "height": 1600,
+          "color": "natural"
+        },
+        {
+          "src": "/demo/alvorada/chapeu-cinza.jpg",
+          "alt": "Detalhe da aba de um chapéu de palha trançada cinza.",
+          "width": 1280,
+          "height": 1600,
+          "color": "cinza"
+        }
+      ],
+      "details": {
+        "composition": "100% palha de papel",
+        "care": [
+          "Não molhar.",
+          "Limpar com pano seco.",
+          "Guardar sem apoiar peso sobre a aba."
+        ]
+      },
+      "tags": [],
+      "publishedAt": "2026-09-12T12:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "handle": "camisas-e-malhas",
+      "title": "Camisas e malhas",
+      "description": "Camisas de algodão e suéteres de tricô.",
+      "image": {
+        "src": "/demo/alvorada/camisa-listrada.jpg",
+        "alt": "Detalhe da gola de uma camisa branca com listras finas azuis.",
+        "width": 1280,
+        "height": 1600
+      }
+    },
+    {
+      "handle": "vestidos-e-saias",
+      "title": "Vestidos e saias",
+      "description": "Vestidos e saias de caimento solto.",
+      "image": {
+        "src": "/demo/alvorada/vestido-estampado.jpg",
+        "alt": "Vestido azul-marinho com estampa de pequenas flores brancas, visto do busto à cintura.",
+        "width": 1280,
+        "height": 1600
+      }
+    },
+    {
+      "handle": "calcas-e-shorts",
+      "title": "Calças e shorts",
+      "description": "Calças de cintura alta, retas e shorts para o calor.",
+      "image": {
+        "src": "/demo/alvorada/calca-pantalona.jpg",
+        "alt": "Calça cor cru de cintura alta, com pregas e perna reta, em manequim sobre fundo cinza.",
+        "width": 1280,
+        "height": 1600
+      }
+    },
+    {
+      "handle": "acessorios",
+      "title": "Acessórios",
+      "description": "Chapéus de palha para sol forte.",
+      "image": {
+        "src": "/demo/alvorada/chapeu-natural.jpg",
+        "alt": "Chapéu de palha natural com cordão preto, pousado no meio de um capinzal verde.",
+        "width": 1280,
+        "height": 1600
+      }
+    }
+  ],
+  "collections": [
+    {
+      "handle": "calor",
+      "title": "Para o calor",
+      "description": "Peças leves e claras para os dias mais quentes."
+    }
+  ],
+  "sizeGuides": [
+    {
+      "id": "partes-de-cima",
+      "title": "Camisas, malhas e vestidos",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Busto ou peito",
+        "Comprimento",
+        "Ombro"
+      ],
+      "rows": [
+        [
+          "PP",
+          "92",
+          "66",
+          "38"
+        ],
+        [
+          "P",
+          "98",
+          "68",
+          "40"
+        ],
+        [
+          "M",
+          "104",
+          "70",
+          "42"
+        ],
+        [
+          "G",
+          "112",
+          "72",
+          "44"
+        ],
+        [
+          "GG",
+          "120",
+          "74",
+          "46"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Busto ou peito",
+          "text": "de uma axila à outra, com a peça esticada, multiplicado por dois."
+        },
+        {
+          "label": "Comprimento",
+          "text": "do ponto mais alto do ombro até a barra."
+        }
+      ]
+    },
+    {
+      "id": "partes-de-baixo",
+      "title": "Calças, saias e bermudas",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Cintura",
+        "Quadril",
+        "Comprimento"
+      ],
+      "rows": [
+        [
+          "36",
+          "68",
+          "96",
+          "100"
+        ],
+        [
+          "38",
+          "72",
+          "100",
+          "101"
+        ],
+        [
+          "40",
+          "76",
+          "104",
+          "102"
+        ],
+        [
+          "42",
+          "80",
+          "108",
+          "103"
+        ],
+        [
+          "44",
+          "86",
+          "114",
+          "104"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Cintura",
+          "text": "de um lado ao outro do cós, com a peça fechada, multiplicado por dois."
+        },
+        {
+          "label": "Quadril",
+          "text": "na parte mais larga, 20 cm abaixo do cós, multiplicado por dois."
+        }
+      ]
+    }
+  ]
+}
