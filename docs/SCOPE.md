@@ -39,13 +39,14 @@ Frete, Pix, parcelamento, descontos e prazos só aparecem quando configurados no
 
 ## Critérios de aceite
 
-- [ ] As duas marcas rodam do mesmo core, escolhidas por `BRAND`, sem condicional de marca em componentes.
-- [ ] Adicionar ao carrinho exige cor e tamanho; variante esgotada não pode ser adicionada.
-- [ ] Carrinho persiste entre recargas, é isolado por marca e ambiente e nunca vai para cache compartilhado.
-- [ ] O servidor recalcula preço, estoque e totais a cada leitura; valores vindos do navegador são ignorados.
-- [ ] Filtros, ordenação e página vivem na URL; o botão voltar restaura o contexto.
-- [ ] Nenhum controle falso, link morto ou condição comercial inventada.
-- [ ] Modo demonstração identificado em toda página e no checkout; nenhuma compra simulada aparece como paga.
-- [ ] Navegação completa por teclado, foco visível, diálogos com Escape e retorno de foco, anúncios de carrinho.
-- [ ] Lint, typecheck, testes, cobertura mínima (85/80, e 90 nas regras críticas), build e E2E passam na CI.
-- [ ] QA visual em 360, 390, 768, 1280 e 1440 px nas duas marcas, registrado em [QA.md](QA.md).
+- [x] As duas marcas rodam do mesmo core, escolhidas por `BRAND`, sem condicional de marca em componentes.
+- [x] Adicionar ao carrinho exige cor e tamanho; variante esgotada não pode ser adicionada.
+- [x] Carrinho persiste entre recargas, é isolado por marca e ambiente e nunca vai para cache compartilhado.
+- [x] O servidor recalcula preço, estoque e totais a cada leitura; valores vindos do navegador são ignorados.
+- [x] Filtros, ordenação e página vivem na URL; o botão voltar restaura o contexto.
+- [x] Nenhum controle falso, link morto ou condição comercial inventada.
+- [x] Modo demonstração identificado em toda página e no checkout; nenhuma compra simulada aparece como paga.
+- [x] Navegação completa por teclado, foco visível, diálogos com Escape e retorno de foco, anúncios de carrinho.
+- [x] Lint, typecheck, testes, cobertura mínima (85/80, e 90 nas regras críticas), build e E2E passam na CI.
+- [ ] Venda real: depende de ligar a Shopify (credenciais externas). Ver [QA.md](QA.md#pendências).
+- [x] QA visual em 360, 390, 768, 1280 e 1440 px nas duas marcas, registrado em [QA.md](QA.md).
