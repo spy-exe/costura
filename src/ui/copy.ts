@@ -7,6 +7,7 @@ import type { SortKey } from "@/core/catalog/query";
  */
 export const copy = {
   skipToContent: "Pular para o conteúdo",
+  landing: { skip: "Pular a abertura" },
   demoNotice: "Loja de demonstração. Produtos, preços e estoque são fictícios e nenhuma compra é cobrada.",
   nav: { open: "Abrir menu", close: "Fechar menu", label: "Principal", shop: "Ver tudo" },
   search: {

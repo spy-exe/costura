@@ -267,3 +267,162 @@
     scroll-padding-bottom: 5.5rem;
   }
 }
+
+/* Altura do cabeçalho fixo; a abertura fixa começa logo abaixo dele. */
+:root {
+  --header-h: 4rem;
+}
+@media (min-width: 64rem) {
+  :root {
+    --header-h: 5rem;
+  }
+}
+
+/* Rolagem suave (Lenis), só na abertura cinematográfica do desktop. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis-stopped {
+  overflow: hidden;
+}
+
+/*
+ * Abertura. Camadas animadas pela linha do tempo são posicionadas sem transform:
+ * o GSAP é dono do transform delas.
+ */
+.landing-title {
+  font-size: calc(clamp(3rem, 0.75rem + 6.6vw, 8.75rem) * var(--display-scale));
+  line-height: 0.9;
+}
+.landing-cinematic {
+  position: relative;
+}
+.landing-sticky {
+  position: sticky;
+  top: var(--header-h);
+  height: calc(100svh - var(--header-h));
+  overflow: hidden;
+  isolation: isolate;
+}
+.landing-canvas,
+.landing-poster {
+  position: absolute;
+  inset: 0;
+}
+.landing-canvas canvas {
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+.landing-cinematic[data-ready] .landing-canvas canvas {
+  opacity: 1;
+}
+.landing-poster {
+  transition: opacity 700ms ease;
+}
+.landing-cinematic[data-ready] .landing-poster {
+  opacity: 0;
+}
+.landing-layer {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.landing-cinematic [data-layer] {
+  opacity: 0;
+  pointer-events: none;
+}
+.landing-hero {
+  top: 0;
+  bottom: 0;
+  left: max(1rem, 4vw);
+  width: min(46rem, 46vw);
+  justify-content: center;
+}
+.landing-scroll-hint {
+  position: absolute;
+  z-index: 1;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--c-muted);
+}
+.landing-weave {
+  left: max(1rem, 4vw);
+  bottom: 9%;
+  width: min(26rem, 80vw);
+}
+.landing-rail-title {
+  top: 2rem;
+  left: max(1rem, 4vw);
+}
+.landing-rail-list {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  pointer-events: none;
+}
+.landing-caption {
+  top: 0;
+  bottom: 0;
+  left: max(1rem, 4vw);
+  width: min(24rem, 34vw);
+  justify-content: center;
+}
+.landing-collection {
+  top: 7%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: min(40rem, 90vw);
+  align-items: center;
+  text-align: center;
+}
+
+/* Retrato (celular e tablet em pé): título sobre o pano, legendas na base. */
+@media (max-aspect-ratio: 9/10) {
+  .landing-title {
+    font-size: calc(clamp(2.75rem, 1rem + 9vw, 5.5rem) * var(--display-scale));
+  }
+  .landing-hero {
+    bottom: auto;
+    top: 5%;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+  }
+  .landing-hero [data-hero-meta] p {
+    max-width: 30ch;
+  }
+  .landing-caption {
+    top: auto;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    padding: 1rem 1.25rem 0.5rem;
+    background: color-mix(in srgb, var(--c-bg) 88%, transparent);
+  }
+  .landing-weave {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    padding: 1rem 1.25rem;
+    background: color-mix(in srgb, var(--c-bg) 88%, transparent);
+  }
+  .landing-collection {
+    top: 4%;
+  }
+}

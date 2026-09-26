@@ -12,7 +12,7 @@ export function Header({ brand }: { brand: BrandConfig }) {
   const taken = new Set([...primary.map((l) => l.href), "/carrinho"]);
   const secondary = brand.navigation.footer.flatMap((group) => group.links).filter((l) => !taken.has(l.href));
   return (
-    <header className="sticky top-0 z-30 border-b border-line bg-bg/95 backdrop-blur-sm supports-[backdrop-filter]:bg-bg/85">
+    <header className="sticky top-0 z-30 border-b border-line bg-bg">
       <div className="wrap grid h-16 grid-cols-[1fr_auto_1fr] items-center gap-4 lg:h-20 lg:grid-cols-[auto_1fr_auto]">
         <div className="flex items-center lg:hidden">
           <MobileNav links={primary} secondary={secondary} />
