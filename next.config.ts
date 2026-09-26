@@ -19,11 +19,14 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       // Next injeta scripts inline de hidratação; sem nonce, 'unsafe-inline' fica restrito a scripts da própria origem.
-      `script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
+      // 'wasm-unsafe-eval' permite só compilar WebAssembly, usado pelos decodificadores Draco e Meshopt dos modelos GLB.
+      `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
+      // O decodificador Draco roda em Web Workers criados a partir de blob.
+      "worker-src 'self' blob:",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://cdn.shopify.com",
       "font-src 'self'",
-      "connect-src 'self'",
+      "connect-src 'self' blob: data:",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       `form-action ${formTargets.join(" ")}`,

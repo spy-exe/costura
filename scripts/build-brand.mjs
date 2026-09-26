@@ -11,6 +11,7 @@ if (!brand || !/^[a-z0-9-]+$/.test(brand) || !existsSync(path.join("brands", bra
   process.exit(1);
 }
 
+spawnSync("node", ["scripts/assets/copy-decoders.mjs"], { stdio: "inherit" });
 const result = spawnSync("npx", ["next", "build"], { stdio: "inherit", env: { ...process.env, BRAND: brand } });
 if (result.status !== 0) process.exit(result.status ?? 1);
 
