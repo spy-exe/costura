@@ -73,5 +73,14 @@ export const brand = {
       },
     ],
   },
-  features: { editorialScene: false },
+  stage: {
+    background: "#E4E2DC",
+    floor: "#CFCBC2",
+    haze: 0.5,
+    // Lona pesada que mal balança, luz dura de galpão vinda de cima.
+    fabric: { color: "#9C8A63", weave: "twill", threadsPerMeter: 560, wind: 0.32, sheen: 0.2 },
+    light: { key: "#F2F5FF", fill: "#C9CED6", direction: "top", intensity: 1.45 },
+    hanger: { color: "#1C1C1C", metalness: 0.25, roughness: 0.6 },
+    grain: 0.05,
+  },
 } satisfies BrandConfig;

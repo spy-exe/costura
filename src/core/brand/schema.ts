@@ -15,6 +15,40 @@ const navLinkSchema = z.object({
   href: internalHref,
 });
 
+const unit = z.number().min(0).max(1);
+
+export const stageSchema = z.object({
+  /** Cor do fundo infinito do estúdio; costuma ser a cor de fundo do site, para a saída se dissolver nela. */
+  background: hex,
+  floor: hex,
+  /** Densidade da névoa que funde o chão com o fundo, 0 a 1. */
+  haze: unit,
+  fabric: z.object({
+    color: hex,
+    /** Padrão da trama gerado no shader: "plain" (tela, um fio por cima e um por baixo) ou "twill" (sarja diagonal, como o jeans). */
+    weave: z.enum(["plain", "twill"]),
+    /** Fios por metro; valores baixos deixam a trama aberta e visível no plano de perto. */
+    threadsPerMeter: z.number().int().min(150).max(1500),
+    /** Força do vento sobre o pano: linho leve perto de 1, lona pesada perto de 0,3. */
+    wind: unit,
+    /** Brilho acetinado das fibras (sheen). */
+    sheen: unit,
+  }),
+  light: z.object({
+    key: hex,
+    fill: hex,
+    /** "side": luz de janela lateral e baixa. "top": luz dura de cima, de galpão. */
+    direction: z.enum(["side", "top"]),
+    /** Intensidade relativa da luz principal, 0,5 a 2. */
+    intensity: z.number().min(0.5).max(2),
+  }),
+  hanger: z.object({ color: hex, metalness: unit, roughness: unit }),
+  /** Granulação de filme no pós-processamento, 0 a 0,1. */
+  grain: z.number().min(0).max(0.1),
+});
+
+export type StageConfig = z.infer<typeof stageSchema>;
+
 /**
  * Identidade de uma empresa. Tudo que muda de uma marca para outra na interface vem daqui.
  * Nada de catálogo, preço, frete ou credencial mora neste objeto.
@@ -76,10 +110,11 @@ export const brandSchema = z.object({
     primary: z.array(navLinkSchema).min(1).max(8),
     footer: z.array(z.object({ title: z.string().min(1), links: z.array(navLinkSchema).min(1) })).max(4),
   }),
-  features: z.object({
-    /** Cena WebGL editorial na homepage. Desligada, a homepage usa só a imagem estática. */
-    editorialScene: z.boolean(),
-  }),
+  /**
+   * Direção de luz e material do estúdio 3D da homepage. Ausente, a homepage usa a abertura clássica.
+   * Só parâmetros de arte: textos da experiência ficam em content.home.experience.
+   */
+  stage: stageSchema.optional(),
 });
 
 export type BrandConfig = z.infer<typeof brandSchema>;
@@ -93,6 +128,36 @@ const imageRef = z.object({
 });
 
 const ctaSchema = z.object({ label: z.string().min(1).max(40), href: internalHref });
+
+const shortLine = z.string().min(1).max(26);
+
+/** Textos da abertura cinematográfica, na ordem das cenas do storyboard (docs/landing-storyboard.md). */
+export const experienceSchema = z.object({
+  opening: z.object({
+    kicker: z.string().max(40).optional(),
+    /** Título quebrado em linhas curtas; cada linha entra e sai separada. */
+    title: z.array(shortLine).min(1).max(4),
+    body: z.string().min(1).max(160),
+    primaryCta: ctaSchema,
+    secondaryCta: ctaSchema.optional(),
+    scrollHint: z.string().min(1).max(40),
+  }),
+  weave: z.object({ title: z.string().min(1).max(40), body: z.string().min(1).max(180) }),
+  rail: z.object({
+    title: z.string().min(1).max(40),
+    /** Peças penduradas na arara, na ordem da câmera. */
+    products: z.array(z.string().regex(/^[a-z0-9-]{1,80}$/)).min(3).max(5),
+    productCta: z.string().min(1).max(24),
+    /**
+     * Modelo 3D (GLB exportado do Blender, com Draco ou Meshopt) por peça. A peça sem modelo aparece
+     * como foto impressa em painel de tecido.
+     */
+    models: z.record(z.string(), z.string().regex(/^\/models\/[a-z0-9-]+\.glb$/)).optional(),
+  }),
+  collection: z.object({ handle: z.string(), ctaLabel: z.string().min(1).max(40) }),
+});
+
+export type ExperienceContent = z.infer<typeof experienceSchema>;
 
 const pageSectionSchema = z.object({ heading: z.string().min(1), body: z.array(z.string().min(1)).min(1) });
 
@@ -117,8 +182,8 @@ export const contentSchema = z.object({
       image: imageRef,
       cta: ctaSchema.optional(),
     }),
-    /** Texto da cena editorial, quando a marca liga `features.editorialScene`. */
-    scene: z.object({ title: z.string(), body: z.string(), texture: imageRef }).optional(),
+    /** Roteiro da abertura cinematográfica. Só vale com `brand.stage` definido. */
+    experience: experienceSchema.optional(),
     newArrivalsTitle: z.string().min(1),
   }),
   pages: z.object({

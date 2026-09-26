@@ -23,10 +23,25 @@ export const content = {
       image: img("/demo/alvorada/story.jpg", "Pessoa de costas, de vestido branco, caminhando na beira do mar ao entardecer.", 1067, 1600),
       cta: { label: "Abrir o guia de medidas", href: "/guia-de-medidas" },
     },
-    scene: {
-      title: "A trama de perto",
-      body: "Tecidos de trama aberta deixam o ar passar e amassam com facilidade. Para a peça ficar lisa, passe a ferro ainda úmida.",
-      texture: img("/demo/alvorada/textura.jpg", "Tecido de trama aberta em tom natural, visto de perto.", 1236, 1600),
+    experience: {
+      opening: {
+        kicker: "Coleção Para o calor",
+        title: ["Roupa leve", "para o calor", "de verdade"],
+        body: "Camisas, vestidos, saias e calças em tecidos leves, com modelagem folgada.",
+        primaryCta: { label: "Ver a coleção", href: "/colecao/calor" },
+        secondaryCta: { label: "Toda a loja", href: "/loja" },
+        scrollHint: "Role para ver as peças",
+      },
+      weave: {
+        title: "A trama de perto",
+        body: "Tecidos de trama aberta deixam o ar passar e amassam com facilidade. Para a peça ficar lisa, passe a ferro ainda úmida.",
+      },
+      rail: {
+        title: "Na arara",
+        products: ["camisa-listrada", "vestido-estampado", "calca-cintura-alta", "sueter-listrado"],
+        productCta: "Ver peça",
+      },
+      collection: { handle: "calor", ctaLabel: "Ver a coleção" },
     },
     newArrivalsTitle: "Chegaram agora",
   },

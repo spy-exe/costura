@@ -41,7 +41,7 @@ describe.each(Object.entries(brands))("marca %s", (id, mod) => {
     for (const src of [brand.logo.horizontal.src, brand.logo.compact.src, brand.favicon, brand.ogImage]) {
       expect(existsSync(publicFile(src)), src).toBe(true);
     }
-    const images = [content.home.hero.image, content.home.story.image, content.home.scene?.texture, content.pages.about.image].filter(Boolean);
+    const images = [content.home.hero.image, content.home.story.image, content.pages.about.image].filter(Boolean);
     for (const image of images) expect(existsSync(publicFile(image!.src)), image!.src).toBe(true);
     for (const product of catalog.products) for (const image of product.images) expect(existsSync(publicFile(image.src)), image.src).toBe(true);
   });
@@ -92,7 +92,8 @@ describe("as duas marcas são diferentes de verdade", () => {
     expect(alvorada.brand.colors.accent).not.toBe(obra.brand.colors.accent);
     expect(alvorada.brand.typography.displayCase).not.toBe(obra.brand.typography.displayCase);
     expect(alvorada.content.home.hero.layout).not.toBe(obra.content.home.hero.layout);
-    expect(alvorada.brand.features.editorialScene).not.toBe(obra.brand.features.editorialScene);
+    expect(alvorada.brand.stage?.light.direction).not.toBe(obra.brand.stage?.light.direction);
+    expect(alvorada.brand.stage?.fabric.weave).not.toBe(obra.brand.stage?.fabric.weave);
   });
 });
 

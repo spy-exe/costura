@@ -23,6 +23,25 @@ export const content = {
       image: img("/demo/obra/story.jpg", "Pessoa de costas, de gorro e jaqueta caramelo com capuz, em um campo seco.", 1600, 1067, { x: 45, y: 50 }),
       cta: { label: "Ver calças e macacões", href: "/categoria/calcas-e-macacoes" },
     },
+    experience: {
+      opening: {
+        title: ["Roupa", "de trabalho", "para a cidade"],
+        body: "Jaquetas, camisas, calças e macacão em jeans, sarja e brim de algodão.",
+        primaryCta: { label: "Ver os essenciais", href: "/colecao/essenciais" },
+        secondaryCta: { label: "Toda a loja", href: "/loja" },
+        scrollHint: "Role para ver as peças",
+      },
+      weave: {
+        title: "Trama fechada",
+        body: "Algodão de trama fechada nas jaquetas, calças e no macacão. Composição e cuidados estão na página de cada peça.",
+      },
+      rail: {
+        title: "Na arara",
+        products: ["jaqueta-jeans", "camisa-de-flanela", "macacao-de-trabalho", "calca-chino"],
+        productCta: "Ver peça",
+      },
+      collection: { handle: "essenciais", ctaLabel: "Ver os essenciais" },
+    },
     newArrivalsTitle: "Novidades",
   },
   pages: {

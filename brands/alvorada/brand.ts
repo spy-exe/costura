@@ -74,5 +74,14 @@ export const brand = {
       },
     ],
   },
-  features: { editorialScene: true },
+  stage: {
+    background: "#FFFFFF",
+    floor: "#EFEDE7",
+    haze: 0.35,
+    // Linho cru ao vento, luz de janela baixa e quente.
+    fabric: { color: "#E7DFCE", weave: "plain", threadsPerMeter: 420, wind: 0.9, sheen: 0.55 },
+    light: { key: "#FFE6C4", fill: "#D9E2EA", direction: "side", intensity: 1.2 },
+    hanger: { color: "#B79E72", metalness: 0.85, roughness: 0.32 },
+    grain: 0.035,
+  },
 } satisfies BrandConfig;
