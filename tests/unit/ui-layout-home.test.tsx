@@ -1,8 +1,7 @@
-import { act, render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { brand, content } from "@/server/brand";
-import { EditorialScene, supportsWebGL } from "@/ui/home/editorial-scene";
 import { CategoryRail } from "@/ui/home/category-rail";
 import { Hero } from "@/ui/home/hero";
 import { ProductRow } from "@/ui/home/product-row";
@@ -98,50 +97,5 @@ describe("homepage", () => {
     expect(screen.getAllByTestId("product-card")).toHaveLength(3);
     expect(screen.getByRole("heading", { name: content.home.story.title })).toBeInTheDocument();
     expect(container.querySelectorAll("section")).toHaveLength(3);
-  });
-});
-
-describe("cena editorial", () => {
-  const scene = { title: "Linho", body: "Texto", texture: { src: "/t.jpg", alt: "Trama", width: 10, height: 10 } };
-
-  it("fica estática com movimento reduzido e sem WebGL", async () => {
-    vi.stubGlobal("matchMedia", () => ({ matches: true, addEventListener: vi.fn(), removeEventListener: vi.fn() }));
-    render(<EditorialScene scene={scene} />);
-    await act(async () => {});
-    expect(document.querySelector("[data-scene-mode]")).toHaveAttribute("data-scene-mode", "static");
-    expect(screen.getByRole("img", { name: "Trama" })).toBeInTheDocument();
-    expect(supportsWebGL()).toBe(false);
-  });
-
-  it("carrega sob demanda quando visível, pausa e retoma", async () => {
-    vi.stubGlobal("matchMedia", () => ({ matches: false, addEventListener: vi.fn(), removeEventListener: vi.fn() }));
-    const getContext = vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockReturnValue({} as never);
-    const handle = { start: vi.fn(), stop: vi.fn(), dispose: vi.fn() };
-    vi.doMock("@/ui/home/scene/cloth", () => ({ mountCloth: vi.fn(async () => handle) }));
-    let trigger: (entries: { isIntersecting: boolean }[]) => void = () => {};
-    vi.stubGlobal(
-      "IntersectionObserver",
-      class {
-        constructor(cb: typeof trigger) {
-          trigger = cb;
-        }
-        observe() {}
-        disconnect() {}
-      },
-    );
-    const { unmount } = render(<EditorialScene scene={scene} />);
-    await act(async () => trigger([{ isIntersecting: true }]));
-    const pause = await screen.findByRole("button", { name: "Pausar animação do tecido" });
-    expect(handle.start).toHaveBeenCalled();
-    await userEvent.click(pause);
-    expect(handle.stop).toHaveBeenCalled();
-    await userEvent.click(screen.getByRole("button", { name: "Retomar animação do tecido" }));
-    await act(async () => trigger([{ isIntersecting: false }]));
-    expect(handle.stop).toHaveBeenCalledTimes(2);
-    document.dispatchEvent(new Event("visibilitychange"));
-    unmount();
-    expect(handle.dispose).toHaveBeenCalled();
-    getContext.mockRestore();
-    vi.doUnmock("@/ui/home/scene/cloth");
   });
 });

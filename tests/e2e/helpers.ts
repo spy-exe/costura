@@ -81,7 +81,8 @@ export async function addToCart(page: Page) {
 export function watchErrors(page: Page) {
   const errors: string[] = [];
   page.on("console", (msg) => {
-    if (msg.type() === "error") errors.push(`console: ${msg.text()}`);
+    // Aviso de extensão ausente na GPU emulada da CI não é erro da loja.
+    if (msg.type() === "error" && !/KHR_parallel_shader_compile/.test(msg.text())) errors.push(`console: ${msg.text()}`);
   });
   page.on("pageerror", (err) => errors.push(`pageerror: ${err.message}`));
   page.on("response", (res) => {

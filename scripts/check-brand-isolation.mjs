@@ -12,7 +12,11 @@ for (const id of brands) {
   const source = readFileSync(path.join(brandsDir, id, "brand.ts"), "utf8");
   needles.add(id);
   for (const m of source.matchAll(/(?:name|shortName):\s*"([^"]+)"/g)) needles.add(m[1]);
-  for (const m of source.matchAll(/"(#[0-9a-fA-F]{6})"/g)) needles.add(m[1].toLowerCase());
+  // Branco e preto puros são constantes (luz branca, sombra), não identidade de marca.
+  for (const m of source.matchAll(/"(#[0-9a-fA-F]{6})"/g)) {
+    const color = m[1].toLowerCase();
+    if (color !== "#ffffff" && color !== "#000000") needles.add(color);
+  }
   for (const m of source.matchAll(/"([a-z0-9.-]+\.example)"/g)) needles.add(m[1]);
 }
 

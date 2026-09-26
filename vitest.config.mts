@@ -39,8 +39,10 @@ export default defineConfig({
         "src/app/**/global-error.tsx",
         "src/app/robots.ts",
         "src/app/sitemap.ts",
-        // Cena WebGL: jsdom não tem WebGL. O componente que a controla (editorial-scene.tsx) é testado.
-        "src/ui/home/scene/cloth.ts",
+        // Cena 3D da abertura: componentes React Three Fiber que só existem com WebGL, ausente no jsdom.
+        // A lógica deles (coreografia, amortecimento, níveis) está em src/core/landing, testada por unidade;
+        // a cena montada é verificada no E2E (tests/e2e/landing.spec.ts) e no QA visual.
+        "src/ui/landing/three/**",
         // Declarações de fonte do next/font: resolvidas só no build.
         "brands/*/fonts.ts",
         "**/*.d.ts",
