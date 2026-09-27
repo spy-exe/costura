@@ -11,9 +11,13 @@ test("fluxo principal: homepage, catálogo, produto, sacola e checkout de demons
   await page.goto("/");
   await expect(page.getByTestId("demo-notice")).toBeVisible();
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  // Os links visíveis disparam prefetch. Navegar com eles em andamento cancela as buscas, e o WebKit
+  // registra cada cancelamento como erro de página: a troca só acontece com a rede parada.
+  await page.waitForLoadState("networkidle");
 
   await page.goto("/loja");
   await expect(page.getByTestId("product-card").first()).toBeVisible();
+  await page.waitForLoadState("networkidle");
 
   await page.goto(`/produto/${product.handle}`);
   await expect(page.getByRole("heading", { level: 1, name: product.title })).toBeVisible();

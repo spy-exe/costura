@@ -44,19 +44,21 @@ export default defineConfig({
     {
       name: "alvorada-mobile",
       use: { ...devices["Pixel 7"], baseURL: "http://127.0.0.1:3100" },
-      testMatch: /(mobile|smoke)\.spec\.ts/,
+      testMatch: /(mobile|smoke|landing)\.spec\.ts/,
       metadata: { brand: "alvorada" },
     },
     {
       name: "alvorada-firefox",
       use: { ...devices["Desktop Firefox"], baseURL: "http://127.0.0.1:3100" },
-      testMatch: /smoke\.spec\.ts/,
+      // A abertura roda nos três motores: WebGL, rolagem e foco variam entre eles.
+      testMatch: /(smoke|landing)\.spec\.ts/,
       metadata: { brand: "alvorada" },
     },
     {
       name: "alvorada-webkit",
       use: { ...devices["Desktop Safari"], baseURL: "http://127.0.0.1:3100" },
-      testMatch: /smoke\.spec\.ts/,
+      // A abertura roda nos três motores: WebGL, rolagem e foco variam entre eles.
+      testMatch: /(smoke|landing)\.spec\.ts/,
       metadata: { brand: "alvorada" },
     },
   ],
