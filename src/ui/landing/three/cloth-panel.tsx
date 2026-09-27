@@ -3,6 +3,7 @@
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useMemo, useRef } from "react";
 import { PlaneGeometry, type Mesh, type Texture } from "three";
+import { useLandingStore } from "../store";
 import { createClothMaterials, type ClothUniforms } from "./cloth-material";
 
 export interface ClothDrive {
@@ -38,6 +39,7 @@ function clothGeometry(width: number, height: number, [sx, sy]: readonly [number
 
 export function ClothPanel({ width, height, segments, color, map, weave, threadsPerMeter, sheen, seed, weaveStrength, faithfulColor, suppleness, foldAmount, castShadow, drive, position }: Props) {
   const mesh = useRef<Mesh>(null);
+  const store = useLandingStore();
   const geometry = useMemo(() => clothGeometry(width, height, segments), [width, height, segments]);
   const { material, depthMaterial, uniforms } = useMemo(
     () =>
@@ -55,7 +57,8 @@ export function ClothPanel({ width, height, segments, color, map, weave, threads
   );
 
   useFrame((_, delta) => {
-    uniforms.uTime.value += delta;
+    // Pausado, o vento para; cortina, rolagem e ponteiro continuam respondendo.
+    if (!store.current.paused) uniforms.uTime.value += delta;
     drive(uniforms, delta);
   });
 

@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Pause, Play } from "lucide-react";
 import { SEQUENCE_SCROLL_LENGTH, QUALITY, type RealtimeTier } from "@/core/landing/quality";
 import { copy } from "@/ui/copy";
 import { CollectionCopy, HeroCopy, ProductCaption, WeaveCopy } from "../copy-blocks";
@@ -120,6 +120,14 @@ export function CinematicLanding({ data, tier, onDowngrade, onFailure }: Props) 
 
   const onReady = useCallback(() => setReady(true), []);
 
+  // Vento e poeira se movem sozinhos: a pessoa pode parar esse movimento (WCAG 2.2.2).
+  const [paused, setPaused] = useState(false);
+  const togglePaused = useCallback(() => {
+    const next = !store.current.paused;
+    store.current.paused = next;
+    setPaused(next);
+  }, [store]);
+
   // A falha fica marcada na seção (data-scene-failed) para o suporte e os testes.
   const [sceneFailed, setSceneFailed] = useState(false);
   const onSceneFailure = useCallback(() => {
@@ -159,6 +167,13 @@ export function CinematicLanding({ data, tier, onDowngrade, onFailure }: Props) 
             )}
           </SceneBoundary>
         </div>
+
+        {realtime && (
+          <button type="button" className="landing-pause icon-btn" aria-pressed={paused} title={copy.landing.pause} onClick={togglePaused}>
+            {paused ? <Play aria-hidden size={18} strokeWidth={1.5} /> : <Pause aria-hidden size={18} strokeWidth={1.5} />}
+            <span className="sr-only">{copy.landing.pause}</span>
+          </button>
+        )}
 
         <div className="landing-layer landing-hero">
           <HeroCopy opening={experience.opening} />

@@ -77,6 +77,8 @@ Decididos uma vez por visita em `capabilities.ts` (`decideTier`). Em tempo de ex
 
 **O rebaixamento em tempo de execução nunca volta ao estático:** trocar o layout no meio da rolagem faria o conteúdo pular.
 
+**Pausa:** `store.paused` congela o relógio do tecido e da poeira; o resto da cena segue a rolagem. O botão fica no canto superior direito da seção, com `aria-pressed` e rótulo fixo.
+
 **Título que cabe na coluna:** `HeroCopy` publica o tamanho da linha mais longa em `--title-chars`, e o CSS limita o título a `100cqi / (--title-chars × --display-glyph)`, com a coluna de texto como contêiner. A marca informa a largura de um caractere do título em `typography.displayGlyphWidth`.
 
 **Falha da cena:** uma barreira de erro (`SceneBoundary`) envolve a cena e o sequenciador. Contexto WebGL recusado, shader que não compila, modelo ou pedaço de JavaScript que não carrega: a cena some, o pôster continua sob as mesmas camadas de texto e a seção ganha `data-scene-failed`. O nível vai direto para quadros ou pôster, sem tentar níveis menores, porque a falha não é de desempenho. Sem a barreira, o React Three Fiber relançaria o erro e a homepage inteira viraria a tela de erro.

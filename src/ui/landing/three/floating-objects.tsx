@@ -4,6 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import { useEffect, useMemo } from "react";
 import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, ShaderMaterial } from "three";
 import { damp } from "@/core/landing/damp";
+import { useLandingStore } from "../store";
 import { useFrameState } from "./director";
 
 /** Gerador determinístico: a poeira nasce igual em toda visita. */
@@ -24,6 +25,7 @@ function mulberry32(seed: number) {
  */
 export function FloatingObjects({ count, color }: { count: number; color: string }) {
   const frame = useFrameState();
+  const store = useLandingStore();
   const { geometry, material } = useMemo(() => {
     const random = mulberry32(17);
     const positions = new Float32Array(count * 3);
@@ -78,7 +80,7 @@ export function FloatingObjects({ count, color }: { count: number; color: string
   useFrame((_, delta) => {
     const { scene } = frame.state;
     const goal = scene === "opening" || scene === "weave" ? 0.5 : 0;
-    material.uniforms.uTime!.value += delta;
+    if (!store.current.paused) material.uniforms.uTime!.value += delta;
     material.uniforms.uOpacity!.value = damp(material.uniforms.uOpacity!.value, goal, 0.4, delta);
   });
 

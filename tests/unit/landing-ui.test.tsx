@@ -8,6 +8,7 @@ import { getLandingData } from "@/server/landing";
 import { forcedTier } from "@/ui/landing/capabilities";
 import { createLandingMotion } from "@/ui/landing/cinematic/motion";
 import { SceneBoundary } from "@/ui/landing/cinematic/scene-boundary";
+import { copy } from "@/ui/copy";
 import { LandingExperience } from "@/ui/landing/landing-experience";
 import { frameUrl, loadOrder, nearestLoaded } from "@/ui/landing/sequence/image-sequence";
 import { StaticLanding } from "@/ui/landing/static-landing";
@@ -170,6 +171,23 @@ describe("escolha da versão", () => {
     fireEvent.pointerMove(section, { pointerType: "touch", clientX: 10, clientY: 10 });
     fireEvent.pointerMove(section, { pointerType: "mouse", clientX: 10, clientY: 10 });
     fireEvent.pointerLeave(section, { pointerType: "mouse" });
+  });
+
+  it("cena em tempo real tem controle para pausar o movimento; pôster não", async () => {
+    mockMatchMedia(false);
+    window.history.replaceState(null, "", "/?qualidade=low");
+    const { unmount } = render(<LandingExperience data={await landingData()} />);
+    const pause = screen.getByRole("button", { name: copy.landing.pause });
+    expect(pause).toHaveAttribute("aria-pressed", "false");
+    fireEvent.click(pause);
+    expect(pause).toHaveAttribute("aria-pressed", "true");
+    fireEvent.click(pause);
+    expect(pause).toHaveAttribute("aria-pressed", "false");
+    unmount();
+
+    window.history.replaceState(null, "", "/?qualidade=poster");
+    render(<LandingExperience data={await landingData()} />);
+    expect(screen.queryByRole("button", { name: copy.landing.pause })).not.toBeInTheDocument();
   });
 
   it("barreira da cena avisa uma vez e some, sem derrubar o resto", () => {

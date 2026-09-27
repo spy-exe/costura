@@ -376,6 +376,21 @@ html.lenis body {
   font-size: 0.8125rem;
   color: var(--c-muted);
 }
+/* Controle de pausa do movimento autônomo, no canto livre em todas as orientações. */
+.landing-pause {
+  position: absolute;
+  z-index: 2;
+  top: 0.75rem;
+  right: max(1rem, 4vw);
+  background: color-mix(in srgb, var(--c-bg) 88%, transparent);
+}
+.landing-pause:not([aria-pressed="true"]):hover {
+  background: var(--c-surface);
+}
+.landing-pause[aria-pressed="true"] {
+  background: var(--c-ink);
+  color: var(--c-bg);
+}
 .landing-weave {
   left: max(1rem, 4vw);
   bottom: 9%;
@@ -419,9 +434,10 @@ html.lenis body {
   .landing-title {
     --title-size: calc(clamp(2.75rem, 1rem + 9vw, 5.5rem) * var(--display-scale));
   }
+  /* No alto, abaixo do controle de pausa. */
   .landing-hero {
     bottom: auto;
-    top: 5%;
+    top: 4.25rem;
     left: 1rem;
     right: 1rem;
     width: auto;
@@ -447,6 +463,6 @@ html.lenis body {
     background: color-mix(in srgb, var(--c-bg) 88%, transparent);
   }
   .landing-collection {
-    top: 4%;
+    top: 4.25rem;
   }
 }

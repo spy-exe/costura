@@ -14,10 +14,15 @@ export interface LandingStore {
   pointer: { x: number; y: number; active: boolean };
   /** Seção visível na tela; fora dela a cena para de desenhar. */
   visible: boolean;
+  /**
+   * Movimento autônomo pausado pela pessoa (WCAG 2.2.2): vento e poeira param. A rolagem continua
+   * mandando na câmera, porque esse movimento é ela quem provoca.
+   */
+  paused: boolean;
 }
 
 export function createLandingStore(): LandingStore {
-  return { progress: 0, pointer: { x: 0, y: 0, active: false }, visible: true };
+  return { progress: 0, pointer: { x: 0, y: 0, active: false }, visible: true, paused: false };
 }
 
 /** A cena recebe a referência, não o objeto: o valor é lido só dentro de useFrame e de efeitos. */

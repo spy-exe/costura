@@ -89,6 +89,10 @@ Com `prefers-reduced-motion` ou economia de dados, não há seção fixa nem câ
 
 Sem WebGL, a experiência usa a mesma versão estática. Quando existirem quadros pré-renderizados da marca, ela usa esses quadros controlados pela rolagem.
 
+## Pausa
+
+Vento e poeira se movem sozinhos. Um botão no canto superior direito ("Pausar o movimento", com `aria-pressed`) congela esse movimento, como pede a WCAG 2.2.2. A câmera, a cortina e a arara continuam seguindo a rolagem, porque esse movimento é a pessoa quem provoca. O botão só aparece nos níveis em tempo real.
+
 ## Linguagem de movimento
 
 | Uso | Curva | Onde |
