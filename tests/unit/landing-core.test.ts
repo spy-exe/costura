@@ -103,6 +103,8 @@ describe("coreografia", () => {
     expect(railCaptionRange(0, 4).start).toBeLessThan(SCENES.rail.start);
     expect(railCaptionRange(3, 4).end).toBeGreaterThan(SCENES.collection.start);
     expect(railCaptionRange(0, 1)).toEqual(SCENES.rail);
+    // Uma legenda por vez: a próxima só começa quando a anterior termina.
+    for (let i = 0; i < 3; i++) expect(railCaptionRange(i, 4).end).toBeLessThanOrEqual(railCaptionRange(i + 1, 4).start);
   });
 
   it("peças ficam espaçadas ao longo da arara", () => {

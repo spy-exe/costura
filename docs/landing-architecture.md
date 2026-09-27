@@ -52,7 +52,7 @@ requestAnimationFrame (R3F) ─► Director: sample(store.progress, orientação
                                    └─► Effects: distância de foco
 ```
 
-**Uma fonte de verdade:** o progresso da linha do tempo GSAP. As camadas DOM e a cena 3D leem o mesmo número; as faixas de cada cena estão em `SCENES`, usadas pelos dois lados.
+**Uma fonte de verdade:** o progresso da linha do tempo GSAP. As camadas DOM e a cena 3D leem o mesmo número. As faixas de cada cena estão em `SCENES` e as das camadas de texto em `LAYERS` e `railCaptionRange`, todas em `choreography.ts`. O E2E rola até essas mesmas faixas.
 
 **Nada de estado React por quadro:** rolagem e ponteiro vão para um objeto mutável (`useRef`). A cena lê esse objeto dentro de `useFrame` e muta objetos do three diretamente, como recomenda o React Three Fiber. Por isso a regra `react-hooks/immutability` está desligada só em `src/ui/landing/three/**`, com a justificativa no `eslint.config.mjs`.
 

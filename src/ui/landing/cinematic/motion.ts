@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-import { SCENES, railCaptionRange } from "@/core/landing/choreography";
+import { LAYERS, SCENES, railCaptionRange } from "@/core/landing/choreography";
 import type { LandingStore } from "../store";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -21,14 +21,12 @@ const DURATION = { line: 0.035, lineStagger: 0.012, enter: 0.035, exit: 0.03, ca
 
 /** Progresso em que cada camada fica plenamente visível, para levar o foco do teclado até ela. */
 function focusProgress(layer: Element, railCount: number): number {
+  const middle = ({ start, end }: { start: number; end: number }) => (start + end) / 2;
   const kind = layer.getAttribute("data-layer");
-  if (kind === "weave") return 0.22;
-  if (kind === "rail-title") return SCENES.rail.start + 0.02;
-  if (kind === "caption") {
-    const { start, end } = railCaptionRange(Number(layer.getAttribute("data-index")), railCount);
-    return (start + end) / 2;
-  }
-  if (kind === "collection") return 0.84;
+  if (kind === "weave") return middle(LAYERS.weave);
+  if (kind === "rail-title") return middle(LAYERS.railTitle);
+  if (kind === "caption") return middle(railCaptionRange(Number(layer.getAttribute("data-index")), railCount));
+  if (kind === "collection") return middle(LAYERS.collection);
   return 0;
 }
 
@@ -97,13 +95,13 @@ export function createLandingMotion({ section, store, smooth, railCount }: Optio
       timeline.to(targets, { y: -24, opacity: 0, duration: DURATION.exit, ease: EASE.exit }, out);
     };
 
-    reveal(q('[data-layer="weave"]'), 0.17, 0.265);
-    reveal(q('[data-layer="rail-title"]'), SCENES.curtain.end - 0.02, SCENES.collection.start - 0.005, 0.03);
+    reveal(q('[data-layer="weave"]'), LAYERS.weave.start, LAYERS.weave.end);
+    reveal(q('[data-layer="rail-title"]'), LAYERS.railTitle.start, LAYERS.railTitle.end, 0.03);
     q('[data-layer="caption"]').forEach((caption, i) => {
       const { start, end } = railCaptionRange(i, railCount);
       reveal([caption], start, end - DURATION.caption, DURATION.caption);
     });
-    reveal(q('[data-layer="collection"]'), SCENES.collection.start + 0.03, SCENES.exit.start + 0.045);
+    reveal(q('[data-layer="collection"]'), LAYERS.collection.start, LAYERS.collection.end);
 
     // Saída: o canvas se dissolve na cor de fundo e a loja assume.
     timeline.to(q("[data-landing-canvas]"), { opacity: 0, duration: 1 - (SCENES.exit.start + 0.03), ease: "power1.inOut" }, SCENES.exit.start + 0.03);

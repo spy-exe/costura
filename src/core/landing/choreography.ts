@@ -20,6 +20,17 @@ export const SCENES = {
 
 export type SceneName = keyof typeof SCENES;
 
+/**
+ * Faixas das camadas de texto DOM: entrada em `start`, saída a partir de `end`. As legendas das peças
+ * seguem o foco da arara (railCaptionRange).
+ */
+export const LAYERS = {
+  weave: { start: 0.17, end: 0.265 },
+  railTitle: { start: SCENES.curtain.end - 0.02, end: SCENES.collection.start - 0.005 },
+  // A coleção entra com o recuo da câmera quase completo: antes disso o texto cruzaria a arara.
+  collection: { start: SCENES.collection.start + 0.075, end: SCENES.exit.start + 0.045 },
+} as const;
+
 /** Medidas do estúdio em metros. O pano principal fica à direita do título; a arara desce do urdimento. */
 export const STAGE = {
   sheet: { x: 1.15, topY: 3.55, width: 2.3, height: 3.25, z: 0 },
@@ -212,10 +223,11 @@ export function railCaptionRange(index: number, count: number): { start: number;
   const { start, end } = SCENES.rail;
   if (count <= 1) return { start, end };
   const span = (end - start) / (count - 1);
-  // A primeira peça aparece desde a chegada da arara; a última permanece até a coleção.
+  // Cada legenda ocupa o trecho inteiro da sua peça: sai e a próxima entra enquanto a câmera anda,
+  // e fica plena durante a pausa. A primeira aparece desde a chegada da arara; a última fica até a coleção.
   const center = start + index * span;
   return {
-    start: index === 0 ? SCENES.curtain.end - 0.03 : center - span * 0.4,
-    end: index === count - 1 ? SCENES.collection.start + 0.02 : center + span * 0.4,
+    start: index === 0 ? SCENES.curtain.end - 0.03 : center - span / 2,
+    end: index === count - 1 ? SCENES.collection.start + 0.02 : center + span / 2,
   };
 }

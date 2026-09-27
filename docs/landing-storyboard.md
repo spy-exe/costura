@@ -59,7 +59,7 @@ Comprimento da rolagem: 6 telas no desktop, 5,5 no tablet e 4,5 no celular.
 - **Transformação:** travelling lateral pela arara, de peça em peça.
 - **Ritmo:** cada peça fica parada 55% do seu trecho (metade na chegada e metade na saída), e o resto é deslocamento com `power2.inOut`. A leitura do preço acontece com a câmera parada.
 - **Foco:** a profundidade de campo segue a peça em foco (só no nível alto).
-- **Entra por peça:** legenda DOM com categoria, nome, preço e o link "Ver peça", que troca em crossfade quando o foco passa de uma peça para a outra.
+- **Entra por peça:** legenda DOM em cartão, com categoria, nome, preço e o link "Ver peça". Ela fica plena durante a pausa da câmera e troca enquanto a câmera anda: a legenda anterior sai e a próxima entra, uma por vez. O cartão tem o fundo do site a 88%, porque a peça vizinha pode passar por trás do texto.
 - **Teclado:** focar o link de uma peça rola a página até o trecho em que ela aparece.
 - **Produto:** 4 peças por marca, cada uma impressa num painel de tecido pendurado num cabide. O cabide é um GLB comprimido com Meshopt. A peça pode trocar o painel por um modelo GLB próprio quando existir.
 
@@ -67,7 +67,7 @@ Comprimento da rolagem: 6 telas no desktop, 5,5 no tablet e 4,5 no celular.
 
 - **Transformação:** a câmera recua e sobe até enquadrar a arara inteira.
 - **Vento:** o dos painéis diminui (0,8 para 0,45); as peças assentam.
-- **Entra:** o título da coleção (vindo do catálogo), a descrição e o botão da coleção, centralizados no alto.
+- **Entra:** o título da coleção (vindo do catálogo), a descrição e o botão da coleção, centralizados no alto. Eles entram só a partir de 83,5%, com o recuo da câmera quase completo, porque antes disso o texto cruzaria a arara.
 - **Sai:** a legenda da última peça, no começo da cena.
 
 ## Cena 06: Saída (90 a 100%)

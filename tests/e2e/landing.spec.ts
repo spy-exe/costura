@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { LAYERS, railCaptionRange } from "../../src/core/landing/choreography";
 import { resetCatalog, watchErrors } from "./helpers";
 
 // Nível "poster": toda a coreografia DOM, sem WebGL. A GPU da CI é emulada por software e deixaria os
@@ -38,15 +39,17 @@ test("a rolagem troca as camadas na ordem do storyboard", async ({ page }) => {
   await expect(page.locator('[data-landing="cinematic"]')).toBeVisible();
   await page.waitForFunction(() => document.querySelector("[data-hero-line]") !== null);
 
-  await scrollLanding(page, 0.22);
+  const middle = ({ start, end }: { start: number; end: number }) => (start + end) / 2;
+  await scrollLanding(page, middle(LAYERS.weave));
   await expect.poll(() => opacity(page, '[data-layer="weave"]')).toBeGreaterThan(0.9);
   await expect.poll(() => opacity(page, "[data-hero-line]")).toBeLessThan(0.1);
 
-  await scrollLanding(page, 0.5);
+  const first = railCaptionRange(0, await page.locator('[data-layer="caption"]').count());
+  await scrollLanding(page, middle(first));
   await expect.poll(() => opacity(page, '[data-layer="caption"][data-index="0"]')).toBeGreaterThan(0.9);
   await expect.poll(() => opacity(page, '[data-layer="weave"]')).toBeLessThan(0.1);
 
-  await scrollLanding(page, 0.84);
+  await scrollLanding(page, middle(LAYERS.collection));
   await expect.poll(() => opacity(page, '[data-layer="collection"]')).toBeGreaterThan(0.9);
   await expect(page.locator('[data-layer="collection"]').getByRole("link")).toHaveAttribute("href", /\/colecao\//);
 });
