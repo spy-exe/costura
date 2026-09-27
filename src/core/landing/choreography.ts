@@ -88,8 +88,9 @@ const FRAMING: Record<Orientation, Framing> = {
     reveal: (x) => ({ position: [x + 0.9, 1.9, 3.6], target: [x + 1.2, 1.9, rail.z], fov: 34 }),
     // A câmera mira à esquerda da peça: ela fica à direita do quadro e a legenda ocupa a esquerda.
     railCamera: (x) => ({ position: [x - 0.25, 1.8, rail.z + 3.7], target: [x - 0.55, 1.82, rail.z], fov: 28 }),
-    collection: (midX) => ({ position: [midX, 2.15, rail.z + 8.6], target: [midX, 1.7, rail.z], fov: 32 }),
-    exit: (midX) => ({ position: [midX, 3.2, rail.z + 9.6], target: [midX, 1.95, rail.z], fov: 32 }),
+    // Mira acima da arara: ela desce para o meio do quadro e o terço de cima fica livre para o texto da coleção.
+    collection: (midX) => ({ position: [midX, 2.4, rail.z + 8.6], target: [midX, 2.2, rail.z], fov: 32 }),
+    exit: (midX) => ({ position: [midX, 3.3, rail.z + 9.6], target: [midX, 2.3, rail.z], fov: 32 }),
   },
   portrait: {
     // Retrato: o pano preenche a tela e vira o fundo do título; o varão fica acima do quadro.
