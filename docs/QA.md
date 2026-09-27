@@ -1,6 +1,40 @@
 # QA
 
-Última rodada: 2026-09-25, commit `ea60284`, em produção em https://roupas-website.malha.app (Alvorada) e na rede interna (OBRA, porta 3001).
+Última rodada da loja: 2026-09-25, commit `ea60284`. Última rodada da abertura cinematográfica: 2026-09-26 (seção abaixo). As duas foram feitas em produção, em https://roupas-website.malha.app (Alvorada), e na rede interna (OBRA, porta 3001).
+
+## Abertura cinematográfica
+
+**Ambiente:** o servidor não tem GPU. As capturas usam Chromium headless com SwiftShader e o nível baixo forçado (`?qualidade=low`), com 4 s de espera por ponto de rolagem. Nessa GPU emulada a câmera amortecida demora a assentar. Os enquadramentos intermediários das capturas são mais atrasados que num aparelho real, e o fps delas não significa nada.
+
+**Varredura visual em produção:**
+- resoluções: 1920 × 1080, 1440 × 900, 1366 × 768, 1024 × 768, 768 × 1024 e 430 × 932, na Alvorada; abertura, pôster e versão estática da OBRA em 1920, 1440, 1024 e 430;
+- pontos de rolagem: abertura, trama, cortina, arara e coleção;
+- console: só o erro conhecido do beacon da Cloudflare, mais dois avisos de biblioteca (`THREE.Clock` obsoleto, vindo do React Three Fiber, e a extensão de compilação paralela ausente no SwiftShader).
+- 390 × 844: coberta pela regressão visual (versão estática) e pelo E2E no Pixel 7.
+
+**Navegadores (E2E na CI):**
+- Chromium nas duas marcas, Firefox, WebKit e Pixel 7 rodam o roteiro da abertura: camadas na ordem, foco do teclado até a peça, atalho para pular, versão estática com movimento reduzido e falha de WebGL sem derrubar a página;
+- a cena em tempo real carrega no Chromium, no WebKit e no Pixel 7. O Firefox headless da CI recusa WebGL2 sem GPU, então lá o teste da cena é pulado e vale o de falha.
+
+**Defeitos encontrados e corrigidos:**
+
+| Defeito | Como apareceu | Correção |
+| --- | --- | --- |
+| Legenda da peça em cima da foto da peça vizinha | Capturas em 1920, 1366 e 1024 | Legenda em cartão com o fundo do site a 88% |
+| Legenda só ficava plena em parte da pausa da câmera | E2E e revisão das faixas | Cada legenda ocupa o trecho inteiro da peça, uma por vez |
+| Título e botão da coleção cruzando a arara | Capturas em 1024 × 768 e 1366 × 768 | Coleção entra com o recuo quase completo; câmera mira acima da arara |
+| Pano amassado no centro até o mouse se mexer; no toque, amassado permanente | Pôster da OBRA | Empurrão e paralaxe só com mouse sobre a seção |
+| Homepage inteira virava tela de erro quando o WebGL era recusado | E2E no Firefox | Barreira de erro em volta da cena; cai no pôster |
+| 95 s de bloqueio da thread principal no Lighthouse | Lighthouse da CI (sem GPU) | GPU emulada por software conta como sem WebGL (ver performance.md) |
+| Prefetch das páginas das legendas escondidas na carga | Erro de página no WebKit | `prefetch={false}` nos links que começam invisíveis |
+| Smoke do WebKit instável (prefetch cancelado pela navegação) | CI | Teste espera a rede parar antes de trocar de página |
+| Título da OBRA (caixa alta expandida) por cima do pano na paisagem | Pôster da OBRA na versão estática, 1440 px | Título dimensionado para caber na coluna; pano no terço direito |
+| Cena sem controle de pausa (a cena antiga tinha), WCAG 2.2.2 | Revisão da documentação | Botão "Pausar o movimento" com `aria-pressed` |
+
+**Não executado:**
+- fps e rebaixamento de nível em GPU real, com iPhone, Android intermediário, notebook com GPU integrada e desktop (roteiro em performance.md);
+- Safari de verdade: o WebKit do Playwright não é o Safari do iOS;
+- leitor de tela na abertura: os textos são DOM comum e o canvas é `aria-hidden`, mas não houve rodada com NVDA ou VoiceOver.
 
 ## Resumo
 

@@ -80,6 +80,6 @@ POST /api/cart
 | Preço e estoque da sacola e do checkout | nunca em cache | consulta a cada leitura |
 | `/api/cart`, `/carrinho`, `/checkout` | `private, no-store` | nunca compartilhado |
 
-## Cena WebGL
+## Abertura cinematográfica
 
-`src/ui/home/editorial-scene.tsx` só existe quando a marca liga `features.editorialScene`. A foto estática é sempre renderizada; o módulo `three` é importado sob demanda quando a seção chega perto da tela. A cena pausa fora da tela e com a aba oculta, limita a densidade de pixels a 1,5, tem botão de pausa, não carrega com `prefers-reduced-motion` nem sem WebGL, e volta para a foto se o contexto WebGL for perdido.
+A homepage abre com uma cena WebGL controlada pela rolagem quando a marca define `stage` e `content.home.experience`. Módulos, níveis de qualidade, carregamento e assets estão em [landing-architecture.md](landing-architecture.md); o roteiro, em [landing-storyboard.md](landing-storyboard.md). Resumo do que protege a loja: textos e links sempre em DOM, cena carregada fora do caminho da primeira pintura, versão estática com movimento reduzido, economia de dados ou GPU por software, barreira de erro que devolve o pôster, e controle para pausar o movimento autônomo.

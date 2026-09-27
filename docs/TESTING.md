@@ -43,7 +43,7 @@ Exclusões e motivo:
 | `src/ui/landing/three/**` | Componentes React Three Fiber: WebGL não existe no jsdom | Lógica em `src/core/landing` (unidade), cena montada no E2E (`landing.spec.ts`, nível baixo forçado) e QA visual |
 | `brands/*/fonts.ts` | `next/font` só resolve no build | Build |
 
-Última medição local (2026-09-26, Vitest 5.0.1, `npm run test:coverage`): 174 testes; 91,9% statements, 88,8% ramos, 91,5% funções, 93,2% linhas; gates críticos aprovados. A queda em relação à fase anterior (96,3% statements) vem dos componentes cliente da abertura: o carregamento da cena e o sequenciador de quadros dependem de WebGL e canvas, e são cobertos pelo E2E.
+Última medição local (2026-09-26, Vitest 5.0.1, `npm run test:coverage`): 177 testes; 93,4% statements, 90,2% ramos, 92,9% funções, 94,7% linhas; gates críticos aprovados. A queda em relação à fase anterior (96,3% statements) vem dos componentes cliente da abertura: o carregamento da cena e o sequenciador de quadros dependem de WebGL e canvas, e são cobertos pelo E2E.
 
 ## Matriz
 
