@@ -40,10 +40,10 @@ Exclusões e motivo:
 | Arquivo | Motivo | Coberto por |
 | --- | --- | --- |
 | `src/app/**/page.tsx`, `layout.tsx`, `loading.tsx`, `not-found.tsx`, `error.tsx`, `global-error.tsx`, `robots.ts`, `sitemap.ts` | Componentes de servidor assíncronos que dependem do runtime do Next | E2E |
-| `src/ui/home/scene/cloth.ts` | WebGL não existe no jsdom | E2E de movimento reduzido e QA manual; o componente que o controla é testado |
+| `src/ui/landing/three/**` | Componentes React Three Fiber: WebGL não existe no jsdom | Lógica em `src/core/landing` (unidade), cena montada no E2E (`landing.spec.ts`, nível baixo forçado) e QA visual |
 | `brands/*/fonts.ts` | `next/font` só resolve no build | Build |
 
-Última medição local (2026-09-25, Vitest 5.0.1, `npm run test:coverage`): 142 testes; 96,3% statements, 91,9% ramos, 95,7% funções, 97,5% linhas; gates críticos aprovados.
+Última medição local (2026-09-26, Vitest 5.0.1, `npm run test:coverage`): 174 testes; 91,9% statements, 88,8% ramos, 91,5% funções, 93,2% linhas; gates críticos aprovados. A queda em relação à fase anterior (96,3% statements) vem dos componentes cliente da abertura: o carregamento da cena e o sequenciador de quadros dependem de WebGL e canvas, e são cobertos pelo E2E.
 
 ## Matriz
 
@@ -67,6 +67,12 @@ Exclusões e motivo:
 | Troca de marca sem alterar o core | `check:brand`, unidade (`brands`), E2E nas duas marcas |
 | Teclado, foco, diálogos com Escape e retorno de foco | componente, E2E |
 | Movimento reduzido não carrega WebGL | E2E |
+| Coreografia da abertura: cenas sem buracos, câmera sem saltos, antecipação da cortina, foco da arara com pausas, uma legenda por vez | unidade (`landing-core`) |
+| Nível de qualidade: movimento reduzido, economia de dados, sem WebGL, GPU por software, rebaixamento sem voltar ao estático | unidade, componente |
+| Versões da abertura (estática, pôster, cinematográfica) com o mesmo roteiro, peças e preços do catálogo | componente (`landing-ui`), E2E |
+| Camadas de texto trocam na ordem do storyboard; foco do teclado rola até a peça | componente, E2E |
+| Cena 3D carrega sobre o pôster sem erro de console (GLB, Draco, CSP) | E2E, nível baixo forçado |
+| Abertura em Chromium, Firefox, WebKit e celular | E2E |
 | WCAG A/AA automático (axe) | E2E |
 | Isolamento do cookie por marca e ambiente, `no-store` | unidade, E2E |
 | Não indexação da demonstração, cabeçalhos de segurança | unidade, E2E |

@@ -4,9 +4,11 @@ Core de e-commerce de roupas para várias empresas com o mesmo código. Cada imp
 
 Demonstração: **https://roupas-website.malha.app** (marca fictícia Alvorada, em modo demonstração: nada é vendido nem cobrado).
 
+A homepage abre com uma experiência cinematográfica em WebGL controlada pela rolagem: um pano em estúdio, a trama de perto, a cortina que revela uma arara com peças do catálogo e a coleção. Títulos, preços e links continuam em DOM. Aparelhos modestos recebem um nível mais leve; movimento reduzido, economia de dados e aparelhos sem GPU recebem uma versão estática com o mesmo roteiro. Ver [docs/landing-architecture.md](docs/landing-architecture.md).
+
 ## Stack
 
-Next.js 16 (App Router), React 19, TypeScript 5.9 estrito, Tailwind CSS 4, Zod 4, Lucide, Three.js (opcional, por marca), Vitest 5 com Testing Library, Playwright 1.63 com axe-core. Node 24.18 e npm 11.16, fixados em `.nvmrc` e `packageManager`.
+Next.js 16 (App Router), React 19, TypeScript 5.9 estrito, Tailwind CSS 4, Zod 4, Lucide. Abertura com Three.js, React Three Fiber, drei e postprocessing, GSAP com ScrollTrigger e Lenis, carregados fora do caminho da primeira pintura. Vitest 5 com Testing Library, Playwright 1.63 com axe-core. Node 24.18 e npm 11.16, fixados em `.nvmrc` e `packageManager`.
 
 ## Rodar localmente
 
@@ -29,6 +31,10 @@ Sem variáveis de ambiente o projeto sobe em modo demonstração, com catálogo 
 | `node scripts/build-brand.mjs <marca>` | Build de produção de uma marca em `.next-<marca>/standalone` |
 | `npm run test:e2e` | E2E nas duas marcas, em Chromium, Firefox, WebKit e celular (precisa dos builds) |
 | `deploy/release.sh <marca>` | Publica no servidor, com verificação de saúde e rollback |
+| `npm run assets:hanger` | Gera o cabide GLB de exemplo (Meshopt) |
+| `node scripts/assets/render-landing.mjs <url> <marca>` | Renderiza o pôster e a sequência de quadros da abertura a partir da própria cena |
+
+Para comparar os níveis da abertura, acrescente `?qualidade=high`, `medium`, `low`, `sequence`, `poster` ou `static` ao endereço.
 
 ## Configurar outra empresa
 
