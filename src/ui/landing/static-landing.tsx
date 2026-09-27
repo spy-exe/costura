@@ -17,8 +17,10 @@ export function StaticLanding({ data }: { data: LandingData }) {
             <Image src={poster.landscape} alt="" fill priority sizes="100vw" className="object-cover" />
           </picture>
         )}
-        <div className="wrap landing-hero-static py-16">
-          <HeroCopy opening={experience.opening} />
+        <div className="landing-hero-static-frame py-16">
+          <div className="landing-hero-static">
+            <HeroCopy opening={experience.opening} />
+          </div>
         </div>
       </div>
 

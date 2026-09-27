@@ -34,6 +34,8 @@ export const brand = {
     displayCase: "uppercase",
     displayScale: 0.84,
     displayStretch: 125,
+    // Caixa alta expandida: até 0,94 em por caractere no título da abertura ("ROUPA").
+    displayGlyphWidth: 0.9,
   },
   contact: {
     email: "contato@obra.example",

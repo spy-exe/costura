@@ -96,6 +96,9 @@ describe("versão estática", () => {
     render(<StaticLanding data={data} />);
     const title = screen.getByRole("heading", { level: 1 });
     for (const line of data.experience.opening.title) expect(title).toHaveTextContent(line);
+    // O CSS dimensiona o título pela linha mais longa, para ela caber na coluna.
+    const longest = Math.max(...data.experience.opening.title.map((line) => line.length));
+    expect(title.style.getPropertyValue("--title-chars")).toBe(String(longest));
     expect(screen.getAllByRole("link", { name: data.experience.opening.primaryCta.label })[0]).toHaveAttribute("href", data.experience.opening.primaryCta.href);
     expect(screen.getByRole("heading", { level: 2, name: data.experience.weave.title })).toBeInTheDocument();
     for (const product of data.products) {

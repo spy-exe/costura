@@ -28,11 +28,11 @@ Comprimento da rolagem: 6 telas no desktop, 5,5 no tablet e 4 no celular.
 
 ## Cena 01: Abertura (0 a 12%)
 
-- **Estado inicial:** estúdio de fundo infinito na cor de fundo do site. Pano de 2,3 × 3,25 m pendurado por um trilho invisível, à direita do centro.
-- **Câmera:** 7,4 m, levemente abaixo do centro do pano, 30° de campo. Aproxima 0,8 m ao longo da cena (`power2.inOut`).
+- **Estado inicial:** estúdio de fundo infinito na cor de fundo do site. Pano de 2,3 × 3,25 m pendurado por um varão, à direita do centro.
+- **Câmera:** 7,4 m, levemente abaixo do centro do pano, 30° de campo, mirando à esquerda dele: o pano ocupa o terço direito e a coluna do título fica livre. Aproxima 0,8 m ao longo da cena (`power2.inOut`).
 - **Produto:** o pano. Vento contínuo com duas ondas cruzadas e borda superior presa.
 - **Luz:** principal rasante pelo lado (Alvorada) ou de cima (OBRA), revelando as dobras. Preenchimento frio e fraco. Softboxes no ambiente dão o brilho acetinado das fibras.
-- **Título:** à esquerda, em 2 a 4 linhas curtas, a maior tipografia da página. Abaixo, o texto de apoio e dois botões ("Ver a coleção" e "Toda a loja"). No pé, a dica de rolagem.
+- **Título:** à esquerda, em 1 a 4 linhas curtas, a maior tipografia da página. O tamanho é o da escala da marca, limitado para a linha mais longa caber na coluna de texto (34% da largura na paisagem). Abaixo, o texto de apoio e dois botões ("Ver a coleção" e "Toda a loja"). No pé, a dica de rolagem.
 - **Interação:** o mouse move a câmera em até ±12 cm com amortecimento, e o ponteiro sobre o pano empurra o tecido localmente. A dica de rolagem some nos primeiros 3%.
 - **Celular:** a câmera fica mais perto e o pano preenche a tela como fundo do título, com o varão acima do quadro. Numa tela estreita não cabem pano e título lado a lado.
 

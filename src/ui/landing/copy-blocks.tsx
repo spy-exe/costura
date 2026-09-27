@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import type { ExperienceContent } from "@/core/brand/schema";
 import type { LandingData, LandingProduct } from "./types";
 
@@ -8,6 +9,8 @@ import type { LandingData, LandingProduct } from "./types";
  */
 
 export function HeroCopy({ opening }: { opening: ExperienceContent["opening"] }) {
+  // A linha mais longa define o tamanho do título: ela precisa caber inteira na coluna (globals.css).
+  const longest = Math.max(...opening.title.map((line) => line.length));
   return (
     <>
       {opening.kicker && (
@@ -15,7 +18,7 @@ export function HeroCopy({ opening }: { opening: ExperienceContent["opening"] })
           {opening.kicker}
         </p>
       )}
-      <h1 id="landing-title" className="display landing-title">
+      <h1 id="landing-title" className="display landing-title" style={{ "--title-chars": longest } as CSSProperties}>
         {opening.title.map((line) => (
           <span key={line} className="block" data-hero-line>
             {line}{" "}

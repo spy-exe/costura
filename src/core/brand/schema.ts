@@ -95,6 +95,11 @@ export const brandSchema = z.object({
     displayScale: z.number().min(0.7).max(1.3),
     /** Largura da fonte de títulos (font-stretch), para famílias com eixo wdth. */
     displayStretch: z.number().int().min(75).max(125).default(100),
+    /**
+     * Largura de um caractere do título, em em, na caixa e na largura da marca (o maior valor medido entre
+     * as linhas). Com ela o título da abertura é dimensionado para a linha mais longa caber na coluna.
+     */
+    displayGlyphWidth: z.number().min(0.25).max(1.2).default(0.6),
   }),
   contact: z.object({
     email: z.email(),

@@ -25,7 +25,7 @@ export const content = {
     },
     experience: {
       opening: {
-        title: ["Roupa", "de trabalho", "para a cidade"],
+        title: ["Roupa de", "trabalho", "para a", "cidade"],
         body: "Jaquetas, camisas, calças e macacão em jeans, sarja e brim de algodão.",
         primaryCta: { label: "Ver os essenciais", href: "/colecao/essenciais" },
         secondaryCta: { label: "Toda a loja", href: "/loja" },

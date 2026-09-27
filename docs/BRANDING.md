@@ -22,10 +22,10 @@ mkdir -p public/brands/minha-marca
 | `favicon`, `ogImage` | SVG quadrado e JPG 1200×630 |
 | `colors` | 12 cores. O teste `tests/unit/brands.test.ts` exige contraste AA para texto (4,5:1) e 3:1 para o foco |
 | `shape` | Raio (`none`, `sm`, `md`) e caixa dos botões |
-| `typography` | Peso, espaçamento, caixa, escala e largura (`font-stretch`) dos títulos |
+| `typography` | Peso, espaçamento, caixa, escala e largura (`font-stretch`) dos títulos. `displayGlyphWidth` é a largura de um caractere do título em em (o maior valor medido entre as linhas da abertura); com ela o título da abertura é dimensionado para caber na coluna de texto |
 | `contact`, `social` | Canais reais de atendimento. Redes só com URL https |
 | `navigation` | Até 8 links principais e até 4 grupos no rodapé, sempre caminhos internos |
-| `features.editorialScene` | Liga a cena WebGL na homepage (exige `content.home.scene`) |
+| `stage` | Direção de arte da abertura cinematográfica: fundo, chão, névoa, tecido, luz, cabide e granulação (exige `content.home.experience`). Ver [landing-architecture.md](landing-architecture.md) |
 
 Logos com texto precisam ter o texto convertido em curvas: SVG dentro de `<img>` não carrega fonte.
 
@@ -35,7 +35,7 @@ No máximo duas famílias do Google Fonts via `next/font/google`, expondo `--fon
 
 ## 4. Conteúdo (`content.ts`)
 
-Abertura da homepage (`layout: "split"` ou `"full-bleed"`), título das categorias, coleção em destaque, bloco editorial, cena opcional, textos de "Sobre" e perguntas frequentes. Imagens com texto alternativo que descreve o que se vê.
+Abertura clássica da homepage (`layout: "split"` ou `"full-bleed"`), roteiro da abertura cinematográfica (`home.experience`: título em 1 a 4 linhas curtas, trama, 3 a 5 peças da arara e coleção de destino), título das categorias, coleção em destaque, bloco editorial, textos de "Sobre" e perguntas frequentes. Imagens com texto alternativo que descreve o que se vê.
 
 ## 5. Operação comercial (`commerce.ts`)
 
@@ -61,4 +61,5 @@ Inclua a marca em `tests/unit/brands.test.ts` e em `playwright.config.ts` para a
 - Nome longo com logo horizontal de duas linhas (Alvorada Costura Brasileira).
 - Nome curto com logo compacto só tipográfico (OBRA).
 - Títulos em caixa alta e largura expandida versus caixa normal com serifa.
-- Marca com e sem cena WebGL.
+- Abertura cinematográfica com luz lateral quente e tecido em tela (Alvorada) ou luz de cima fria e sarja (OBRA); sem `stage`, a homepage usa a abertura clássica.
+- Título da abertura em serifa estreita (0,36 em por caractere) e em caixa alta expandida (0,9 em).

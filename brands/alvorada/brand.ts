@@ -34,6 +34,8 @@ export const brand = {
     displayCase: "none",
     displayScale: 1.08,
     displayStretch: 100,
+    // Medido no título da abertura: até 0,35 em por caractere.
+    displayGlyphWidth: 0.36,
   },
   contact: {
     email: "atendimento@alvorada.example",

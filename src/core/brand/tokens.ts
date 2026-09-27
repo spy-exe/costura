@@ -25,6 +25,7 @@ export function brandCssVariables(brand: BrandConfig): Record<string, string> {
     "--display-case": brand.typography.displayCase,
     "--display-scale": String(brand.typography.displayScale),
     "--display-stretch": `${brand.typography.displayStretch}%`,
+    "--display-glyph": String(brand.typography.displayGlyphWidth),
   };
 }
 

@@ -82,8 +82,9 @@ const { sheet, rail } = STAGE;
 // Retrato: título no alto, pano centralizado mais abaixo, peças uma por vez na arara.
 const FRAMING: Record<Orientation, Framing> = {
   landscape: {
-    opening: { position: [0.15, 1.55, 7.4], target: [0.75, 1.72, 0], fov: 30 },
-    openingPush: { position: [0.3, 1.6, 6.6], target: [0.82, 1.76, 0], fov: 30 },
+    // A câmera mira à esquerda do pano: ele fica à direita do centro e a coluna do título fica livre.
+    opening: { position: [-0.2, 1.55, 7.4], target: [0.4, 1.72, 0], fov: 30 },
+    openingPush: { position: [-0.05, 1.6, 6.6], target: [0.47, 1.76, 0], fov: 30 },
     weave: { position: [sheet.x + 0.05, 2.1, 1.3], target: [sheet.x + 0.08, 2.08, sheet.z], fov: 26 },
     reveal: (x) => ({ position: [x + 0.9, 1.9, 3.6], target: [x + 1.2, 1.9, rail.z], fov: 34 }),
     // A câmera mira à esquerda da peça: ela fica à direita do quadro e a legenda ocupa a esquerda.

@@ -77,6 +77,8 @@ Decididos uma vez por visita em `capabilities.ts` (`decideTier`). Em tempo de ex
 
 **O rebaixamento em tempo de execução nunca volta ao estático:** trocar o layout no meio da rolagem faria o conteúdo pular.
 
+**Título que cabe na coluna:** `HeroCopy` publica o tamanho da linha mais longa em `--title-chars`, e o CSS limita o título a `100cqi / (--title-chars × --display-glyph)`, com a coluna de texto como contêiner. A marca informa a largura de um caractere do título em `typography.displayGlyphWidth`.
+
 **Falha da cena:** uma barreira de erro (`SceneBoundary`) envolve a cena e o sequenciador. Contexto WebGL recusado, shader que não compila, modelo ou pedaço de JavaScript que não carrega: a cena some, o pôster continua sob as mesmas camadas de texto e a seção ganha `data-scene-failed`. O nível vai direto para quadros ou pôster, sem tentar níveis menores, porque a falha não é de desempenho. Sem a barreira, o React Three Fiber relançaria o erro e a homepage inteira viraria a tela de erro.
 
 **`?qualidade=`:** força um nível (`high`, `medium`, `low`, `sequence`, `poster` ou `static`) para QA, E2E e suporte. O nível forçado não é rebaixado. Movimento reduzido vence o parâmetro.
@@ -130,9 +132,10 @@ O `ImageSequence` carrega os quadros de forma esparsa (1 a cada 8, depois 4, 2 e
 
 ## Configurar a abertura de uma marca
 
-1. **Direção de arte:** `brand.stage`, com fundo, chão, névoa, tecido (cor, trama, fios por metro, vento, brilho), luz (cor principal, preenchimento, direção "side" ou "top", intensidade), cabide e granulação.
-2. **Roteiro:** `content.home.experience`, com o título em linhas curtas, textos, 3 a 5 peças do catálogo na ordem da câmera e a coleção de destino.
-3. **Assets gerados:** rode o script de pôster e quadros com o servidor da marca de pé.
+1. **Tipografia:** meça a largura de um caractere do título (largura da linha ÷ tamanho da fonte ÷ caracteres, o maior valor entre as linhas) e informe em `typography.displayGlyphWidth`.
+2. **Direção de arte:** `brand.stage`, com fundo, chão, névoa, tecido (cor, trama, fios por metro, vento, brilho), luz (cor principal, preenchimento, direção "side" ou "top", intensidade), cabide e granulação.
+3. **Roteiro:** `content.home.experience`, com o título em linhas curtas, textos, 3 a 5 peças do catálogo na ordem da câmera e a coleção de destino.
+4. **Assets gerados:** rode o script de pôster e quadros com o servidor da marca de pé.
 
 Sem `stage` ou sem `experience`, a homepage usa a abertura clássica (`Hero`).
 

@@ -294,9 +294,29 @@ html.lenis body {
  * Abertura. Camadas animadas pela linha do tempo são posicionadas sem transform:
  * o GSAP é dono do transform delas.
  */
+/*
+ * Título da abertura: escala da marca, limitado para a linha mais longa (--title-chars, vindo do conteúdo)
+ * caber na coluna de texto com a largura de caractere da marca (--display-glyph).
+ */
+.landing-hero,
+.landing-hero-static {
+  container-type: inline-size;
+}
 .landing-title {
-  font-size: calc(clamp(3rem, 0.75rem + 6.6vw, 8.75rem) * var(--display-scale));
+  --title-size: calc(clamp(3rem, 0.75rem + 6.6vw, 8.75rem) * var(--display-scale));
+  font-size: min(var(--title-size), calc(100cqi / (var(--title-chars) * var(--display-glyph))));
   line-height: 0.9;
+}
+/* A versão estática alinha o texto como a abertura: pela borda da tela, não pelo centro da página. */
+.landing-hero-static-frame {
+  width: 100%;
+  padding-inline: max(1rem, 4vw);
+}
+/* Na paisagem, o texto ocupa a coluna à esquerda do pano, na abertura e no pôster da versão estática. */
+@media (min-aspect-ratio: 9/10) {
+  .landing-hero-static {
+    width: min(46rem, 34vw);
+  }
 }
 .landing-cinematic {
   position: relative;
@@ -340,7 +360,7 @@ html.lenis body {
   top: 0;
   bottom: 0;
   left: max(1rem, 4vw);
-  width: min(46rem, 46vw);
+  width: min(46rem, 34vw);
   justify-content: center;
 }
 .landing-scroll-hint {
@@ -397,7 +417,7 @@ html.lenis body {
 /* Retrato (celular e tablet em pé): título sobre o pano, legendas na base. */
 @media (max-aspect-ratio: 9/10) {
   .landing-title {
-    font-size: calc(clamp(2.75rem, 1rem + 9vw, 5.5rem) * var(--display-scale));
+    --title-size: calc(clamp(2.75rem, 1rem + 9vw, 5.5rem) * var(--display-scale));
   }
   .landing-hero {
     bottom: auto;
