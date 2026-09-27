@@ -48,13 +48,21 @@ export function WeaveCopy({ weave }: { weave: ExperienceContent["weave"] }) {
   );
 }
 
-export function ProductCaption({ product, cta }: { product: LandingProduct; cta: string }) {
+/**
+ * `prefetch={false}` na versão cinematográfica: as legendas ficam no viewport com opacidade zero desde a
+ * carga, e o Next buscaria todas as páginas de produto antes da primeira rolagem.
+ */
+interface LinkOptions {
+  prefetch?: boolean;
+}
+
+export function ProductCaption({ product, cta, prefetch }: { product: LandingProduct; cta: string } & LinkOptions) {
   return (
     <>
       <p className="text-sm text-muted">{product.category}</p>
       <h3 className="display display-md mt-1">{product.title}</h3>
       <p className="mt-2 text-lg tabular-nums">{product.price}</p>
-      <Link href={product.href} className="link mt-4 inline-flex min-h-11 items-center text-[0.9375rem]">
+      <Link href={product.href} prefetch={prefetch} className="link mt-4 inline-flex min-h-11 items-center text-[0.9375rem]">
         {cta}
         <span className="sr-only">: {product.title}</span>
       </Link>
@@ -62,12 +70,12 @@ export function ProductCaption({ product, cta }: { product: LandingProduct; cta:
   );
 }
 
-export function CollectionCopy({ collection }: { collection: LandingData["collection"] }) {
+export function CollectionCopy({ collection, prefetch }: { collection: LandingData["collection"] } & LinkOptions) {
   return (
     <>
       <h2 className="display display-lg">{collection.title}</h2>
       <p className="mx-auto mt-4 max-w-[40ch] leading-relaxed text-muted">{collection.description}</p>
-      <Link href={collection.href} className="btn btn-primary mt-7">
+      <Link href={collection.href} prefetch={prefetch} className="btn btn-primary mt-7">
         {collection.ctaLabel}
       </Link>
     </>

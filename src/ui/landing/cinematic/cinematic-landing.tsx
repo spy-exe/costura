@@ -160,13 +160,13 @@ export function CinematicLanding({ data, tier, onDowngrade }: Props) {
         <ol className="landing-rail-list">
           {products.map((product, index) => (
             <li key={product.handle} className="landing-layer landing-caption" data-layer="caption" data-index={index}>
-              <ProductCaption product={product} cta={experience.rail.productCta} />
+              <ProductCaption product={product} cta={experience.rail.productCta} prefetch={false} />
             </li>
           ))}
         </ol>
 
         <div className="landing-layer landing-collection" data-layer="collection">
-          <CollectionCopy collection={collection} />
+          <CollectionCopy collection={collection} prefetch={false} />
         </div>
       </div>
       {/* Destino de "Pular a abertura": o conteúdo da loja que vem depois da seção fixa. */}
