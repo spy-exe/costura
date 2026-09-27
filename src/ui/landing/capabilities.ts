@@ -5,20 +5,40 @@ import { decideTier, type Capabilities, type QualityTier } from "@/core/landing/
 
 const REDUCED_MOTION = "(prefers-reduced-motion: reduce)";
 
-let webgl2Cache: boolean | undefined;
+/** Rasterizadores por software: SwiftShader (Chrome sem GPU), llvmpipe e softpipe (Mesa), WARP (Windows). */
+const SOFTWARE_RENDERER = /swiftshader|llvmpipe|softpipe|software|basic render/i;
+/** Valor mascarado do Chromium e do Safari; o nome real vem da extensão de depuração. */
+const MASKED_RENDERER = /^webkit webgl$/i;
 
-/** Testa WebGL2 uma vez e libera o contexto de teste em seguida. */
-function hasWebgl2(): boolean {
-  if (webgl2Cache !== undefined) return webgl2Cache;
+interface WebglSupport {
+  webgl2: boolean;
+  softwareRenderer: boolean;
+}
+
+let webglCache: WebglSupport | undefined;
+
+function rendererName(gl: WebGL2RenderingContext): string {
+  const renderer = String(gl.getParameter(gl.RENDERER));
+  // O Firefox já entrega o nome em RENDERER e avisa que a extensão está obsoleta: só pede quando mascarado.
+  if (!MASKED_RENDERER.test(renderer)) return renderer;
+  const debug = gl.getExtension("WEBGL_debug_renderer_info");
+  return debug ? String(gl.getParameter(debug.UNMASKED_RENDERER_WEBGL)) : renderer;
+}
+
+/** Testa WebGL2 e o tipo de GPU uma vez, e libera o contexto de teste em seguida. */
+function webglSupport(): WebglSupport {
+  if (webglCache) return webglCache;
+  webglCache = { webgl2: false, softwareRenderer: false };
   try {
-    const canvas = document.createElement("canvas");
-    const gl = canvas.getContext("webgl2");
-    webgl2Cache = Boolean(gl);
-    gl?.getExtension("WEBGL_lose_context")?.loseContext();
+    const gl = document.createElement("canvas").getContext("webgl2");
+    if (gl) {
+      webglCache = { webgl2: true, softwareRenderer: SOFTWARE_RENDERER.test(rendererName(gl)) };
+      gl.getExtension("WEBGL_lose_context")?.loseContext();
+    }
   } catch {
-    webgl2Cache = false;
+    // Sem WebGL2: vale o padrão acima.
   }
-  return webgl2Cache;
+  return webglCache;
 }
 
 interface NavigatorHints {
@@ -31,7 +51,7 @@ export function readCapabilities(hasSequence: boolean): Capabilities {
   return {
     reducedMotion: window.matchMedia(REDUCED_MOTION).matches,
     saveData: nav.connection?.saveData === true,
-    webgl2: hasWebgl2(),
+    ...webglSupport(),
     width: window.innerWidth,
     coarsePointer: window.matchMedia("(pointer: coarse)").matches,
     hardwareConcurrency: nav.hardwareConcurrency,

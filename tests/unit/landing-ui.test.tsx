@@ -34,8 +34,22 @@ function mockMatchMedia(reduced: boolean) {
 
 afterEach(() => {
   vi.unstubAllGlobals();
+  vi.restoreAllMocks();
   window.history.replaceState(null, "", "/");
 });
+
+const GL_RENDERER = 0x1f01;
+const UNMASKED_RENDERER = 0x9246;
+
+/** Contexto WebGL2 mínimo: só o que a detecção de GPU lê. */
+function fakeWebgl(renderer: string, unmasked?: string) {
+  return {
+    RENDERER: GL_RENDERER,
+    getParameter: (name: number) => (name === GL_RENDERER ? renderer : unmasked),
+    getExtension: (name: string) =>
+      name === "WEBGL_debug_renderer_info" ? { UNMASKED_RENDERER_WEBGL: UNMASKED_RENDERER } : { loseContext: vi.fn() },
+  };
+}
 
 describe("dados da abertura no servidor", () => {
   it("monta peças com preço formatado, link e categoria, e a coleção do catálogo", async () => {
@@ -113,6 +127,22 @@ describe("escolha da versão", () => {
     mockMatchMedia(false);
     const { container } = render(<LandingExperience data={{ ...(await landingData()), sequence: undefined }} />);
     expect(container.querySelector('[data-landing="static"]')).toBeInTheDocument();
+  });
+
+  it("GPU emulada por software conta como aparelho sem WebGL", async () => {
+    mockMatchMedia(false);
+    const cases = [
+      ["WebKit WebGL", "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero)), SwiftShader driver)", true],
+      ["llvmpipe (LLVM 19.1.7, 256 bits)", undefined, true],
+      ["WebKit WebGL", "ANGLE (Apple, ANGLE Metal Renderer: Apple M2, Unspecified Version)", false],
+    ] as const;
+    for (const [renderer, unmasked, software] of cases) {
+      // O resultado fica em cache por visita: cada caso carrega o módulo de novo.
+      vi.resetModules();
+      vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockReturnValue(fakeWebgl(renderer, unmasked) as never);
+      const { readCapabilities } = await import("@/ui/landing/capabilities");
+      expect(readCapabilities(false)).toMatchObject({ webgl2: true, softwareRenderer: software });
+    }
   });
 
   it("nível forçado monta a versão cinematográfica com as camadas e o atalho para pular", async () => {

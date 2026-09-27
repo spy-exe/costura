@@ -127,6 +127,7 @@ const desktop: Capabilities = {
   reducedMotion: false,
   saveData: false,
   webgl2: true,
+  softwareRenderer: false,
   width: 1440,
   coarsePointer: false,
   hardwareConcurrency: 8,
@@ -143,6 +144,11 @@ describe("nível de qualidade", () => {
   it("sem WebGL usa quadros pré-renderizados quando existem", () => {
     expect(decideTier({ ...desktop, webgl2: false })).toBe("static");
     expect(decideTier({ ...desktop, webgl2: false, hasSequence: true })).toBe("sequence");
+  });
+
+  it("GPU emulada por software é tratada como sem WebGL", () => {
+    expect(decideTier({ ...desktop, softwareRenderer: true })).toBe("static");
+    expect(decideTier({ ...desktop, softwareRenderer: true, hasSequence: true })).toBe("sequence");
   });
 
   it("classifica desktop, tablet e celular", () => {

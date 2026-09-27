@@ -17,6 +17,11 @@ export interface Capabilities {
   reducedMotion: boolean;
   saveData: boolean;
   webgl2: boolean;
+  /**
+   * WebGL2 existe, mas a GPU é emulada por software (máquina virtual, GPU bloqueada, testes de laboratório
+   * como o Lighthouse). A cena roda a poucos quadros por segundo e trava a thread principal.
+   */
+  softwareRenderer: boolean;
   width: number;
   coarsePointer: boolean;
   hardwareConcurrency?: number;
@@ -87,7 +92,7 @@ export const SEQUENCE_SCROLL_LENGTH = QUALITY.low.scrollLength;
 
 export function decideTier(c: Capabilities): QualityTier {
   if (c.reducedMotion || c.saveData) return "static";
-  if (!c.webgl2) return c.hasSequence ? "sequence" : "static";
+  if (!c.webgl2 || c.softwareRenderer) return c.hasSequence ? "sequence" : "static";
   const cores = c.hardwareConcurrency ?? 4;
   const memory = c.deviceMemory ?? 4;
   if (memory <= 2 || cores <= 2) return "low";

@@ -69,9 +69,11 @@ Decididos uma vez por visita em `capabilities.ts` (`decideTier`). Em tempo de ex
 | high | Desktop largo, 6+ núcleos, 4+ GB | Sombras 2048, profundidade de campo, vinheta, granulação, poeira, DPR até 1,75, 6 telas de rolagem, Lenis |
 | medium | Tablet, notebook modesto, até 4 núcleos | Sombras 1024, poeira, DPR até 1,5, 5,5 telas, Lenis |
 | low | Celular, 2 GB ou menos | Sem sombras nem pós-processamento, malha menor, DPR até 1,25, 4 telas, rolagem nativa; a cena carrega na primeira rolagem |
-| sequence | Sem WebGL, com quadros pré-renderizados da marca | Canvas 2D desenhando o quadro da rolagem |
+| sequence | Sem WebGL ou com GPU emulada por software, com quadros pré-renderizados da marca | Canvas 2D desenhando o quadro da rolagem |
 | poster | A cena falhou em tempo de execução | Imagem parada sob as mesmas camadas DOM |
-| static | Movimento reduzido, economia de dados, sem WebGL e sem quadros | Composição estática, sem seção fixa |
+| static | Movimento reduzido, economia de dados, ou sem WebGL (ou com GPU por software) e sem quadros | Composição estática, sem seção fixa |
+
+**GPU emulada por software conta como sem WebGL:** SwiftShader (Chrome sem GPU ou com a GPU bloqueada), llvmpipe (Linux sem driver) e WARP (Windows) têm WebGL2, mas rodam a cena a poucos quadros por segundo e travam a thread principal. É também o caso do Lighthouse e do PageSpeed Insights, que rodam sem GPU. A detecção lê o nome do renderizador uma vez por visita.
 
 **O rebaixamento em tempo de execução nunca volta ao estático:** trocar o layout no meio da rolagem faria o conteúdo pular.
 

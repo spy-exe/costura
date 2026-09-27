@@ -22,7 +22,7 @@ A mesma cena serve às duas marcas. Luz, tecido e fundo vêm de `brand.stage`, e
 | Cabide | Latão escovado | Preto fosco |
 | Título | Serifa, caixa normal | Archivo expandido, caixa alta |
 
-Comprimento da rolagem: 6 telas no desktop, 5,5 no tablet e 4,5 no celular.
+Comprimento da rolagem: 6 telas no desktop, 5,5 no tablet e 4 no celular.
 
 ---
 
