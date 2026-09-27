@@ -38,6 +38,8 @@ export interface QualitySettings {
   sheetSegments: readonly [number, number];
   panelSegments: readonly [number, number];
   shadows: boolean;
+  /** Resolução do mapa de sombra da luz principal, em pixels. */
+  shadowMapSize: number;
   postprocessing: boolean;
   dust: number;
   environmentResolution: number;
@@ -54,6 +56,7 @@ export const QUALITY: Record<RealtimeTier, QualitySettings> = {
     sheetSegments: [72, 96],
     panelSegments: [40, 52],
     shadows: true,
+    shadowMapSize: 2048,
     postprocessing: true,
     dust: 260,
     environmentResolution: 256,
@@ -66,6 +69,7 @@ export const QUALITY: Record<RealtimeTier, QualitySettings> = {
     sheetSegments: [48, 64],
     panelSegments: [28, 36],
     shadows: true,
+    shadowMapSize: 1024,
     postprocessing: false,
     dust: 120,
     environmentResolution: 128,
@@ -78,6 +82,7 @@ export const QUALITY: Record<RealtimeTier, QualitySettings> = {
     sheetSegments: [32, 44],
     panelSegments: [18, 24],
     shadows: false,
+    shadowMapSize: 0,
     postprocessing: false,
     dust: 0,
     environmentResolution: 64,

@@ -81,7 +81,7 @@ export default function SceneRoot({ data, tier, store, active, onReady, onDowngr
         />
         <Director railCount={railCount}>
           <SceneEnvironment stage={stage} resolution={quality.environmentResolution} />
-          <LightingRig stage={stage} shadows={quality.shadows} shadowMapSize={tier === "high" ? 2048 : 1024} railCount={railCount} />
+          <LightingRig stage={stage} shadows={quality.shadows} shadowMapSize={quality.shadowMapSize} railCount={railCount} />
           <CameraRig parallax={tier !== "low"} />
           <Suspense fallback={null}>
             <HeroSheet stage={stage} segments={quality.sheetSegments} castShadow={quality.shadows} />
