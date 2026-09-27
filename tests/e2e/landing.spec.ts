@@ -73,11 +73,35 @@ test("a cena 3D carrega sobre o pôster no nível baixo", async ({ page }) => {
   test.slow();
   const errors = watchErrors(page);
   await page.goto("/?qualidade=low");
+  // O Firefox headless da CI recusa WebGL2 sem GPU; sem contexto, o que vale é o teste de falha abaixo.
+  const webgl2 = await page.evaluate(() => document.createElement("canvas").getContext("webgl2") !== null);
+  test.skip(!webgl2, "navegador sem WebGL2 neste ambiente");
   const section = page.locator('[data-landing="cinematic"]');
   await expect(section).toHaveAttribute("data-tier", "low");
   await expect(section).toHaveAttribute("data-ready", "true", { timeout: 60_000 });
   await expect(page.getByTestId("landing-canvas").locator("canvas")).toBeVisible();
   expect(errors).toEqual([]);
+});
+
+test("sem contexto WebGL a cena some e a página continua, com o pôster e os textos", async ({ page }) => {
+  // Simula a recusa do contexto: GPU bloqueada, contexto perdido ou limite de contextos do navegador.
+  await page.addInitScript(() => {
+    const original = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (this: HTMLCanvasElement, type: string, ...rest: unknown[]) {
+      return type === "webgl2" || type === "webgl" ? null : original.apply(this, [type, ...rest] as never);
+    } as typeof original;
+  });
+  await page.goto("/?qualidade=low");
+  const section = page.locator('[data-landing="cinematic"]');
+  await expect(section).toHaveAttribute("data-tier", "low");
+  // No nível baixo a cena é pedida na primeira rolagem.
+  await scrollLanding(page, 0.01);
+  await expect(section).toHaveAttribute("data-scene-failed", "true", { timeout: 20_000 });
+  await expect(page.getByTestId("landing-canvas").locator("canvas")).toHaveCount(0);
+  await expect(page.locator(".landing-poster")).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await scrollLanding(page, 0.5);
+  await expect.poll(() => opacity(page, '[data-layer="rail-title"]')).toBeGreaterThan(0.9);
 });
 
 test.describe("movimento reduzido", () => {

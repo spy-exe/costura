@@ -7,6 +7,7 @@ import { getCatalog } from "@/server/commerce";
 import { getLandingData } from "@/server/landing";
 import { forcedTier } from "@/ui/landing/capabilities";
 import { createLandingMotion } from "@/ui/landing/cinematic/motion";
+import { SceneBoundary } from "@/ui/landing/cinematic/scene-boundary";
 import { LandingExperience } from "@/ui/landing/landing-experience";
 import { frameUrl, loadOrder, nearestLoaded } from "@/ui/landing/sequence/image-sequence";
 import { StaticLanding } from "@/ui/landing/static-landing";
@@ -14,7 +15,14 @@ import { createLandingStore } from "@/ui/landing/store";
 import { textureUrl, type LandingData } from "@/ui/landing/types";
 
 // A cena e o sequenciador dependem de WebGL e canvas, ausentes no jsdom; os testes E2E cobrem os dois.
-vi.mock("@/ui/landing/three/scene-root", () => ({ default: () => null }));
+// A cena simulada pode falhar como uma cena real sem contexto WebGL.
+const scene = vi.hoisted(() => ({ fail: false }));
+vi.mock("@/ui/landing/three/scene-root", () => ({
+  default: () => {
+    if (scene.fail) throw new Error("contexto WebGL recusado");
+    return null;
+  },
+}));
 vi.mock("@/ui/landing/sequence/image-sequence", async (original) => ({ ...(await original()), default: () => null }));
 
 async function landingData(): Promise<LandingData> {
@@ -33,6 +41,7 @@ function mockMatchMedia(reduced: boolean) {
 }
 
 afterEach(() => {
+  scene.fail = false;
   vi.unstubAllGlobals();
   vi.restoreAllMocks();
   window.history.replaceState(null, "", "/");
@@ -158,6 +167,42 @@ describe("escolha da versão", () => {
     fireEvent.pointerMove(section, { pointerType: "touch", clientX: 10, clientY: 10 });
     fireEvent.pointerMove(section, { pointerType: "mouse", clientX: 10, clientY: 10 });
     fireEvent.pointerLeave(section, { pointerType: "mouse" });
+  });
+
+  it("barreira da cena avisa uma vez e some, sem derrubar o resto", () => {
+    const onFailure = vi.fn();
+    const Broken = () => {
+      throw new Error("shader não compilou");
+    };
+    // O React registra no console o erro capturado pela barreira; aqui ele é esperado.
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    const { container } = render(
+      <div>
+        <p>camadas de texto</p>
+        <SceneBoundary onFailure={onFailure}>
+          <Broken />
+        </SceneBoundary>
+      </div>,
+    );
+    expect(onFailure).toHaveBeenCalledTimes(1);
+    expect(container).toHaveTextContent("camadas de texto");
+  });
+
+  it("cena que falha num aparelho com GPU cai no pôster, sem a tela de erro", async () => {
+    mockMatchMedia(false);
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockReturnValue(
+      fakeWebgl("WebKit WebGL", "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Direct3D11 vs_5_0 ps_5_0)") as never,
+    );
+    scene.fail = true;
+    // Módulos novos: o nível decidido fica em cache por visita.
+    vi.resetModules();
+    const { LandingExperience: Fresh } = await import("@/ui/landing/landing-experience");
+    const { container } = render(<Fresh data={await landingData()} />);
+    const section = () => container.querySelector('[data-landing="cinematic"]');
+    expect(section()).toHaveAttribute("data-tier", "medium");
+    await vi.waitFor(() => expect(section()).toHaveAttribute("data-tier", "poster"), { timeout: 3000 });
+    expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
   });
 });
 

@@ -77,6 +77,8 @@ Decididos uma vez por visita em `capabilities.ts` (`decideTier`). Em tempo de ex
 
 **O rebaixamento em tempo de execução nunca volta ao estático:** trocar o layout no meio da rolagem faria o conteúdo pular.
 
+**Falha da cena:** uma barreira de erro (`SceneBoundary`) envolve a cena e o sequenciador. Contexto WebGL recusado, shader que não compila, modelo ou pedaço de JavaScript que não carrega: a cena some, o pôster continua sob as mesmas camadas de texto e a seção ganha `data-scene-failed`. O nível vai direto para quadros ou pôster, sem tentar níveis menores, porque a falha não é de desempenho. Sem a barreira, o React Three Fiber relançaria o erro e a homepage inteira viraria a tela de erro.
+
 **`?qualidade=`:** força um nível (`high`, `medium`, `low`, `sequence`, `poster` ou `static`) para QA, E2E e suporte. O nível forçado não é rebaixado. Movimento reduzido vence o parâmetro.
 
 ## Carregamento

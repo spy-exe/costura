@@ -8,6 +8,7 @@ import { SEQUENCE_SCROLL_LENGTH, QUALITY, type RealtimeTier } from "@/core/landi
 import { copy } from "@/ui/copy";
 import { CollectionCopy, HeroCopy, ProductCaption, WeaveCopy } from "../copy-blocks";
 import { createLandingStore, LandingStoreContext } from "../store";
+import { SceneBoundary } from "./scene-boundary";
 import type { LandingData } from "../types";
 
 // A cena e o sequenciador de quadros vêm em pedaços separados, fora do caminho da primeira pintura.
@@ -17,7 +18,10 @@ const ImageSequence = dynamic(() => import("../sequence/image-sequence"), { ssr:
 interface Props {
   data: LandingData;
   tier: RealtimeTier | "sequence" | "poster";
+  /** O aparelho não sustentou a taxa de quadros: desce um nível. */
   onDowngrade: () => void;
+  /** A cena falhou: vai direto para os quadros ou o pôster. */
+  onFailure: () => void;
 }
 
 /** Espera o navegador ficar ocioso depois do carregamento, com prazo máximo. */
@@ -37,7 +41,7 @@ function whenIdle(callback: () => void, timeout: number): () => void {
   };
 }
 
-export function CinematicLanding({ data, tier, onDowngrade }: Props) {
+export function CinematicLanding({ data, tier, onDowngrade, onFailure }: Props) {
   const { experience, products, collection, poster } = data;
   // Estado lido pela cena a cada quadro; mutado em eventos, nunca durante a renderização.
   const store = useRef(createLandingStore());
@@ -116,6 +120,13 @@ export function CinematicLanding({ data, tier, onDowngrade }: Props) {
 
   const onReady = useCallback(() => setReady(true), []);
 
+  // A falha fica marcada na seção (data-scene-failed) para o suporte e os testes.
+  const [sceneFailed, setSceneFailed] = useState(false);
+  const onSceneFailure = useCallback(() => {
+    setSceneFailed(true);
+    onFailure();
+  }, [onFailure]);
+
   return (
     <section
       ref={section}
@@ -124,6 +135,7 @@ export function CinematicLanding({ data, tier, onDowngrade }: Props) {
       data-landing="cinematic"
       data-tier={tier}
       data-ready={ready || undefined}
+      data-scene-failed={sceneFailed || undefined}
       style={{ height: `calc(${scrollLength * 100}svh)` }}
       onPointerMove={onPointerMove}
       onPointerLeave={onPointerLeave}
@@ -136,14 +148,16 @@ export function CinematicLanding({ data, tier, onDowngrade }: Props) {
               <Image src={poster.landscape} alt="" fill priority sizes="100vw" className="object-cover" />
             </picture>
           )}
-          {sceneWanted && realtime && (
-            <LandingStoreContext.Provider value={store}>
-              <SceneRoot data={data} tier={tier} store={store} active={active} onReady={onReady} onDowngrade={onDowngrade} />
-            </LandingStoreContext.Provider>
-          )}
-          {sceneWanted && tier === "sequence" && data.sequence && (
-            <ImageSequence manifest={data.sequence} store={store} active={active} onReady={onReady} />
-          )}
+          <SceneBoundary onFailure={onSceneFailure}>
+            {sceneWanted && realtime && (
+              <LandingStoreContext.Provider value={store}>
+                <SceneRoot data={data} tier={tier} store={store} active={active} onReady={onReady} onDowngrade={onDowngrade} />
+              </LandingStoreContext.Provider>
+            )}
+            {sceneWanted && tier === "sequence" && data.sequence && (
+              <ImageSequence manifest={data.sequence} store={store} active={active} onReady={onReady} />
+            )}
+          </SceneBoundary>
         </div>
 
         <div className="landing-layer landing-hero">
