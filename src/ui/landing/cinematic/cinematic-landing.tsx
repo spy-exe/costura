@@ -104,9 +104,15 @@ export function CinematicLanding({ data, tier, onDowngrade }: Props) {
       const rect = event.currentTarget.getBoundingClientRect();
       store.current.pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
       store.current.pointer.y = -(((event.clientY - rect.top) / rect.height) * 2 - 1);
+      store.current.pointer.active = true;
     },
     [store],
   );
+
+  // Fora da seção, a câmera volta ao centro e o pano deixa de ser empurrado.
+  const onPointerLeave = useCallback(() => {
+    store.current.pointer = { x: 0, y: 0, active: false };
+  }, [store]);
 
   const onReady = useCallback(() => setReady(true), []);
 
@@ -120,6 +126,7 @@ export function CinematicLanding({ data, tier, onDowngrade }: Props) {
       data-ready={ready || undefined}
       style={{ height: `calc(${scrollLength * 100}svh)` }}
       onPointerMove={onPointerMove}
+      onPointerLeave={onPointerLeave}
     >
       <div className="landing-sticky" style={{ backgroundColor: data.stage.background }}>
         <div className="landing-canvas" data-landing-canvas aria-hidden>

@@ -40,11 +40,16 @@ export function HeroSheet({ stage, segments, castShadow }: { stage: StageConfig;
   const tools = useMemo(() => ({ ray: new Raycaster(), plane: new Plane(new Vector3(0, 0, 1), -sheet.z), hit: new Vector3(), ndc: new Vector2() }), []);
   const live = useRef({ pull: 0, wind: stage.fabric.wind, push: 0, x: 0, y: -sheet.height / 2 });
 
-  // O ponteiro vale só enquanto o pano é o assunto (abertura e trama).
+  // O ponteiro vale só com um mouse sobre a seção e enquanto o pano é o assunto (abertura e trama).
   useFrame(() => {
     const l = live.current;
-    const interactive = frame.state.scene === "opening" || frame.state.scene === "weave";
-    tools.ndc.set(store.current.pointer.x, store.current.pointer.y);
+    const { pointer } = store.current;
+    const interactive = pointer.active && (frame.state.scene === "opening" || frame.state.scene === "weave");
+    if (!interactive) {
+      l.push = 0;
+      return;
+    }
+    tools.ndc.set(pointer.x, pointer.y);
     tools.ray.setFromCamera(tools.ndc, camera);
     const hit = tools.ray.ray.intersectPlane(tools.plane, tools.hit);
     const inside = hit && Math.abs(hit.x - sheet.x) < sheet.width / 2 && hit.y < sheet.topY && hit.y > sheet.topY - sheet.height;
@@ -52,7 +57,7 @@ export function HeroSheet({ stage, segments, castShadow }: { stage: StageConfig;
       l.x = hit.x - sheet.x;
       l.y = hit.y - sheet.topY;
     }
-    l.push = interactive && inside ? PUSH : 0;
+    l.push = inside ? PUSH : 0;
   });
 
   const drive: ClothDrive = (u, dt) => {

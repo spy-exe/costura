@@ -157,6 +157,7 @@ describe("escolha da versão", () => {
     // O ponteiro do mouse alimenta a paralaxe; toque não.
     fireEvent.pointerMove(section, { pointerType: "touch", clientX: 10, clientY: 10 });
     fireEvent.pointerMove(section, { pointerType: "mouse", clientX: 10, clientY: 10 });
+    fireEvent.pointerLeave(section, { pointerType: "mouse" });
   });
 });
 
