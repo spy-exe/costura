@@ -1,0 +1,591 @@
+{
+  "categories": [
+    {
+      "handle": "camisetas",
+      "title": "Camisetas",
+      "description": "Camisetas de malha pesada, manga longa e camisas.",
+      "image": "camiseta-resort"
+    },
+    {
+      "handle": "calcas-e-shorts",
+      "title": "Calças e shorts",
+      "description": "Jeans baggy e shorts de nylon.",
+      "image": "calca-baggy"
+    },
+    {
+      "handle": "tenis",
+      "title": "Tênis",
+      "description": "Tênis de skate para o dia inteiro.",
+      "image": "tenis-flat-core"
+    },
+    {
+      "handle": "feminino",
+      "title": "Feminino",
+      "description": "Cropped e peças da linha feminina.",
+      "image": "cropped-funcao-modelo"
+    }
+  ],
+  "collections": [
+    {
+      "handle": "novidades",
+      "title": "Drop da semana",
+      "description": "O que acabou de chegar na loja."
+    },
+    {
+      "handle": "plano-c",
+      "title": "Plano C",
+      "description": "Camisetas, jeans e shorts da Plano C."
+    },
+    {
+      "handle": "wanted",
+      "title": "Wanted",
+      "description": "Wanted e LadyBack, a linha feminina da marca."
+    },
+    {
+      "handle": "hocks",
+      "title": "Hocks",
+      "description": "Tênis de skate da Hocks."
+    }
+  ],
+  "sizeGuides": [
+    {
+      "id": "camisetas",
+      "title": "Camisetas e manga longa",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Largura",
+        "Comprimento",
+        "Manga"
+      ],
+      "rows": [
+        [
+          "P",
+          "54",
+          "72",
+          "22"
+        ],
+        [
+          "M",
+          "57",
+          "74",
+          "23"
+        ],
+        [
+          "G",
+          "60",
+          "76",
+          "24"
+        ],
+        [
+          "GG",
+          "63",
+          "78",
+          "25"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Largura",
+          "text": "de uma axila à outra, com a peça esticada."
+        },
+        {
+          "label": "Comprimento",
+          "text": "do ponto mais alto do ombro até a barra."
+        }
+      ]
+    },
+    {
+      "id": "calcas",
+      "title": "Calças",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Cintura",
+        "Quadril",
+        "Comprimento"
+      ],
+      "rows": [
+        [
+          "38",
+          "78",
+          "108",
+          "104"
+        ],
+        [
+          "40",
+          "82",
+          "112",
+          "105"
+        ],
+        [
+          "42",
+          "86",
+          "116",
+          "106"
+        ],
+        [
+          "44",
+          "90",
+          "120",
+          "107"
+        ],
+        [
+          "46",
+          "94",
+          "124",
+          "108"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Cintura",
+          "text": "de um lado ao outro do cós, com a peça fechada, multiplicado por dois."
+        },
+        {
+          "label": "Quadril",
+          "text": "na parte mais larga, 20 cm abaixo do cós, multiplicado por dois."
+        }
+      ]
+    },
+    {
+      "id": "shorts",
+      "title": "Shorts",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Cintura (elástico solto)",
+        "Comprimento"
+      ],
+      "rows": [
+        [
+          "P",
+          "76",
+          "48"
+        ],
+        [
+          "M",
+          "80",
+          "50"
+        ],
+        [
+          "G",
+          "84",
+          "52"
+        ],
+        [
+          "GG",
+          "88",
+          "54"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Cintura",
+          "text": "de um lado ao outro do elástico, sem esticar, multiplicado por dois."
+        }
+      ]
+    },
+    {
+      "id": "tenis",
+      "title": "Tênis",
+      "unit": "cm",
+      "columns": [
+        "Numeração",
+        "Comprimento do pé"
+      ],
+      "rows": [
+        [
+          "37",
+          "24,5"
+        ],
+        [
+          "38",
+          "25"
+        ],
+        [
+          "39",
+          "25,7"
+        ],
+        [
+          "40",
+          "26,4"
+        ],
+        [
+          "41",
+          "27"
+        ],
+        [
+          "42",
+          "27,7"
+        ],
+        [
+          "43",
+          "28,3"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Comprimento do pé",
+          "text": "do calcanhar à ponta do dedo mais longo, em pé, sobre uma folha de papel."
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "handle": "camiseta-plano-c-fountain",
+      "title": "Camiseta Plano C Fountain",
+      "category": "camisetas",
+      "colors": [
+        {
+          "images": [
+            "camiseta-fountain-branca"
+          ]
+        },
+        {
+          "images": [
+            "camiseta-fountain-areia",
+            "camiseta-fountain-areia-costas"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 18990,
+      "description": "Camiseta de malha pesada com o chafariz da Plano C: estampa na frente na branca, nas costas na areia.",
+      "details": {
+        "composition": "100% algodão, malha 30.1 penteada",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Oversized, ombro caído."
+      },
+      "sku": "NBC-CPCF",
+      "collections": [
+        "plano-c",
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "camisetas"
+    },
+    {
+      "handle": "camiseta-plano-c-resort",
+      "title": "Camiseta Plano C Resort",
+      "category": "camisetas",
+      "colors": [
+        {
+          "images": [
+            "camiseta-resort",
+            "camiseta-resort-costas"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 18990,
+      "description": "Camiseta branca com brasão pequeno no peito e o brasão do Plano C Resort Club grande nas costas.",
+      "details": {
+        "composition": "100% algodão, malha 30.1 penteada",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Oversized, ombro caído."
+      },
+      "sku": "NBC-CPCR",
+      "collections": [
+        "plano-c",
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "camisetas"
+    },
+    {
+      "handle": "manga-longa-o-jogo-das-ruas",
+      "title": "Manga longa O Jogo das Ruas",
+      "category": "camisetas",
+      "colors": [
+        {
+          "images": [
+            "manga-longa-jogo-das-ruas",
+            "manga-longa-jogo-das-ruas-costas",
+            "manga-longa-jogo-das-ruas-modelo"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 22990,
+      "description": "Manga longa preta da Wanted, com estampa pequena no peito, texto na manga e a arte \"Sagacidade\" grande nas costas.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Regular, punho canelado."
+      },
+      "sku": "NBC-MLOJD",
+      "collections": [
+        "wanted"
+      ],
+      "publishedAt": "2026-09-15T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "camisetas"
+    },
+    {
+      "handle": "camisa-entre-ruas-e-reis",
+      "title": "Camisa Entre Ruas e Reis",
+      "category": "camisetas",
+      "colors": [
+        {
+          "images": [
+            "camisa-entre-ruas-e-reis",
+            "camisa-entre-ruas-e-reis-costas",
+            "camisa-entre-ruas-e-reis-modelo",
+            "camisa-entre-ruas-e-reis-gola"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 27990,
+      "description": "Camisa de manga longa da Wanted no estilo uniforme de futebol: branca, faixas azuis nos ombros, gola polo e escudo no peito.",
+      "details": {
+        "composition": "100% poliéster com textura",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Ampla."
+      },
+      "sku": "NBC-CERER",
+      "collections": [
+        "wanted",
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "camisetas"
+    },
+    {
+      "handle": "tenis-hocks-flat-core",
+      "title": "Tênis Hocks Flat Core Cordura",
+      "category": "tenis",
+      "colors": [
+        {
+          "images": [
+            "tenis-flat-core",
+            "tenis-flat-core-cima",
+            "tenis-flat-core-par",
+            "tenis-flat-core-detalhe"
+          ]
+        }
+      ],
+      "sizes": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "price": 49990,
+      "description": "Tênis Hocks de cordura preta, cadarço branco largo e sola vulcanizada. Feito para andar de skate e para o dia inteiro.",
+      "details": {
+        "composition": "Cabedal de cordura, sola de borracha",
+        "care": [
+          "Limpar com pano úmido e sabão neutro.",
+          "Não lavar na máquina.",
+          "Secar à sombra."
+        ]
+      },
+      "sku": "NBC-THFC",
+      "collections": [
+        "hocks",
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "tenis"
+    },
+    {
+      "handle": "cropped-ladyback-funcao-2014",
+      "title": "Cropped LadyBack Função 2014",
+      "category": "feminino",
+      "colors": [
+        {
+          "images": [
+            "cropped-funcao",
+            "cropped-funcao-costas",
+            "cropped-funcao-modelo"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G"
+      ],
+      "price": 13990,
+      "description": "Camiseta cropped preta da LadyBack, a linha feminina da Wanted: logotipo pequeno no peito e assinatura grande nas costas.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Curta e ampla."
+      },
+      "sku": "NBC-CLF2",
+      "collections": [
+        "wanted"
+      ],
+      "publishedAt": "2026-09-15T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "camisetas"
+    },
+    {
+      "handle": "shorts-classic-nylon-plano-c",
+      "title": "Shorts Classic Nylon Plano C",
+      "category": "calcas-e-shorts",
+      "colors": [
+        {
+          "images": [
+            "shorts-nylon",
+            "shorts-nylon-costas"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 19990,
+      "description": "Shorts preto de nylon leve com cordão branco e bolso de botão atrás.",
+      "details": {
+        "composition": "100% poliamida",
+        "care": [
+          "Lavar à mão ou no ciclo delicado.",
+          "Não usar secadora.",
+          "Secar à sombra."
+        ],
+        "fit": "Acima do joelho, cintura com elástico."
+      },
+      "sku": "NBC-SCNPC",
+      "collections": [
+        "plano-c"
+      ],
+      "publishedAt": "2026-09-15T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "shorts"
+    },
+    {
+      "handle": "shorts-legacy-plano-c",
+      "title": "Shorts Legacy Plano C",
+      "category": "calcas-e-shorts",
+      "colors": [
+        {
+          "images": [
+            "shorts-legacy",
+            "shorts-legacy-costas",
+            "shorts-legacy-modelo"
+          ]
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 18990,
+      "description": "Shorts preto com vivo cinza na lateral e brasão pequeno, para a quadra e para a rua.",
+      "details": {
+        "composition": "100% poliéster",
+        "care": [
+          "Lavar à mão ou no ciclo delicado.",
+          "Não usar secadora.",
+          "Secar à sombra."
+        ],
+        "fit": "Na altura do joelho, cintura com elástico."
+      },
+      "sku": "NBC-SLPC",
+      "collections": [
+        "plano-c"
+      ],
+      "publishedAt": "2026-09-15T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "shorts",
+      "compareAt": 22990
+    },
+    {
+      "handle": "calca-baggy-army-wash",
+      "title": "Calça Baggy Plano C Army Wash",
+      "category": "calcas-e-shorts",
+      "colors": [
+        {
+          "images": [
+            "calca-baggy",
+            "calca-baggy-costas",
+            "calca-baggy-bolso"
+          ]
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "price": 34990,
+      "description": "Calça jeans baggy em lavagem army wash, com bolsos de trás bordados em linha caramelo.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Baggy, perna larga e reta."
+      },
+      "sku": "NBC-CBAW",
+      "collections": [
+        "plano-c",
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "calcas"
+    }
+  ]
+}

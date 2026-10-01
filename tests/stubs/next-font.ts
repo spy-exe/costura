@@ -5,3 +5,5 @@ export const Geist = font;
 export const Archivo = font;
 export const Gilda_Display = font;
 export const DM_Sans = font;
+export const Anton = font;
+export const Space_Grotesk = font;

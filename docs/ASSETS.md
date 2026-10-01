@@ -58,6 +58,13 @@ A Jo Look Fashion é uma loja real (Vassouras, RJ). A prévia usa fotos de banco
 | `/demo/jolook/hero.jpg` | arara de loja | Artem Beliaikin | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / Flickr](https://www.flickr.com/photos/157635012@N07/48124880907) | reduzida para 1600 px de largura |
 | `/demo/jolook/story.jpg` | cabides com jeans | Artem Beliaikin | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / Flickr](https://www.flickr.com/photos/157635012@N07/50179598477) | reduzida para 1600 px de largura |
 
+### Prévia da Na Beca
+
+Fotos enviadas pela própria loja (Na Beca, streetwear) para esta prévia, das peças que ela revende: Plano C, Wanted, LadyBack e Hocks. Não são CC0. O uso fica restrito à prévia feita para a loja, e a página `/creditos` lista a origem.
+
+- Packshots em fundo claro ganharam margem até 4:5, copiando a borda da própria foto (3 px aparados antes, para não repetir a linha clara da borda do arquivo). Fotos de modelo foram recortadas em 4:5.
+- O tag "NA BECA" foi vetorizado (potrace) do logo de 150 px enviado pela loja. O ícone repete a foto de perfil do Instagram (tag branco em círculo preto); a imagem de compartilhamento põe o tag preto na parede branca, com a faixa laranja das caixas de tênis da loja.
+
 "Autor não informado" significa que a fonte não publicou o nome; nesses casos o link leva à página original.
 
 ## Logos e favicons
@@ -79,6 +86,8 @@ Servidas pelo `next/font/google`, que baixa os arquivos no build e os entrega pe
 | Archivo (eixo de largura) | OBRA | Títulos (125%) e texto (100%) | SIL Open Font License 1.1 |
 | Gilda Display | Jo Look | Títulos (a mais próxima do letreiro do logo entre as do Google Fonts) | SIL Open Font License 1.1 |
 | DM Sans | Jo Look | Interface e texto (a mesma do Linktree da loja) | SIL Open Font License 1.1 |
+| Anton | Na Beca | Títulos, em caixa alta, como cartaz de rua | SIL Open Font License 1.1 |
+| Space Grotesk | Na Beca | Interface e texto | SIL Open Font License 1.1 |
 
 ## Ícones
 

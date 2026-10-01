@@ -2,6 +2,14 @@
 
 Última rodada da loja: 2026-09-25, commit `ea60284`. Última rodada da abertura cinematográfica: 2026-09-26 (seção abaixo). As duas foram feitas em produção, em https://roupas-website.malha.app (Alvorada), e na rede interna (OBRA, porta 3001).
 
+## Na Beca, streetwear (2026-10-01)
+
+Quarta marca no core, com as fotos que a loja enviou. A identidade vem da loja física: parede branca, tag preto, araras de cano preto e as caixas laranja dos tênis.
+
+- **Desktop, cena ao vivo:** pano de algodão preto na parede branca, arara de cano preto e as peças da Plano C, Wanted e Hocks penduradas.
+- **Celular e tablet em pé:** o pôster de retrato é o pano preto ocupando a tela, e o título preto sumia. O core passou a inverter os tons do título quando o texto não contrasta com o tecido. Conferido no iPhone 13 (editorial) e no iPad em pé (cena), com texto e botões claros; no desktop o título continua escuro sobre a parede.
+- **Conteúdo:** "Drop da semana" aparecia três vezes seguidas na home; a arara virou "Em destaque" e a fileira da home mostra a Plano C.
+
 ## Jo Look Fashion e pedido pelo WhatsApp (2026-10-01)
 
 Prévia para uma loja real de Vassouras (RJ), terceira marca no mesmo core.

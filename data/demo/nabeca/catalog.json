@@ -1,0 +1,1274 @@
+{
+  "products": [
+    {
+      "id": "nabeca-camiseta-plano-c-fountain",
+      "handle": "camiseta-plano-c-fountain",
+      "title": "Camiseta Plano C Fountain",
+      "description": "Camiseta de malha pesada com o chafariz da Plano C: estampa na frente na branca, nas costas na areia.",
+      "category": "camisetas",
+      "collections": [
+        "plano-c",
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "branca",
+          "name": "Branca",
+          "hex": "#F2F2F0"
+        },
+        {
+          "id": "areia",
+          "name": "Areia",
+          "hex": "#E4D9C3"
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "nabeca-camiseta-plano-c-fountain-branca-p",
+          "sku": "NBC-CPCF-BRA-P",
+          "color": "branca",
+          "size": "P",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-fountain-branca-m",
+          "sku": "NBC-CPCF-BRA-M",
+          "color": "branca",
+          "size": "M",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-fountain-branca-g",
+          "sku": "NBC-CPCF-BRA-G",
+          "color": "branca",
+          "size": "G",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-fountain-branca-gg",
+          "sku": "NBC-CPCF-BRA-GG",
+          "color": "branca",
+          "size": "GG",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-fountain-areia-p",
+          "sku": "NBC-CPCF-ARE-P",
+          "color": "areia",
+          "size": "P",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-fountain-areia-m",
+          "sku": "NBC-CPCF-ARE-M",
+          "color": "areia",
+          "size": "M",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-fountain-areia-g",
+          "sku": "NBC-CPCF-ARE-G",
+          "color": "areia",
+          "size": "G",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-fountain-areia-gg",
+          "sku": "NBC-CPCF-ARE-GG",
+          "color": "areia",
+          "size": "GG",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/nabeca/camiseta-fountain-branca.jpg",
+          "alt": "Camiseta branca com estampa de chafariz em sépia na frente.",
+          "width": 853,
+          "height": 1066,
+          "color": "branca"
+        },
+        {
+          "src": "/demo/nabeca/camiseta-fountain-areia.jpg",
+          "alt": "Camiseta cor de areia com pequena assinatura no peito.",
+          "width": 857,
+          "height": 1071,
+          "color": "areia"
+        },
+        {
+          "src": "/demo/nabeca/camiseta-fountain-areia-costas.jpg",
+          "alt": "Costas da camiseta cor de areia com estampa grande de chafariz em sépia.",
+          "width": 858,
+          "height": 1073,
+          "color": "areia"
+        }
+      ],
+      "details": {
+        "composition": "100% algodão, malha 30.1 penteada",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Oversized, ombro caído."
+      },
+      "sizeGuide": "camisetas",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "nabeca-camiseta-plano-c-resort",
+      "handle": "camiseta-plano-c-resort",
+      "title": "Camiseta Plano C Resort",
+      "description": "Camiseta branca com brasão pequeno no peito e o brasão do Plano C Resort Club grande nas costas.",
+      "category": "camisetas",
+      "collections": [
+        "plano-c",
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "branca",
+          "name": "Branca",
+          "hex": "#F2F2F0"
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "nabeca-camiseta-plano-c-resort-branca-p",
+          "sku": "NBC-CPCR-BRA-P",
+          "color": "branca",
+          "size": "P",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-resort-branca-m",
+          "sku": "NBC-CPCR-BRA-M",
+          "color": "branca",
+          "size": "M",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-resort-branca-g",
+          "sku": "NBC-CPCR-BRA-G",
+          "color": "branca",
+          "size": "G",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "nabeca-camiseta-plano-c-resort-branca-gg",
+          "sku": "NBC-CPCR-BRA-GG",
+          "color": "branca",
+          "size": "GG",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/nabeca/camiseta-resort.jpg",
+          "alt": "Camiseta branca com pequeno brasão verde no peito.",
+          "width": 857,
+          "height": 1071
+        },
+        {
+          "src": "/demo/nabeca/camiseta-resort-costas.jpg",
+          "alt": "Costas da camiseta branca com brasão verde grande do Plano C Resort Club.",
+          "width": 856,
+          "height": 1070
+        }
+      ],
+      "details": {
+        "composition": "100% algodão, malha 30.1 penteada",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Oversized, ombro caído."
+      },
+      "sizeGuide": "camisetas",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "nabeca-manga-longa-o-jogo-das-ruas",
+      "handle": "manga-longa-o-jogo-das-ruas",
+      "title": "Manga longa O Jogo das Ruas",
+      "description": "Manga longa preta da Wanted, com estampa pequena no peito, texto na manga e a arte \"Sagacidade\" grande nas costas.",
+      "category": "camisetas",
+      "collections": [
+        "wanted"
+      ],
+      "colors": [
+        {
+          "id": "preta",
+          "name": "Preta",
+          "hex": "#141414"
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "nabeca-manga-longa-o-jogo-das-ruas-preta-p",
+          "sku": "NBC-MLOJD-PRE-P",
+          "color": "preta",
+          "size": "P",
+          "price": {
+            "amount": 22990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "nabeca-manga-longa-o-jogo-das-ruas-preta-m",
+          "sku": "NBC-MLOJD-PRE-M",
+          "color": "preta",
+          "size": "M",
+          "price": {
+            "amount": 22990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "nabeca-manga-longa-o-jogo-das-ruas-preta-g",
+          "sku": "NBC-MLOJD-PRE-G",
+          "color": "preta",
+          "size": "G",
+          "price": {
+            "amount": 22990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "nabeca-manga-longa-o-jogo-das-ruas-preta-gg",
+          "sku": "NBC-MLOJD-PRE-GG",
+          "color": "preta",
+          "size": "GG",
+          "price": {
+            "amount": 22990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/nabeca/manga-longa-jogo-das-ruas.jpg",
+          "alt": "Camiseta de manga longa preta com estampa branca pequena no peito e texto na manga.",
+          "width": 863,
+          "height": 1079
+        },
+        {
+          "src": "/demo/nabeca/manga-longa-jogo-das-ruas-costas.jpg",
+          "alt": "Costas da camiseta de manga longa preta com estampa grande em preto e branco.",
+          "width": 857,
+          "height": 1071
+        },
+        {
+          "src": "/demo/nabeca/manga-longa-jogo-das-ruas-modelo.jpg",
+          "alt": "Pessoa de costas, à noite, vestindo a manga longa preta com a estampa das costas.",
+          "width": 633,
+          "height": 791
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Regular, punho canelado."
+      },
+      "sizeGuide": "camisetas",
+      "tags": [],
+      "publishedAt": "2026-09-15T12:00:00.000Z"
+    },
+    {
+      "id": "nabeca-camisa-entre-ruas-e-reis",
+      "handle": "camisa-entre-ruas-e-reis",
+      "title": "Camisa Entre Ruas e Reis",
+      "description": "Camisa de manga longa da Wanted no estilo uniforme de futebol: branca, faixas azuis nos ombros, gola polo e escudo no peito.",
+      "category": "camisetas",
+      "collections": [
+        "wanted",
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "branca-e-azul",
+          "name": "Branca e azul",
+          "hex": "#2F4E9E"
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "nabeca-camisa-entre-ruas-e-reis-branca-e-azul-p",
+          "sku": "NBC-CERER-BRA-P",
+          "color": "branca-e-azul",
+          "size": "P",
+          "price": {
+            "amount": 27990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "nabeca-camisa-entre-ruas-e-reis-branca-e-azul-m",
+          "sku": "NBC-CERER-BRA-M",
+          "color": "branca-e-azul",
+          "size": "M",
+          "price": {
+            "amount": 27990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "nabeca-camisa-entre-ruas-e-reis-branca-e-azul-g",
+          "sku": "NBC-CERER-BRA-G",
+          "color": "branca-e-azul",
+          "size": "G",
+          "price": {
+            "amount": 27990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "nabeca-camisa-entre-ruas-e-reis-branca-e-azul-gg",
+          "sku": "NBC-CERER-BRA-GG",
+          "color": "branca-e-azul",
+          "size": "GG",
+          "price": {
+            "amount": 27990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/nabeca/camisa-entre-ruas-e-reis.jpg",
+          "alt": "Camisa de manga longa branca com faixas azuis nos ombros, gola polo e escudo no peito.",
+          "width": 854,
+          "height": 1068
+        },
+        {
+          "src": "/demo/nabeca/camisa-entre-ruas-e-reis-costas.jpg",
+          "alt": "Costas da camisa branca de manga longa com faixas azuis.",
+          "width": 853,
+          "height": 1066
+        },
+        {
+          "src": "/demo/nabeca/camisa-entre-ruas-e-reis-modelo.jpg",
+          "alt": "Pessoa em estúdio cinza vestindo a camisa branca de manga longa com faixas azuis.",
+          "width": 563,
+          "height": 704
+        },
+        {
+          "src": "/demo/nabeca/camisa-entre-ruas-e-reis-gola.jpg",
+          "alt": "Pessoa olhando para cima, segurando a gola polo da camisa branca e azul.",
+          "width": 565,
+          "height": 706
+        }
+      ],
+      "details": {
+        "composition": "100% poliéster com textura",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Ampla."
+      },
+      "sizeGuide": "camisetas",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "nabeca-tenis-hocks-flat-core",
+      "handle": "tenis-hocks-flat-core",
+      "title": "Tênis Hocks Flat Core Cordura",
+      "description": "Tênis Hocks de cordura preta, cadarço branco largo e sola vulcanizada. Feito para andar de skate e para o dia inteiro.",
+      "category": "tenis",
+      "collections": [
+        "hocks",
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "preto",
+          "name": "Preto",
+          "hex": "#151515"
+        }
+      ],
+      "sizes": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "variants": [
+        {
+          "id": "nabeca-tenis-hocks-flat-core-preto-37",
+          "sku": "NBC-THFC-PRE-37",
+          "color": "preto",
+          "size": "37",
+          "price": {
+            "amount": 49990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "nabeca-tenis-hocks-flat-core-preto-38",
+          "sku": "NBC-THFC-PRE-38",
+          "color": "preto",
+          "size": "38",
+          "price": {
+            "amount": 49990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "nabeca-tenis-hocks-flat-core-preto-39",
+          "sku": "NBC-THFC-PRE-39",
+          "color": "preto",
+          "size": "39",
+          "price": {
+            "amount": 49990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "nabeca-tenis-hocks-flat-core-preto-40",
+          "sku": "NBC-THFC-PRE-40",
+          "color": "preto",
+          "size": "40",
+          "price": {
+            "amount": 49990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "nabeca-tenis-hocks-flat-core-preto-41",
+          "sku": "NBC-THFC-PRE-41",
+          "color": "preto",
+          "size": "41",
+          "price": {
+            "amount": 49990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "nabeca-tenis-hocks-flat-core-preto-42",
+          "sku": "NBC-THFC-PRE-42",
+          "color": "preto",
+          "size": "42",
+          "price": {
+            "amount": 49990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "nabeca-tenis-hocks-flat-core-preto-43",
+          "sku": "NBC-THFC-PRE-43",
+          "color": "preto",
+          "size": "43",
+          "price": {
+            "amount": 49990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/nabeca/tenis-flat-core.jpg",
+          "alt": "Tênis preto de cordura com cadarço branco largo e sola preta, de lado.",
+          "width": 848,
+          "height": 1060
+        },
+        {
+          "src": "/demo/nabeca/tenis-flat-core-cima.jpg",
+          "alt": "Par de tênis pretos visto de cima, com cadarços brancos largos.",
+          "width": 846,
+          "height": 1058
+        },
+        {
+          "src": "/demo/nabeca/tenis-flat-core-par.jpg",
+          "alt": "Par de tênis pretos, um deitado mostrando a sola.",
+          "width": 840,
+          "height": 1050
+        },
+        {
+          "src": "/demo/nabeca/tenis-flat-core-detalhe.jpg",
+          "alt": "Detalhe da lingueta com etiqueta Flat Core e do cadarço branco.",
+          "width": 674,
+          "height": 843
+        }
+      ],
+      "details": {
+        "composition": "Cabedal de cordura, sola de borracha",
+        "care": [
+          "Limpar com pano úmido e sabão neutro.",
+          "Não lavar na máquina.",
+          "Secar à sombra."
+        ]
+      },
+      "sizeGuide": "tenis",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "nabeca-cropped-ladyback-funcao-2014",
+      "handle": "cropped-ladyback-funcao-2014",
+      "title": "Cropped LadyBack Função 2014",
+      "description": "Camiseta cropped preta da LadyBack, a linha feminina da Wanted: logotipo pequeno no peito e assinatura grande nas costas.",
+      "category": "feminino",
+      "collections": [
+        "wanted"
+      ],
+      "colors": [
+        {
+          "id": "preto",
+          "name": "Preto",
+          "hex": "#141414"
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G"
+      ],
+      "variants": [
+        {
+          "id": "nabeca-cropped-ladyback-funcao-2014-preto-p",
+          "sku": "NBC-CLF2-PRE-P",
+          "color": "preto",
+          "size": "P",
+          "price": {
+            "amount": 13990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "nabeca-cropped-ladyback-funcao-2014-preto-m",
+          "sku": "NBC-CLF2-PRE-M",
+          "color": "preto",
+          "size": "M",
+          "price": {
+            "amount": 13990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "nabeca-cropped-ladyback-funcao-2014-preto-g",
+          "sku": "NBC-CLF2-PRE-G",
+          "color": "preto",
+          "size": "G",
+          "price": {
+            "amount": 13990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/nabeca/cropped-funcao.jpg",
+          "alt": "Camiseta cropped preta com pequeno logotipo branco no peito.",
+          "width": 857,
+          "height": 1071
+        },
+        {
+          "src": "/demo/nabeca/cropped-funcao-costas.jpg",
+          "alt": "Costas da camiseta cropped preta com assinatura grande em branco.",
+          "width": 863,
+          "height": 1079
+        },
+        {
+          "src": "/demo/nabeca/cropped-funcao-modelo.jpg",
+          "alt": "Pessoa de óculos escuros vestindo o cropped preto e calça larga preta.",
+          "width": 559,
+          "height": 699
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não passar ferro sobre a estampa.",
+          "Secar à sombra."
+        ],
+        "fit": "Curta e ampla."
+      },
+      "sizeGuide": "camisetas",
+      "tags": [],
+      "publishedAt": "2026-09-15T12:00:00.000Z"
+    },
+    {
+      "id": "nabeca-shorts-classic-nylon-plano-c",
+      "handle": "shorts-classic-nylon-plano-c",
+      "title": "Shorts Classic Nylon Plano C",
+      "description": "Shorts preto de nylon leve com cordão branco e bolso de botão atrás.",
+      "category": "calcas-e-shorts",
+      "collections": [
+        "plano-c"
+      ],
+      "colors": [
+        {
+          "id": "preto",
+          "name": "Preto",
+          "hex": "#141414"
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "nabeca-shorts-classic-nylon-plano-c-preto-p",
+          "sku": "NBC-SCNPC-PRE-P",
+          "color": "preto",
+          "size": "P",
+          "price": {
+            "amount": 19990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "nabeca-shorts-classic-nylon-plano-c-preto-m",
+          "sku": "NBC-SCNPC-PRE-M",
+          "color": "preto",
+          "size": "M",
+          "price": {
+            "amount": 19990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "nabeca-shorts-classic-nylon-plano-c-preto-g",
+          "sku": "NBC-SCNPC-PRE-G",
+          "color": "preto",
+          "size": "G",
+          "price": {
+            "amount": 19990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "nabeca-shorts-classic-nylon-plano-c-preto-gg",
+          "sku": "NBC-SCNPC-PRE-GG",
+          "color": "preto",
+          "size": "GG",
+          "price": {
+            "amount": 19990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/nabeca/shorts-nylon.jpg",
+          "alt": "Shorts preto de nylon com cordão branco na cintura.",
+          "width": 1128,
+          "height": 1410
+        },
+        {
+          "src": "/demo/nabeca/shorts-nylon-costas.jpg",
+          "alt": "Costas do shorts preto de nylon com bolso de botão.",
+          "width": 1142,
+          "height": 1428
+        }
+      ],
+      "details": {
+        "composition": "100% poliamida",
+        "care": [
+          "Lavar à mão ou no ciclo delicado.",
+          "Não usar secadora.",
+          "Secar à sombra."
+        ],
+        "fit": "Acima do joelho, cintura com elástico."
+      },
+      "sizeGuide": "shorts",
+      "tags": [],
+      "publishedAt": "2026-09-15T12:00:00.000Z"
+    },
+    {
+      "id": "nabeca-shorts-legacy-plano-c",
+      "handle": "shorts-legacy-plano-c",
+      "title": "Shorts Legacy Plano C",
+      "description": "Shorts preto com vivo cinza na lateral e brasão pequeno, para a quadra e para a rua.",
+      "category": "calcas-e-shorts",
+      "collections": [
+        "plano-c"
+      ],
+      "colors": [
+        {
+          "id": "preto",
+          "name": "Preto",
+          "hex": "#141414"
+        }
+      ],
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "nabeca-shorts-legacy-plano-c-preto-p",
+          "sku": "NBC-SLPC-PRE-P",
+          "color": "preto",
+          "size": "P",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 22990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "nabeca-shorts-legacy-plano-c-preto-m",
+          "sku": "NBC-SLPC-PRE-M",
+          "color": "preto",
+          "size": "M",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 22990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "nabeca-shorts-legacy-plano-c-preto-g",
+          "sku": "NBC-SLPC-PRE-G",
+          "color": "preto",
+          "size": "G",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 22990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "nabeca-shorts-legacy-plano-c-preto-gg",
+          "sku": "NBC-SLPC-PRE-GG",
+          "color": "preto",
+          "size": "GG",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 22990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/nabeca/shorts-legacy.jpg",
+          "alt": "Shorts preto com detalhe de vivo cinza na lateral e pequeno brasão.",
+          "width": 729,
+          "height": 911
+        },
+        {
+          "src": "/demo/nabeca/shorts-legacy-costas.jpg",
+          "alt": "Costas do shorts Legacy preto com bolso de botão.",
+          "width": 719,
+          "height": 899
+        },
+        {
+          "src": "/demo/nabeca/shorts-legacy-modelo.jpg",
+          "alt": "Pessoa numa quadra à noite vestindo o shorts Legacy preto com meias brancas.",
+          "width": 560,
+          "height": 700
+        }
+      ],
+      "details": {
+        "composition": "100% poliéster",
+        "care": [
+          "Lavar à mão ou no ciclo delicado.",
+          "Não usar secadora.",
+          "Secar à sombra."
+        ],
+        "fit": "Na altura do joelho, cintura com elástico."
+      },
+      "sizeGuide": "shorts",
+      "tags": [],
+      "publishedAt": "2026-09-15T12:00:00.000Z"
+    },
+    {
+      "id": "nabeca-calca-baggy-army-wash",
+      "handle": "calca-baggy-army-wash",
+      "title": "Calça Baggy Plano C Army Wash",
+      "description": "Calça jeans baggy em lavagem army wash, com bolsos de trás bordados em linha caramelo.",
+      "category": "calcas-e-shorts",
+      "collections": [
+        "plano-c",
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "army-wash",
+          "name": "Army wash",
+          "hex": "#4F6A86"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "variants": [
+        {
+          "id": "nabeca-calca-baggy-army-wash-army-wash-38",
+          "sku": "NBC-CBAW-ARM-38",
+          "color": "army-wash",
+          "size": "38",
+          "price": {
+            "amount": 34990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "nabeca-calca-baggy-army-wash-army-wash-40",
+          "sku": "NBC-CBAW-ARM-40",
+          "color": "army-wash",
+          "size": "40",
+          "price": {
+            "amount": 34990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "nabeca-calca-baggy-army-wash-army-wash-42",
+          "sku": "NBC-CBAW-ARM-42",
+          "color": "army-wash",
+          "size": "42",
+          "price": {
+            "amount": 34990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "nabeca-calca-baggy-army-wash-army-wash-44",
+          "sku": "NBC-CBAW-ARM-44",
+          "color": "army-wash",
+          "size": "44",
+          "price": {
+            "amount": 34990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "nabeca-calca-baggy-army-wash-army-wash-46",
+          "sku": "NBC-CBAW-ARM-46",
+          "color": "army-wash",
+          "size": "46",
+          "price": {
+            "amount": 34990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/nabeca/calca-baggy.jpg",
+          "alt": "Calça jeans baggy em lavagem média, de frente.",
+          "width": 861,
+          "height": 1076
+        },
+        {
+          "src": "/demo/nabeca/calca-baggy-costas.jpg",
+          "alt": "Costas da calça jeans baggy com bolsos bordados.",
+          "width": 853,
+          "height": 1066
+        },
+        {
+          "src": "/demo/nabeca/calca-baggy-bolso.jpg",
+          "alt": "Detalhe do bolso de trás com bordado em linha caramelo.",
+          "width": 675,
+          "height": 844
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Baggy, perna larga e reta."
+      },
+      "sizeGuide": "calcas",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "handle": "camisetas",
+      "title": "Camisetas",
+      "description": "Camisetas de malha pesada, manga longa e camisas.",
+      "image": {
+        "src": "/demo/nabeca/camiseta-resort.jpg",
+        "alt": "Camiseta branca com pequeno brasão verde no peito.",
+        "width": 857,
+        "height": 1071
+      }
+    },
+    {
+      "handle": "calcas-e-shorts",
+      "title": "Calças e shorts",
+      "description": "Jeans baggy e shorts de nylon.",
+      "image": {
+        "src": "/demo/nabeca/calca-baggy.jpg",
+        "alt": "Calça jeans baggy em lavagem média, de frente.",
+        "width": 861,
+        "height": 1076
+      }
+    },
+    {
+      "handle": "tenis",
+      "title": "Tênis",
+      "description": "Tênis de skate para o dia inteiro.",
+      "image": {
+        "src": "/demo/nabeca/tenis-flat-core.jpg",
+        "alt": "Tênis preto de cordura com cadarço branco largo e sola preta, de lado.",
+        "width": 848,
+        "height": 1060
+      }
+    },
+    {
+      "handle": "feminino",
+      "title": "Feminino",
+      "description": "Cropped e peças da linha feminina.",
+      "image": {
+        "src": "/demo/nabeca/cropped-funcao-modelo.jpg",
+        "alt": "Pessoa de óculos escuros vestindo o cropped preto e calça larga preta.",
+        "width": 559,
+        "height": 699
+      }
+    }
+  ],
+  "collections": [
+    {
+      "handle": "novidades",
+      "title": "Drop da semana",
+      "description": "O que acabou de chegar na loja."
+    },
+    {
+      "handle": "plano-c",
+      "title": "Plano C",
+      "description": "Camisetas, jeans e shorts da Plano C."
+    },
+    {
+      "handle": "wanted",
+      "title": "Wanted",
+      "description": "Wanted e LadyBack, a linha feminina da marca."
+    },
+    {
+      "handle": "hocks",
+      "title": "Hocks",
+      "description": "Tênis de skate da Hocks."
+    }
+  ],
+  "sizeGuides": [
+    {
+      "id": "camisetas",
+      "title": "Camisetas e manga longa",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Largura",
+        "Comprimento",
+        "Manga"
+      ],
+      "rows": [
+        [
+          "P",
+          "54",
+          "72",
+          "22"
+        ],
+        [
+          "M",
+          "57",
+          "74",
+          "23"
+        ],
+        [
+          "G",
+          "60",
+          "76",
+          "24"
+        ],
+        [
+          "GG",
+          "63",
+          "78",
+          "25"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Largura",
+          "text": "de uma axila à outra, com a peça esticada."
+        },
+        {
+          "label": "Comprimento",
+          "text": "do ponto mais alto do ombro até a barra."
+        }
+      ]
+    },
+    {
+      "id": "calcas",
+      "title": "Calças",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Cintura",
+        "Quadril",
+        "Comprimento"
+      ],
+      "rows": [
+        [
+          "38",
+          "78",
+          "108",
+          "104"
+        ],
+        [
+          "40",
+          "82",
+          "112",
+          "105"
+        ],
+        [
+          "42",
+          "86",
+          "116",
+          "106"
+        ],
+        [
+          "44",
+          "90",
+          "120",
+          "107"
+        ],
+        [
+          "46",
+          "94",
+          "124",
+          "108"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Cintura",
+          "text": "de um lado ao outro do cós, com a peça fechada, multiplicado por dois."
+        },
+        {
+          "label": "Quadril",
+          "text": "na parte mais larga, 20 cm abaixo do cós, multiplicado por dois."
+        }
+      ]
+    },
+    {
+      "id": "shorts",
+      "title": "Shorts",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Cintura (elástico solto)",
+        "Comprimento"
+      ],
+      "rows": [
+        [
+          "P",
+          "76",
+          "48"
+        ],
+        [
+          "M",
+          "80",
+          "50"
+        ],
+        [
+          "G",
+          "84",
+          "52"
+        ],
+        [
+          "GG",
+          "88",
+          "54"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Cintura",
+          "text": "de um lado ao outro do elástico, sem esticar, multiplicado por dois."
+        }
+      ]
+    },
+    {
+      "id": "tenis",
+      "title": "Tênis",
+      "unit": "cm",
+      "columns": [
+        "Numeração",
+        "Comprimento do pé"
+      ],
+      "rows": [
+        [
+          "37",
+          "24,5"
+        ],
+        [
+          "38",
+          "25"
+        ],
+        [
+          "39",
+          "25,7"
+        ],
+        [
+          "40",
+          "26,4"
+        ],
+        [
+          "41",
+          "27"
+        ],
+        [
+          "42",
+          "27,7"
+        ],
+        [
+          "43",
+          "28,3"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Comprimento do pé",
+          "text": "do calcanhar à ponta do dedo mais longo, em pé, sobre uma folha de papel."
+        }
+      ]
+    }
+  ]
+}

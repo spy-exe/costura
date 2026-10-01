@@ -4,12 +4,13 @@ import { describe, expect, it } from "vitest";
 import alvorada from "@brands/alvorada";
 import obra from "@brands/obra";
 import jolook from "@brands/jolook";
+import nabeca from "@brands/nabeca";
 import { brandSchema, contentSchema } from "@/core/brand/schema";
 import { brandCssVariables, contrastPairs, contrastRatio, relativeLuminance } from "@/core/brand/tokens";
 import { commerceSettingsSchema } from "@/core/commerce/settings";
 import { catalogSchema } from "@/core/commerce/types";
 
-const brands = { alvorada, obra, jolook };
+const brands = { alvorada, obra, jolook, nabeca };
 const publicFile = (src: string) => path.join("public", src);
 
 describe.each(Object.entries(brands))("marca %s", (id, mod) => {
