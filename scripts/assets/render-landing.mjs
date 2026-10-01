@@ -56,9 +56,10 @@ for (const o of ORIENTATIONS) {
   const page = await browser.newPage({ viewport: { width: o.width, height: o.height } });
   await page.goto(`${base}/?qualidade=${TIER}`, { waitUntil: "load" });
   await page.waitForSelector('[data-landing="cinematic"][data-ready]', { timeout: 180000 });
-  // Só a cena: textos, cabeçalho e aviso ficam de fora da imagem (continuam ocupando espaço no layout).
+  // Só a cena: textos, cabeçalho, aviso e controles (pausa, WhatsApp) ficam de fora da imagem.
   await page.addStyleTag({
-    content: "header, [data-testid=demo-notice], .landing-layer, .landing-scroll-hint { visibility: hidden !important; }",
+    content:
+      "header, [data-testid=demo-notice], .landing-layer, .landing-scroll-hint, .landing-pause, .whatsapp-float { visibility: hidden !important; }",
   });
 
   const poster = await capture(page, 0);
