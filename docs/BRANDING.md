@@ -23,7 +23,7 @@ mkdir -p public/brands/minha-marca
 | `colors` | 12 cores. O teste `tests/unit/brands.test.ts` exige contraste AA para texto (4,5:1) e 3:1 para o foco |
 | `shape` | Raio (`none`, `sm`, `md`) e caixa dos botões |
 | `typography` | Peso, espaçamento, caixa, escala e largura (`font-stretch`) dos títulos. `displayGlyphWidth` é a largura de um caractere do título em em (o maior valor medido entre as linhas da abertura); com ela o título da abertura é dimensionado para caber na coluna de texto |
-| `contact`, `social` | Canais reais de atendimento. Redes só com URL https |
+| `contact`, `social` | Canais reais de atendimento: e-mail ou WhatsApp (pelo menos um), telefone, horário, endereço. Com `whatsapp` (DDI + DDD + número, só dígitos), a loja ganha o botão fixo de conversa e o "Comprar pelo WhatsApp" no produto; `whatsappGroup` (convite `chat.whatsapp.com`) aparece no rodapé e no atendimento. Redes só com URL https |
 | `navigation` | Até 8 links principais e até 4 grupos no rodapé, sempre caminhos internos |
 | `stage` | Direção de arte da abertura cinematográfica: fundo, chão, névoa, tecido, luz, cabide e granulação (exige `content.home.experience`). Ver [landing-architecture.md](landing-architecture.md) |
 
@@ -37,9 +37,11 @@ No máximo duas famílias do Google Fonts via `next/font/google`, expondo `--fon
 
 Abertura clássica da homepage (`layout: "split"` ou `"full-bleed"`), roteiro da abertura cinematográfica (`home.experience`: título em 1 a 4 linhas curtas, trama, 3 a 5 peças da arara e coleção de destino), título das categorias, coleção em destaque, bloco editorial, textos de "Sobre" e perguntas frequentes. Imagens com texto alternativo que descreve o que se vê.
 
+Em `demo`, a marca pode trocar o aviso do topo e a nota do rodapé do modo demonstração. O padrão diz que a marca é fictícia; uma empresa real em prévia diz que fotos e preços são de exemplo.
+
 ## 5. Operação comercial (`commerce.ts`)
 
-Veja docs/COMMERCE.md. Preencha apenas o que a empresa realmente oferece.
+Veja docs/COMMERCE.md. Preencha apenas o que a empresa realmente oferece. Loja que vende por mensagem usa `orderChannel: "whatsapp"`.
 
 ## 6. Catálogo
 

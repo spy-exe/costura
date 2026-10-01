@@ -20,7 +20,8 @@ A loja **não está pronta para vender**. Para isso, siga "Ligar a Shopify" abai
 | --- | --- | --- |
 | `cart.maxQuantityPerLine` | Teto de unidades por variante | 10 |
 | `cart.maxLines` | Teto de variantes diferentes (até 50) | 30 |
-| `priceFilterBoundaries` | Faixas do filtro de preço, em reais | Alvorada 0/200/350/500, OBRA 0/150/300/500 |
+| `priceFilterBoundaries` | Faixas do filtro de preço, em reais | Alvorada 0/200/350/500, OBRA 0/150/300/500, Jo Look 0/100/150/200 |
+| `orderChannel` | `"checkout"`: pagamento no provedor. `"whatsapp"`: a revisão da sacola envia o pedido como mensagem para `contact.whatsapp` (exigido), e a loja combina entrega e pagamento na conversa | Alvorada e OBRA `checkout`; Jo Look `whatsapp` |
 | `paymentMethods` | Formas de pagamento mostradas | vazio: o assunto não aparece |
 | `installments` | Parcelamento mostrado | ausente |
 | `shipping` | Texto sobre envio e frete grátis | ausente |
@@ -28,6 +29,17 @@ A loja **não está pronta para vender**. Para isso, siga "Ligar a Shopify" abai
 | `legal` | Razão social e CNPJ | ausente |
 
 Nada é exibido por padrão. Uma empresa só vê parcelamento, Pix ou frete grátis na interface se preencher o campo com as condições reais dela.
+
+## Pedido pelo WhatsApp
+
+Para a loja que vende por mensagem, sem gateway de pagamento:
+
+- **Produto:** "Comprar pelo WhatsApp" abre a conversa com nome, cor, tamanho (ou "ainda não escolhi"), preço e link da peça.
+- **Sacola:** "Finalizar compra" leva à revisão, que recalcula preço e estoque no servidor. Com a sacola válida, "Enviar pedido pelo WhatsApp" abre a conversa com uma linha por peça (quantidade, cor, tamanho e total) e o subtotal. Se algo mudou, a pessoa revisa a sacola antes, como no checkout.
+- **Todas as páginas:** botão fixo de conversa, um link comum renderizado no servidor.
+- **Demonstração:** as mensagens avisam que vieram da versão de demonstração, para a loja não confundir com pedido real.
+
+A mensagem vai em `https://wa.me/<número>?text=...`. Nada passa por servidor de terceiros além do próprio WhatsApp, e o site não guarda a conversa.
 
 ## Regras da sacola
 

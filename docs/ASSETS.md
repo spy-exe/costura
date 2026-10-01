@@ -40,13 +40,33 @@ As marcas Alvorada e OBRA são fictícias. As fotos abaixo ilustram a demonstra�
 | `/demo/obra/sueter-marinho.jpg` | suéter fino de gola careca | Autor não informado | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / rawpixel](https://www.rawpixel.com/image/3292132/free-photo-image-apparel-apple-images-photos-cardigan) | recortada em 4:5 |
 | `/demo/obra/camisa-flanela.jpg` | camisa de flanela xadrez | The World is a Stage | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / stocksnap](https://stocksnap.io/photo/construction-tools-QQVT4TRECF) | recortada em 4:5 |
 
+### Prévia da Jo Look Fashion
+
+A Jo Look Fashion é uma loja real (Vassouras, RJ). A prévia usa fotos de banco de imagens no lugar das peças da loja, e os preços são de exemplo. O aviso do topo e o rodapé dizem isso.
+
+- 8 fotos novas, todas **CC0 1.0** pelo Openverse (StockSnap e Flickr). O StockSnap só libera a versão de 960 px sem o download manual, por isso as fotos dele têm de 512 a 523 px de largura depois do recorte 4:5. As do Flickr vieram em 2048 px pela página de tamanhos.
+- As outras 10 são cópias de fotos da Alvorada e da OBRA listadas acima, em `public/demo/jolook/`.
+
+| Arquivo | Assunto | Autor | Licença | Fonte | Alteração |
+| --- | --- | --- | --- | --- | --- |
+| `/demo/jolook/wide-leg-jeans-clara.jpg` | calça jeans azul-claro | Matt Moloney | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / StockSnap](https://stocksnap.io/photo/fashion-waist-PCVPBKR7XG) | recortada em 4:5 |
+| `/demo/jolook/wide-leg-preta.jpg` | calça jeans preta | Matt Moloney | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / StockSnap](https://stocksnap.io/photo/fashion-waist-VVCEOWJ6GM) | recortada em 4:5 |
+| `/demo/jolook/wide-leg-estonada.jpg` | calças jeans estonadas | it's me neosiam | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / StockSnap](https://stocksnap.io/photo/blue-denim-QBSVGRFT2Y) | recortada em 4:5 |
+| `/demo/jolook/blusa-branca-babado.jpg` | blusa branca com babado | Eneida Nieves | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / StockSnap](https://stocksnap.io/photo/woman-pose-1TRSFNIMK0) | recortada em 4:5 |
+| `/demo/jolook/blusa-floral.jpg` | blusa floral de alcinha | freestocks.org | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / Flickr](https://www.flickr.com/photos/135396164@N05/29249341390) | recortada em 4:5 |
+| `/demo/jolook/bolsa-palha.jpg` | bolsa redonda de palha | Artem Beliaikin | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / Flickr](https://www.flickr.com/photos/157635012@N07/40776081110) | recortada em 4:5 |
+| `/demo/jolook/hero.jpg` | arara de loja | Artem Beliaikin | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / Flickr](https://www.flickr.com/photos/157635012@N07/48124880907) | reduzida para 1600 px de largura |
+| `/demo/jolook/story.jpg` | cabides com jeans | Artem Beliaikin | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Openverse / Flickr](https://www.flickr.com/photos/157635012@N07/50179598477) | reduzida para 1600 px de largura |
+
 "Autor não informado" significa que a fonte não publicou o nome; nesses casos o link leva à página original.
 
 ## Logos e favicons
 
 Criados para este projeto em `public/brands/<marca>/`. O texto dos logos foi convertido em curvas a partir das fontes Instrument Serif, Geist e Archivo (SIL Open Font License 1.1, que permite o uso em logotipos). O sol da Alvorada e o traço da OBRA são desenhos originais.
 
-As imagens de compartilhamento (`og.jpg`) são recortes das fotos de abertura listadas acima.
+As imagens de compartilhamento (`og.jpg`) da Alvorada e da OBRA são recortes das fotos de abertura listadas acima.
+
+**Jo Look Fashion:** o logo é da loja. O mandala foi vetorizado (potrace) da foto de perfil do Instagram e o letreiro, do logo publicado no Linktree dela, só para esta prévia. O ícone e a imagem de compartilhamento são composições desses dois vetores. Trocar pelos arquivos originais da loja, quando ela enviar, não muda código.
 
 ## Fontes tipográficas
 
@@ -57,7 +77,11 @@ Servidas pelo `next/font/google`, que baixa os arquivos no build e os entrega pe
 | Instrument Serif | Alvorada | Títulos | SIL Open Font License 1.1 |
 | Geist | Alvorada | Interface e texto | SIL Open Font License 1.1 |
 | Archivo (eixo de largura) | OBRA | Títulos (125%) e texto (100%) | SIL Open Font License 1.1 |
+| Gilda Display | Jo Look | Títulos (a mais próxima do letreiro do logo entre as do Google Fonts) | SIL Open Font License 1.1 |
+| DM Sans | Jo Look | Interface e texto (a mesma do Linktree da loja) | SIL Open Font License 1.1 |
 
 ## Ícones
 
 [Lucide](https://lucide.dev), licença ISC, via `lucide-react`. Traço de 1,5 a 1,75 px, tamanhos de 16 a 22 px.
+
+Glifo do WhatsApp: [Simple Icons](https://simpleicons.org) 16.33, CC0 1.0, em `src/ui/layout/whatsapp-icon.tsx`. A marca WhatsApp é da Meta; o glifo aparece só nos botões que abrem a conversa, como as diretrizes da marca permitem.

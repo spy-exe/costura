@@ -2,6 +2,16 @@
 
 Última rodada da loja: 2026-09-25, commit `ea60284`. Última rodada da abertura cinematográfica: 2026-09-26 (seção abaixo). As duas foram feitas em produção, em https://roupas-website.malha.app (Alvorada), e na rede interna (OBRA, porta 3001).
 
+## Jo Look Fashion e pedido pelo WhatsApp (2026-10-01)
+
+Prévia para uma loja real de Vassouras (RJ), terceira marca no mesmo core.
+
+- **Celular (iPhone 13, 390 × 844):** home, loja, produto e sacola. A home na versão estática caiu de 7.895 px para 6.083 px de altura, com a arara em duas colunas. Nome e preço do produto aparecem sem rolar. O botão fixo do WhatsApp sobe acima da barra de compra e não cobre os cartões da abertura.
+- **Desktop (1440 × 900), cena ao vivo no nível baixo:** abertura, trama, cortina, arara e coleção com a direção de arte da marca (pano rosa das pétalas, arara terracota).
+- **Testes:** unidade das mensagens (peça, pedido, número inválido, tamanho não escolhido), componente (botão fixo, link do produto acompanhando o tamanho, rodapé com WhatsApp e grupo) e E2E da marca (botão fixo, produto, pedido pela revisão da sacola e bloqueio quando o preço muda), além do axe nas páginas dela.
+- **Defeito encontrado e corrigido:** o script de pôster capturava os botões de pausa e de WhatsApp junto com a cena.
+- **Não executado:** envio real da mensagem (os testes leem o link sem abrir o WhatsApp) e celular físico.
+
 ## Abertura cinematográfica
 
 **Ambiente:** o servidor não tem GPU. As capturas usam Chromium headless com SwiftShader e o nível baixo forçado (`?qualidade=low`), com 4 s de espera por ponto de rolagem. Nessa GPU emulada a câmera amortecida demora a assentar. Os enquadramentos intermediários das capturas são mais atrasados que num aparelho real, e o fps delas não significa nada.
