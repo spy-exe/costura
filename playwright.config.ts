@@ -36,7 +36,8 @@ export default defineConfig({
     ...brands.map((b) => ({
       name: `${b.id}-chromium`,
       use: { ...devices["Desktop Chrome"], baseURL: `http://127.0.0.1:${b.port}` },
-      testIgnore: /(mobile|visual)\.spec\.ts/,
+      // WhatsApp só na marca que vende por mensagem (projeto próprio abaixo).
+      testIgnore: /(mobile|visual|whatsapp)\.spec\.ts/,
       metadata: { brand: b.id },
     })),
     // Regressão visual: movimento reduzido deixa a cena WebGL estática e as capturas determinísticas.
