@@ -1,0 +1,1628 @@
+{
+  "products": [
+    {
+      "id": "jolook-wide-leg-jeans-clara",
+      "handle": "wide-leg-jeans-clara",
+      "title": "Wide leg jeans clara",
+      "description": "A clássica: jeans azul-claro de cintura alta e perna larga, com rasgo no joelho. Combina com tudo e nunca sai de moda.",
+      "category": "calcas",
+      "collections": [
+        "wide-legs",
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "azul-claro",
+          "name": "Azul claro",
+          "hex": "#A9C2D9"
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "variants": [
+        {
+          "id": "jolook-wide-leg-jeans-clara-azul-claro-36",
+          "sku": "JLK-WLJC-AZU-36",
+          "color": "azul-claro",
+          "size": "36",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "jolook-wide-leg-jeans-clara-azul-claro-38",
+          "sku": "JLK-WLJC-AZU-38",
+          "color": "azul-claro",
+          "size": "38",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "jolook-wide-leg-jeans-clara-azul-claro-40",
+          "sku": "JLK-WLJC-AZU-40",
+          "color": "azul-claro",
+          "size": "40",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "jolook-wide-leg-jeans-clara-azul-claro-42",
+          "sku": "JLK-WLJC-AZU-42",
+          "color": "azul-claro",
+          "size": "42",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "jolook-wide-leg-jeans-clara-azul-claro-44",
+          "sku": "JLK-WLJC-AZU-44",
+          "color": "azul-claro",
+          "size": "44",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/wide-leg-jeans-clara.jpg",
+          "alt": "Calça jeans azul-claro de cintura alta com rasgo no joelho, usada com top vermelho.",
+          "width": 523,
+          "height": 654
+        }
+      ],
+      "details": {
+        "composition": "99% algodão, 1% elastano",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Cintura alta, perna larga do quadril à barra."
+      },
+      "sizeGuide": "partes-de-baixo",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-wide-leg-preta",
+      "handle": "wide-leg-preta",
+      "title": "Wide leg preta",
+      "description": "A coringa: jeans preto de cintura alta que vai do look básico ao elegante sem esforço.",
+      "category": "calcas",
+      "collections": [
+        "wide-legs",
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "preta",
+          "name": "Preta",
+          "hex": "#1F1F22"
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "variants": [
+        {
+          "id": "jolook-wide-leg-preta-preta-36",
+          "sku": "JLK-WLP-PRE-36",
+          "color": "preta",
+          "size": "36",
+          "price": {
+            "amount": 16990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "jolook-wide-leg-preta-preta-38",
+          "sku": "JLK-WLP-PRE-38",
+          "color": "preta",
+          "size": "38",
+          "price": {
+            "amount": 16990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "jolook-wide-leg-preta-preta-40",
+          "sku": "JLK-WLP-PRE-40",
+          "color": "preta",
+          "size": "40",
+          "price": {
+            "amount": 16990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "jolook-wide-leg-preta-preta-42",
+          "sku": "JLK-WLP-PRE-42",
+          "color": "preta",
+          "size": "42",
+          "price": {
+            "amount": 16990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "jolook-wide-leg-preta-preta-44",
+          "sku": "JLK-WLP-PRE-44",
+          "color": "preta",
+          "size": "44",
+          "price": {
+            "amount": 16990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/wide-leg-preta.jpg",
+          "alt": "Calça jeans preta de cintura alta, com as mãos apoiadas no quadril.",
+          "width": 512,
+          "height": 640
+        }
+      ],
+      "details": {
+        "composition": "98% algodão, 2% elastano",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Cintura alta, perna larga."
+      },
+      "sizeGuide": "partes-de-baixo",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-wide-leg-linho-bege",
+      "handle": "wide-leg-linho-bege",
+      "title": "Wide leg linho bege",
+      "description": "A chic sem esforço: calça de linho cor cru com pregas na frente e cintura alta. Deixa qualquer produção mais sofisticada.",
+      "category": "calcas",
+      "collections": [
+        "wide-legs"
+      ],
+      "colors": [
+        {
+          "id": "cru",
+          "name": "Cru",
+          "hex": "#E8E0CC"
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "variants": [
+        {
+          "id": "jolook-wide-leg-linho-bege-cru-36",
+          "sku": "JLK-WLLB-CRU-36",
+          "color": "cru",
+          "size": "36",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "jolook-wide-leg-linho-bege-cru-38",
+          "sku": "JLK-WLLB-CRU-38",
+          "color": "cru",
+          "size": "38",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "jolook-wide-leg-linho-bege-cru-40",
+          "sku": "JLK-WLLB-CRU-40",
+          "color": "cru",
+          "size": "40",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "jolook-wide-leg-linho-bege-cru-42",
+          "sku": "JLK-WLLB-CRU-42",
+          "color": "cru",
+          "size": "42",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "jolook-wide-leg-linho-bege-cru-44",
+          "sku": "JLK-WLLB-CRU-44",
+          "color": "cru",
+          "size": "44",
+          "price": {
+            "amount": 18990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/calca-pantalona.jpg",
+          "alt": "Calça cor cru de cintura alta, com pregas e perna reta, em manequim sobre fundo cinza.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "55% linho, 45% viscose",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Cintura alta com pregas, perna ampla."
+      },
+      "sizeGuide": "partes-de-baixo",
+      "tags": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-wide-leg-estonada",
+      "handle": "wide-leg-estonada",
+      "title": "Wide leg estonada",
+      "description": "A estilosa: jeans em lavagem estonada para produções modernas e cheias de atitude.",
+      "category": "calcas",
+      "collections": [
+        "wide-legs"
+      ],
+      "colors": [
+        {
+          "id": "azul-estonado",
+          "name": "Azul estonado",
+          "hex": "#6F86A3"
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "variants": [
+        {
+          "id": "jolook-wide-leg-estonada-azul-estonado-36",
+          "sku": "JLK-WLE-AZU-36",
+          "color": "azul-estonado",
+          "size": "36",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "jolook-wide-leg-estonada-azul-estonado-38",
+          "sku": "JLK-WLE-AZU-38",
+          "color": "azul-estonado",
+          "size": "38",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "jolook-wide-leg-estonada-azul-estonado-40",
+          "sku": "JLK-WLE-AZU-40",
+          "color": "azul-estonado",
+          "size": "40",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "jolook-wide-leg-estonada-azul-estonado-42",
+          "sku": "JLK-WLE-AZU-42",
+          "color": "azul-estonado",
+          "size": "42",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "jolook-wide-leg-estonada-azul-estonado-44",
+          "sku": "JLK-WLE-AZU-44",
+          "color": "azul-estonado",
+          "size": "44",
+          "price": {
+            "amount": 17990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/wide-leg-estonada.jpg",
+          "alt": "Calças jeans em lavagem estonada penduradas lado a lado.",
+          "width": 510,
+          "height": 637
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Cintura alta, perna larga."
+      },
+      "sizeGuide": "partes-de-baixo",
+      "tags": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-blusa-branca-babado",
+      "handle": "blusa-branca-babado",
+      "title": "Blusa branca com babado",
+      "description": "Blusa off-white de tecido leve, com mangas bufantes e babado marcando a cintura.",
+      "category": "blusas-e-camisas",
+      "collections": [
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "off-white",
+          "name": "Off-white",
+          "hex": "#F1EEE6"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "jolook-blusa-branca-babado-off-white-pp",
+          "sku": "JLK-BBB-OFF-PP",
+          "color": "off-white",
+          "size": "PP",
+          "price": {
+            "amount": 10990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "jolook-blusa-branca-babado-off-white-p",
+          "sku": "JLK-BBB-OFF-P",
+          "color": "off-white",
+          "size": "P",
+          "price": {
+            "amount": 10990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "jolook-blusa-branca-babado-off-white-m",
+          "sku": "JLK-BBB-OFF-M",
+          "color": "off-white",
+          "size": "M",
+          "price": {
+            "amount": 10990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "jolook-blusa-branca-babado-off-white-g",
+          "sku": "JLK-BBB-OFF-G",
+          "color": "off-white",
+          "size": "G",
+          "price": {
+            "amount": 10990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "jolook-blusa-branca-babado-off-white-gg",
+          "sku": "JLK-BBB-OFF-GG",
+          "color": "off-white",
+          "size": "GG",
+          "price": {
+            "amount": 10990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/blusa-branca-babado.jpg",
+          "alt": "Mulher sentada numa escada de madeira, de blusa branca com babado na cintura e mangas bufantes.",
+          "width": 513,
+          "height": 641
+        }
+      ],
+      "details": {
+        "composition": "100% viscose",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Solta, com elástico nos punhos."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-blusa-floral-alcinha",
+      "handle": "blusa-floral-alcinha",
+      "title": "Blusa floral de alcinha",
+      "description": "Blusa de alcinha com estampa floral rosa e vermelha, leve para os dias quentes.",
+      "category": "blusas-e-camisas",
+      "collections": [
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "floral-rosa",
+          "name": "Floral rosa",
+          "hex": "#E7A0A0"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "jolook-blusa-floral-alcinha-floral-rosa-pp",
+          "sku": "JLK-BFA-FLO-PP",
+          "color": "floral-rosa",
+          "size": "PP",
+          "price": {
+            "amount": 7990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "jolook-blusa-floral-alcinha-floral-rosa-p",
+          "sku": "JLK-BFA-FLO-P",
+          "color": "floral-rosa",
+          "size": "P",
+          "price": {
+            "amount": 7990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "jolook-blusa-floral-alcinha-floral-rosa-m",
+          "sku": "JLK-BFA-FLO-M",
+          "color": "floral-rosa",
+          "size": "M",
+          "price": {
+            "amount": 7990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "jolook-blusa-floral-alcinha-floral-rosa-g",
+          "sku": "JLK-BFA-FLO-G",
+          "color": "floral-rosa",
+          "size": "G",
+          "price": {
+            "amount": 7990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "jolook-blusa-floral-alcinha-floral-rosa-gg",
+          "sku": "JLK-BFA-FLO-GG",
+          "color": "floral-rosa",
+          "size": "GG",
+          "price": {
+            "amount": 7990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/blusa-floral.jpg",
+          "alt": "Blusa de alcinha com estampa floral rosa e vermelha, usada com saia preta.",
+          "width": 1092,
+          "height": 1365
+        }
+      ],
+      "details": {
+        "composition": "100% viscose",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Reta, comprimento na cintura."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-camisa-listrada",
+      "handle": "camisa-listrada",
+      "title": "Camisa listrada",
+      "description": "Camisa branca com listras finas azuis, gola de camisa e punho com botão. Vai bem por dentro da wide leg.",
+      "category": "blusas-e-camisas",
+      "collections": [],
+      "colors": [
+        {
+          "id": "azul-e-branco",
+          "name": "Azul e branco",
+          "hex": "#C9D3DF"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "jolook-camisa-listrada-azul-e-branco-pp",
+          "sku": "JLK-CL-AZU-PP",
+          "color": "azul-e-branco",
+          "size": "PP",
+          "price": {
+            "amount": 12990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "jolook-camisa-listrada-azul-e-branco-p",
+          "sku": "JLK-CL-AZU-P",
+          "color": "azul-e-branco",
+          "size": "P",
+          "price": {
+            "amount": 12990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "jolook-camisa-listrada-azul-e-branco-m",
+          "sku": "JLK-CL-AZU-M",
+          "color": "azul-e-branco",
+          "size": "M",
+          "price": {
+            "amount": 12990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "jolook-camisa-listrada-azul-e-branco-g",
+          "sku": "JLK-CL-AZU-G",
+          "color": "azul-e-branco",
+          "size": "G",
+          "price": {
+            "amount": 12990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "jolook-camisa-listrada-azul-e-branco-gg",
+          "sku": "JLK-CL-AZU-GG",
+          "color": "azul-e-branco",
+          "size": "GG",
+          "price": {
+            "amount": 12990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/camisa-listrada.jpg",
+          "alt": "Detalhe da gola de uma camisa branca com listras finas azuis.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Reta e folgada."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-vestido-floral",
+      "handle": "vestido-floral",
+      "title": "Vestido floral",
+      "description": "Vestido azul-marinho com estampa floral miúda, manga curta e caimento solto.",
+      "category": "vestidos-e-saias",
+      "collections": [
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "marinho-floral",
+          "name": "Marinho floral",
+          "hex": "#26304A"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "jolook-vestido-floral-marinho-floral-pp",
+          "sku": "JLK-VF-MAR-PP",
+          "color": "marinho-floral",
+          "size": "PP",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "jolook-vestido-floral-marinho-floral-p",
+          "sku": "JLK-VF-MAR-P",
+          "color": "marinho-floral",
+          "size": "P",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "jolook-vestido-floral-marinho-floral-m",
+          "sku": "JLK-VF-MAR-M",
+          "color": "marinho-floral",
+          "size": "M",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "jolook-vestido-floral-marinho-floral-g",
+          "sku": "JLK-VF-MAR-G",
+          "color": "marinho-floral",
+          "size": "G",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "jolook-vestido-floral-marinho-floral-gg",
+          "sku": "JLK-VF-MAR-GG",
+          "color": "marinho-floral",
+          "size": "GG",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/vestido-estampado.jpg",
+          "alt": "Vestido azul-marinho com estampa de pequenas flores brancas, visto do busto à cintura.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% viscose",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Solto, comprimento abaixo do joelho."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-vestido-branco-rodado",
+      "handle": "vestido-branco-rodado",
+      "title": "Vestido branco rodado",
+      "description": "Vestido branco de saia rodada, para o dia ou para uma ocasião especial.",
+      "category": "vestidos-e-saias",
+      "collections": [],
+      "colors": [
+        {
+          "id": "branco",
+          "name": "Branco",
+          "hex": "#EEECE8"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "jolook-vestido-branco-rodado-branco-pp",
+          "sku": "JLK-VBR-BRA-PP",
+          "color": "branco",
+          "size": "PP",
+          "price": {
+            "amount": 19990,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 23990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "jolook-vestido-branco-rodado-branco-p",
+          "sku": "JLK-VBR-BRA-P",
+          "color": "branco",
+          "size": "P",
+          "price": {
+            "amount": 19990,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 23990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "jolook-vestido-branco-rodado-branco-m",
+          "sku": "JLK-VBR-BRA-M",
+          "color": "branco",
+          "size": "M",
+          "price": {
+            "amount": 19990,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 23990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "jolook-vestido-branco-rodado-branco-g",
+          "sku": "JLK-VBR-BRA-G",
+          "color": "branco",
+          "size": "G",
+          "price": {
+            "amount": 19990,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 23990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "jolook-vestido-branco-rodado-branco-gg",
+          "sku": "JLK-VBR-BRA-GG",
+          "color": "branco",
+          "size": "GG",
+          "price": {
+            "amount": 19990,
+            "currency": "BRL"
+          },
+          "compareAtPrice": {
+            "amount": 23990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/vestido-branco.jpg",
+          "alt": "Pessoa de costas em um gramado, segurando a saia de um vestido branco rodado.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Ajustado no busto, saia ampla."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-saia-de-tule",
+      "handle": "saia-de-tule",
+      "title": "Saia de tule",
+      "description": "Saia branca de tule em camadas, com movimento e forro.",
+      "category": "vestidos-e-saias",
+      "collections": [],
+      "colors": [
+        {
+          "id": "branco",
+          "name": "Branco",
+          "hex": "#EEEEEC"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "jolook-saia-de-tule-branco-pp",
+          "sku": "JLK-SDT-BRA-PP",
+          "color": "branco",
+          "size": "PP",
+          "price": {
+            "amount": 13990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        },
+        {
+          "id": "jolook-saia-de-tule-branco-p",
+          "sku": "JLK-SDT-BRA-P",
+          "color": "branco",
+          "size": "P",
+          "price": {
+            "amount": 13990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "jolook-saia-de-tule-branco-m",
+          "sku": "JLK-SDT-BRA-M",
+          "color": "branco",
+          "size": "M",
+          "price": {
+            "amount": 13990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "jolook-saia-de-tule-branco-g",
+          "sku": "JLK-SDT-BRA-G",
+          "color": "branco",
+          "size": "G",
+          "price": {
+            "amount": 13990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "jolook-saia-de-tule-branco-gg",
+          "sku": "JLK-SDT-BRA-GG",
+          "color": "branco",
+          "size": "GG",
+          "price": {
+            "amount": 13990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/saia-rodada.jpg",
+          "alt": "Saia branca de tule em movimento, sobre gramado.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% poliamida",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Cintura alta com elástico."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-jaqueta-jeans-clara",
+      "handle": "jaqueta-jeans-clara",
+      "title": "Jaqueta jeans clara",
+      "description": "Jaqueta jeans azul-claro com botões de metal e bolsos no peito. Fecha o look com a wide leg preta.",
+      "category": "casacos-e-malhas",
+      "collections": [
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "azul-claro",
+          "name": "Azul claro",
+          "hex": "#8DB3D6"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "jolook-jaqueta-jeans-clara-azul-claro-pp",
+          "sku": "JLK-JJC-AZU-PP",
+          "color": "azul-claro",
+          "size": "PP",
+          "price": {
+            "amount": 21990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        },
+        {
+          "id": "jolook-jaqueta-jeans-clara-azul-claro-p",
+          "sku": "JLK-JJC-AZU-P",
+          "color": "azul-claro",
+          "size": "P",
+          "price": {
+            "amount": 21990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "jolook-jaqueta-jeans-clara-azul-claro-m",
+          "sku": "JLK-JJC-AZU-M",
+          "color": "azul-claro",
+          "size": "M",
+          "price": {
+            "amount": 21990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "jolook-jaqueta-jeans-clara-azul-claro-g",
+          "sku": "JLK-JJC-AZU-G",
+          "color": "azul-claro",
+          "size": "G",
+          "price": {
+            "amount": 21990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "jolook-jaqueta-jeans-clara-azul-claro-gg",
+          "sku": "JLK-JJC-AZU-GG",
+          "color": "azul-claro",
+          "size": "GG",
+          "price": {
+            "amount": 21990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/jaqueta-jeans.jpg",
+          "alt": "Jaqueta jeans azul-claro aberta sobre camiseta branca, com um broche no bolso.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Reta, comprimento no quadril."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-sueter-trico-cru",
+      "handle": "sueter-trico-cru",
+      "title": "Suéter de tricô cru",
+      "description": "Suéter de tricô grosso cor cru, macio e quente para as noites frias de Vassouras.",
+      "category": "casacos-e-malhas",
+      "collections": [],
+      "colors": [
+        {
+          "id": "cru",
+          "name": "Cru",
+          "hex": "#D8CCB4"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "jolook-sueter-trico-cru-cru-pp",
+          "sku": "JLK-STC-CRU-PP",
+          "color": "cru",
+          "size": "PP",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 2
+        },
+        {
+          "id": "jolook-sueter-trico-cru-cru-p",
+          "sku": "JLK-STC-CRU-P",
+          "color": "cru",
+          "size": "P",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "jolook-sueter-trico-cru-cru-m",
+          "sku": "JLK-STC-CRU-M",
+          "color": "cru",
+          "size": "M",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "jolook-sueter-trico-cru-cru-g",
+          "sku": "JLK-STC-CRU-G",
+          "color": "cru",
+          "size": "G",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "jolook-sueter-trico-cru-cru-gg",
+          "sku": "JLK-STC-CRU-GG",
+          "color": "cru",
+          "size": "GG",
+          "price": {
+            "amount": 15990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/sueter-cru.jpg",
+          "alt": "Suéter de tricô grosso cor cru, amassado sobre uma mesa de madeira.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "60% algodão, 40% acrílico",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Amplo, ombro caído."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-moletom-rosa",
+      "handle": "moletom-rosa",
+      "title": "Moletom rosa",
+      "description": "Moletom rosa com capuz e bolso canguru, para os dias de conforto.",
+      "category": "casacos-e-malhas",
+      "collections": [],
+      "colors": [
+        {
+          "id": "rosa",
+          "name": "Rosa",
+          "hex": "#E6A9B6"
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "variants": [
+        {
+          "id": "jolook-moletom-rosa-rosa-pp",
+          "sku": "JLK-MR-ROS-PP",
+          "color": "rosa",
+          "size": "PP",
+          "price": {
+            "amount": 14990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 7
+        },
+        {
+          "id": "jolook-moletom-rosa-rosa-p",
+          "sku": "JLK-MR-ROS-P",
+          "color": "rosa",
+          "size": "P",
+          "price": {
+            "amount": 14990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 3
+        },
+        {
+          "id": "jolook-moletom-rosa-rosa-m",
+          "sku": "JLK-MR-ROS-M",
+          "color": "rosa",
+          "size": "M",
+          "price": {
+            "amount": 14990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        },
+        {
+          "id": "jolook-moletom-rosa-rosa-g",
+          "sku": "JLK-MR-ROS-G",
+          "color": "rosa",
+          "size": "G",
+          "price": {
+            "amount": 14990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 9
+        },
+        {
+          "id": "jolook-moletom-rosa-rosa-gg",
+          "sku": "JLK-MR-ROS-GG",
+          "color": "rosa",
+          "size": "GG",
+          "price": {
+            "amount": 14990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 4
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/moletom-rosa.jpg",
+          "alt": "Moletom rosa com capuz, com pequena frase estampada no peito, segurando um buquê.",
+          "width": 1280,
+          "height": 1600
+        }
+      ],
+      "details": {
+        "composition": "70% algodão, 30% poliéster",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Solto."
+      },
+      "sizeGuide": "partes-de-cima",
+      "tags": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-bolsa-de-palha-redonda",
+      "handle": "bolsa-de-palha-redonda",
+      "title": "Bolsa de palha redonda",
+      "description": "Bolsa redonda de palha trançada à mão, com alça transversal de couro caramelo.",
+      "category": "acessorios",
+      "collections": [
+        "novidades"
+      ],
+      "colors": [
+        {
+          "id": "palha-natural",
+          "name": "Palha natural",
+          "hex": "#B98A57"
+        }
+      ],
+      "sizes": [
+        "U"
+      ],
+      "variants": [
+        {
+          "id": "jolook-bolsa-de-palha-redonda-palha-natural-u",
+          "sku": "JLK-BDPR-PAL-U",
+          "color": "palha-natural",
+          "size": "U",
+          "price": {
+            "amount": 11990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 6
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/bolsa-palha.jpg",
+          "alt": "Bolsas redondas de palha com alça de couro caramelo sobre uma mesa branca.",
+          "width": 1092,
+          "height": 1365
+        }
+      ],
+      "details": {
+        "composition": "Palha natural e alça de couro",
+        "care": [
+          "Limpar com pano seco.",
+          "Guardar longe da umidade."
+        ]
+      },
+      "tags": [],
+      "publishedAt": "2026-09-29T12:00:00.000Z"
+    },
+    {
+      "id": "jolook-chapeu-de-palha",
+      "handle": "chapeu-de-palha",
+      "title": "Chapéu de palha",
+      "description": "Chapéu de palha de aba larga, para sol forte e para dar acabamento ao look de verão.",
+      "category": "acessorios",
+      "collections": [],
+      "colors": [
+        {
+          "id": "natural",
+          "name": "Natural",
+          "hex": "#C9A571"
+        },
+        {
+          "id": "cinza",
+          "name": "Cinza",
+          "hex": "#8E8A82"
+        }
+      ],
+      "sizes": [
+        "U"
+      ],
+      "variants": [
+        {
+          "id": "jolook-chapeu-de-palha-natural-u",
+          "sku": "JLK-CDP-NAT-U",
+          "color": "natural",
+          "size": "U",
+          "price": {
+            "amount": 12990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 5
+        },
+        {
+          "id": "jolook-chapeu-de-palha-cinza-u",
+          "sku": "JLK-CDP-CIN-U",
+          "color": "cinza",
+          "size": "U",
+          "price": {
+            "amount": 12990,
+            "currency": "BRL"
+          },
+          "quantityAvailable": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "/demo/jolook/chapeu-natural.jpg",
+          "alt": "Chapéu de palha natural com cordão preto, pousado no meio de um capinzal verde.",
+          "width": 1280,
+          "height": 1600,
+          "color": "natural"
+        },
+        {
+          "src": "/demo/jolook/chapeu-cinza.jpg",
+          "alt": "Detalhe da aba de um chapéu de palha trançada cinza.",
+          "width": 1280,
+          "height": 1600,
+          "color": "cinza"
+        }
+      ],
+      "details": {
+        "composition": "Palha natural",
+        "care": [
+          "Limpar com pano seco.",
+          "Guardar longe da umidade."
+        ]
+      },
+      "tags": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "handle": "calcas",
+      "title": "Calças",
+      "description": "Wide legs em jeans e linho, de cintura alta.",
+      "image": {
+        "src": "/demo/jolook/wide-leg-jeans-clara.jpg",
+        "alt": "Calça jeans azul-claro de cintura alta com rasgo no joelho, usada com top vermelho.",
+        "width": 523,
+        "height": 654
+      }
+    },
+    {
+      "handle": "blusas-e-camisas",
+      "title": "Blusas e camisas",
+      "description": "Blusas leves e camisas para combinar com as calças.",
+      "image": {
+        "src": "/demo/jolook/blusa-branca-babado.jpg",
+        "alt": "Mulher sentada numa escada de madeira, de blusa branca com babado na cintura e mangas bufantes.",
+        "width": 513,
+        "height": 641
+      }
+    },
+    {
+      "handle": "vestidos-e-saias",
+      "title": "Vestidos e saias",
+      "description": "Vestidos e saias para o dia e para ocasiões especiais.",
+      "image": {
+        "src": "/demo/jolook/vestido-estampado.jpg",
+        "alt": "Vestido azul-marinho com estampa de pequenas flores brancas, visto do busto à cintura.",
+        "width": 1280,
+        "height": 1600
+      }
+    },
+    {
+      "handle": "casacos-e-malhas",
+      "title": "Casacos e malhas",
+      "description": "Jaqueta jeans, tricô e moletom.",
+      "image": {
+        "src": "/demo/jolook/jaqueta-jeans.jpg",
+        "alt": "Jaqueta jeans azul-claro aberta sobre camiseta branca, com um broche no bolso.",
+        "width": 1280,
+        "height": 1600
+      }
+    },
+    {
+      "handle": "acessorios",
+      "title": "Acessórios",
+      "description": "Bolsas e chapéus de palha para fechar a produção.",
+      "image": {
+        "src": "/demo/jolook/bolsa-palha.jpg",
+        "alt": "Bolsas redondas de palha com alça de couro caramelo sobre uma mesa branca.",
+        "width": 1092,
+        "height": 1365
+      }
+    }
+  ],
+  "collections": [
+    {
+      "handle": "wide-legs",
+      "title": "As 4 wide legs",
+      "description": "Jeans clara, preta, linho bege e estonada: com elas você resolve praticamente qualquer look."
+    },
+    {
+      "handle": "novidades",
+      "title": "Novidades da semana",
+      "description": "As peças que acabaram de chegar na loja."
+    }
+  ],
+  "sizeGuides": [
+    {
+      "id": "partes-de-cima",
+      "title": "Blusas, camisas, casacos e vestidos",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Busto ou peito",
+        "Comprimento",
+        "Ombro"
+      ],
+      "rows": [
+        [
+          "PP",
+          "92",
+          "66",
+          "38"
+        ],
+        [
+          "P",
+          "98",
+          "68",
+          "40"
+        ],
+        [
+          "M",
+          "104",
+          "70",
+          "42"
+        ],
+        [
+          "G",
+          "112",
+          "72",
+          "44"
+        ],
+        [
+          "GG",
+          "120",
+          "74",
+          "46"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Busto ou peito",
+          "text": "de uma axila à outra, com a peça esticada, multiplicado por dois."
+        },
+        {
+          "label": "Comprimento",
+          "text": "do ponto mais alto do ombro até a barra."
+        }
+      ]
+    },
+    {
+      "id": "partes-de-baixo",
+      "title": "Calças e saias",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Cintura",
+        "Quadril",
+        "Comprimento"
+      ],
+      "rows": [
+        [
+          "36",
+          "68",
+          "96",
+          "100"
+        ],
+        [
+          "38",
+          "72",
+          "100",
+          "101"
+        ],
+        [
+          "40",
+          "76",
+          "104",
+          "102"
+        ],
+        [
+          "42",
+          "80",
+          "108",
+          "103"
+        ],
+        [
+          "44",
+          "86",
+          "114",
+          "104"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Cintura",
+          "text": "de um lado ao outro do cós, com a peça fechada, multiplicado por dois."
+        },
+        {
+          "label": "Quadril",
+          "text": "na parte mais larga, 20 cm abaixo do cós, multiplicado por dois."
+        }
+      ]
+    }
+  ]
+}

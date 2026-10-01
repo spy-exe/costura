@@ -3,12 +3,13 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import alvorada from "@brands/alvorada";
 import obra from "@brands/obra";
+import jolook from "@brands/jolook";
 import { brandSchema, contentSchema } from "@/core/brand/schema";
 import { brandCssVariables, contrastPairs, contrastRatio, relativeLuminance } from "@/core/brand/tokens";
 import { commerceSettingsSchema } from "@/core/commerce/settings";
 import { catalogSchema } from "@/core/commerce/types";
 
-const brands = { alvorada, obra };
+const brands = { alvorada, obra, jolook };
 const publicFile = (src: string) => path.join("public", src);
 
 describe.each(Object.entries(brands))("marca %s", (id, mod) => {
@@ -77,6 +78,10 @@ describe.each(Object.entries(brands))("marca %s", (id, mod) => {
     }
     expect(catalog.products.some((p) => p.colors.length > 1)).toBe(true);
     expect(catalog.products.some((p) => p.variants.some((v) => v.quantityAvailable === 0))).toBe(true);
+  });
+
+  it("pedido pelo WhatsApp só com número configurado", () => {
+    if (commerce.orderChannel === "whatsapp") expect(brand.contact.whatsapp, id).toBeDefined();
   });
 
   it("não oferece condições comerciais que a marca de demonstração não configurou", () => {

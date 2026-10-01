@@ -1,0 +1,700 @@
+{
+  "categories": [
+    {
+      "handle": "calcas",
+      "title": "Calças",
+      "description": "Wide legs em jeans e linho, de cintura alta.",
+      "image": "wide-leg-jeans-clara"
+    },
+    {
+      "handle": "blusas-e-camisas",
+      "title": "Blusas e camisas",
+      "description": "Blusas leves e camisas para combinar com as calças.",
+      "image": "blusa-branca-babado"
+    },
+    {
+      "handle": "vestidos-e-saias",
+      "title": "Vestidos e saias",
+      "description": "Vestidos e saias para o dia e para ocasiões especiais.",
+      "image": "vestido-estampado"
+    },
+    {
+      "handle": "casacos-e-malhas",
+      "title": "Casacos e malhas",
+      "description": "Jaqueta jeans, tricô e moletom.",
+      "image": "jaqueta-jeans"
+    },
+    {
+      "handle": "acessorios",
+      "title": "Acessórios",
+      "description": "Bolsas e chapéus de palha para fechar a produção.",
+      "image": "bolsa-palha"
+    }
+  ],
+  "collections": [
+    {
+      "handle": "wide-legs",
+      "title": "As 4 wide legs",
+      "description": "Jeans clara, preta, linho bege e estonada: com elas você resolve praticamente qualquer look."
+    },
+    {
+      "handle": "novidades",
+      "title": "Novidades da semana",
+      "description": "As peças que acabaram de chegar na loja."
+    }
+  ],
+  "sizeGuides": [
+    {
+      "id": "partes-de-cima",
+      "title": "Blusas, camisas, casacos e vestidos",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Busto ou peito",
+        "Comprimento",
+        "Ombro"
+      ],
+      "rows": [
+        [
+          "PP",
+          "92",
+          "66",
+          "38"
+        ],
+        [
+          "P",
+          "98",
+          "68",
+          "40"
+        ],
+        [
+          "M",
+          "104",
+          "70",
+          "42"
+        ],
+        [
+          "G",
+          "112",
+          "72",
+          "44"
+        ],
+        [
+          "GG",
+          "120",
+          "74",
+          "46"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Busto ou peito",
+          "text": "de uma axila à outra, com a peça esticada, multiplicado por dois."
+        },
+        {
+          "label": "Comprimento",
+          "text": "do ponto mais alto do ombro até a barra."
+        }
+      ]
+    },
+    {
+      "id": "partes-de-baixo",
+      "title": "Calças e saias",
+      "unit": "cm",
+      "columns": [
+        "Tamanho",
+        "Cintura",
+        "Quadril",
+        "Comprimento"
+      ],
+      "rows": [
+        [
+          "36",
+          "68",
+          "96",
+          "100"
+        ],
+        [
+          "38",
+          "72",
+          "100",
+          "101"
+        ],
+        [
+          "40",
+          "76",
+          "104",
+          "102"
+        ],
+        [
+          "42",
+          "80",
+          "108",
+          "103"
+        ],
+        [
+          "44",
+          "86",
+          "114",
+          "104"
+        ]
+      ],
+      "howToMeasure": [
+        {
+          "label": "Cintura",
+          "text": "de um lado ao outro do cós, com a peça fechada, multiplicado por dois."
+        },
+        {
+          "label": "Quadril",
+          "text": "na parte mais larga, 20 cm abaixo do cós, multiplicado por dois."
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "handle": "wide-leg-jeans-clara",
+      "title": "Wide leg jeans clara",
+      "category": "calcas",
+      "colors": [
+        {
+          "images": [
+            "wide-leg-jeans-clara"
+          ]
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "price": 17990,
+      "description": "A clássica: jeans azul-claro de cintura alta e perna larga, com rasgo no joelho. Combina com tudo e nunca sai de moda.",
+      "details": {
+        "composition": "99% algodão, 1% elastano",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Cintura alta, perna larga do quadril à barra."
+      },
+      "sku": "JLK-WLJC",
+      "collections": [
+        "wide-legs",
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-baixo"
+    },
+    {
+      "handle": "wide-leg-preta",
+      "title": "Wide leg preta",
+      "category": "calcas",
+      "colors": [
+        {
+          "images": [
+            "wide-leg-preta"
+          ]
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "price": 16990,
+      "description": "A coringa: jeans preto de cintura alta que vai do look básico ao elegante sem esforço.",
+      "details": {
+        "composition": "98% algodão, 2% elastano",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Cintura alta, perna larga."
+      },
+      "sku": "JLK-WLP",
+      "collections": [
+        "wide-legs",
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-baixo"
+    },
+    {
+      "handle": "wide-leg-linho-bege",
+      "title": "Wide leg linho bege",
+      "category": "calcas",
+      "colors": [
+        {
+          "images": [
+            "calca-pantalona"
+          ]
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "price": 18990,
+      "description": "A chic sem esforço: calça de linho cor cru com pregas na frente e cintura alta. Deixa qualquer produção mais sofisticada.",
+      "details": {
+        "composition": "55% linho, 45% viscose",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Cintura alta com pregas, perna ampla."
+      },
+      "sku": "JLK-WLLB",
+      "collections": [
+        "wide-legs"
+      ],
+      "publishedAt": "2026-09-20T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-baixo"
+    },
+    {
+      "handle": "wide-leg-estonada",
+      "title": "Wide leg estonada",
+      "category": "calcas",
+      "colors": [
+        {
+          "images": [
+            "wide-leg-estonada"
+          ]
+        }
+      ],
+      "sizes": [
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "price": 17990,
+      "description": "A estilosa: jeans em lavagem estonada para produções modernas e cheias de atitude.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Cintura alta, perna larga."
+      },
+      "sku": "JLK-WLE",
+      "collections": [
+        "wide-legs"
+      ],
+      "publishedAt": "2026-09-20T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-baixo"
+    },
+    {
+      "handle": "blusa-branca-babado",
+      "title": "Blusa branca com babado",
+      "category": "blusas-e-camisas",
+      "colors": [
+        {
+          "images": [
+            "blusa-branca-babado"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 10990,
+      "description": "Blusa off-white de tecido leve, com mangas bufantes e babado marcando a cintura.",
+      "details": {
+        "composition": "100% viscose",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Solta, com elástico nos punhos."
+      },
+      "sku": "JLK-BBB",
+      "collections": [
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "blusa-floral-alcinha",
+      "title": "Blusa floral de alcinha",
+      "category": "blusas-e-camisas",
+      "colors": [
+        {
+          "images": [
+            "blusa-floral"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 7990,
+      "description": "Blusa de alcinha com estampa floral rosa e vermelha, leve para os dias quentes.",
+      "details": {
+        "composition": "100% viscose",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Reta, comprimento na cintura."
+      },
+      "sku": "JLK-BFA",
+      "collections": [
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "camisa-listrada",
+      "title": "Camisa listrada",
+      "category": "blusas-e-camisas",
+      "colors": [
+        {
+          "images": [
+            "camisa-listrada"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 12990,
+      "description": "Camisa branca com listras finas azuis, gola de camisa e punho com botão. Vai bem por dentro da wide leg.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Reta e folgada."
+      },
+      "sku": "JLK-CL",
+      "collections": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "vestido-floral",
+      "title": "Vestido floral",
+      "category": "vestidos-e-saias",
+      "colors": [
+        {
+          "images": [
+            "vestido-estampado"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 15990,
+      "description": "Vestido azul-marinho com estampa floral miúda, manga curta e caimento solto.",
+      "details": {
+        "composition": "100% viscose",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Solto, comprimento abaixo do joelho."
+      },
+      "sku": "JLK-VF",
+      "collections": [
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "vestido-branco-rodado",
+      "title": "Vestido branco rodado",
+      "category": "vestidos-e-saias",
+      "colors": [
+        {
+          "images": [
+            "vestido-branco"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 19990,
+      "description": "Vestido branco de saia rodada, para o dia ou para uma ocasião especial.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Ajustado no busto, saia ampla."
+      },
+      "sku": "JLK-VBR",
+      "collections": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima",
+      "compareAt": 23990
+    },
+    {
+      "handle": "saia-de-tule",
+      "title": "Saia de tule",
+      "category": "vestidos-e-saias",
+      "colors": [
+        {
+          "images": [
+            "saia-rodada"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 13990,
+      "description": "Saia branca de tule em camadas, com movimento e forro.",
+      "details": {
+        "composition": "100% poliamida",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Cintura alta com elástico."
+      },
+      "sku": "JLK-SDT",
+      "collections": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "jaqueta-jeans-clara",
+      "title": "Jaqueta jeans clara",
+      "category": "casacos-e-malhas",
+      "colors": [
+        {
+          "images": [
+            "jaqueta-jeans"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 21990,
+      "description": "Jaqueta jeans azul-claro com botões de metal e bolsos no peito. Fecha o look com a wide leg preta.",
+      "details": {
+        "composition": "100% algodão",
+        "care": [
+          "Lavar do avesso, na máquina, com água fria.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Reta, comprimento no quadril."
+      },
+      "sku": "JLK-JJC",
+      "collections": [
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "sueter-trico-cru",
+      "title": "Suéter de tricô cru",
+      "category": "casacos-e-malhas",
+      "colors": [
+        {
+          "images": [
+            "sueter-cru"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 15990,
+      "description": "Suéter de tricô grosso cor cru, macio e quente para as noites frias de Vassouras.",
+      "details": {
+        "composition": "60% algodão, 40% acrílico",
+        "care": [
+          "Lavar à mão ou no ciclo delicado, com água fria.",
+          "Não torcer.",
+          "Secar à sombra, na horizontal."
+        ],
+        "fit": "Amplo, ombro caído."
+      },
+      "sku": "JLK-STC",
+      "collections": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "moletom-rosa",
+      "title": "Moletom rosa",
+      "category": "casacos-e-malhas",
+      "colors": [
+        {
+          "images": [
+            "moletom-rosa"
+          ]
+        }
+      ],
+      "sizes": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 14990,
+      "description": "Moletom rosa com capuz e bolso canguru, para os dias de conforto.",
+      "details": {
+        "composition": "70% algodão, 30% poliéster",
+        "care": [
+          "Lavar na máquina, água fria, com cores parecidas.",
+          "Não usar alvejante.",
+          "Secar à sombra."
+        ],
+        "fit": "Solto."
+      },
+      "sku": "JLK-MR",
+      "collections": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z",
+      "tags": [],
+      "sizeGuide": "partes-de-cima"
+    },
+    {
+      "handle": "bolsa-de-palha-redonda",
+      "title": "Bolsa de palha redonda",
+      "category": "acessorios",
+      "colors": [
+        {
+          "images": [
+            "bolsa-palha"
+          ]
+        }
+      ],
+      "sizes": [
+        "U"
+      ],
+      "price": 11990,
+      "description": "Bolsa redonda de palha trançada à mão, com alça transversal de couro caramelo.",
+      "details": {
+        "composition": "Palha natural e alça de couro",
+        "care": [
+          "Limpar com pano seco.",
+          "Guardar longe da umidade."
+        ]
+      },
+      "sku": "JLK-BDPR",
+      "collections": [
+        "novidades"
+      ],
+      "publishedAt": "2026-09-29T12:00:00.000Z",
+      "tags": [],
+      "stock": {
+        "palha-natural/U": 6
+      }
+    },
+    {
+      "handle": "chapeu-de-palha",
+      "title": "Chapéu de palha",
+      "category": "acessorios",
+      "colors": [
+        {
+          "images": [
+            "chapeu-natural"
+          ]
+        },
+        {
+          "images": [
+            "chapeu-cinza"
+          ]
+        }
+      ],
+      "sizes": [
+        "U"
+      ],
+      "price": 12990,
+      "description": "Chapéu de palha de aba larga, para sol forte e para dar acabamento ao look de verão.",
+      "details": {
+        "composition": "Palha natural",
+        "care": [
+          "Limpar com pano seco.",
+          "Guardar longe da umidade."
+        ]
+      },
+      "sku": "JLK-CDP",
+      "collections": [],
+      "publishedAt": "2026-09-20T12:00:00.000Z",
+      "tags": [],
+      "stock": {
+        "natural/U": 5,
+        "cinza/U": 0
+      }
+    }
+  ]
+}
