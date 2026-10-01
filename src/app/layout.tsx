@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { brandCssVariables } from "@/core/brand/tokens";
-import { brand, fontStyle, fontVariables } from "@/server/brand";
+import { brand, commerceSettings, content, fontStyle, fontVariables } from "@/server/brand";
 import { isDemoMode } from "@/server/commerce";
 import { baseMetadata } from "@/server/seo";
 import { copy } from "@/ui/copy";
@@ -9,6 +9,8 @@ import { DemoNotice } from "@/ui/layout/demo-notice";
 import { Footer } from "@/ui/layout/footer";
 import { Header } from "@/ui/layout/header";
 import { StoreShell } from "@/ui/layout/store-shell";
+import { WhatsAppFloat } from "@/ui/layout/whatsapp-float";
+import { subtotalNote } from "@/ui/cart/subtotal-note";
 import "./globals.css";
 
 export const metadata: Metadata = baseMetadata();
@@ -30,13 +32,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           {copy.skipToContent}
         </a>
-        {demo && <DemoNotice />}
-        <StoreShell>
+        {demo && <DemoNotice text={content.demo?.notice} />}
+        <StoreShell subtotalNote={subtotalNote(commerceSettings.orderChannel)}>
           <Header brand={brand} />
           <main id="conteudo" tabIndex={-1} className="outline-none">
             {children}
           </main>
-          <Footer brand={brand} demo={demo} />
+          <Footer brand={brand} demoNote={demo ? (content.demo?.footer ?? copy.footer.demo) : undefined} />
+          {brand.contact.whatsapp && <WhatsAppFloat number={brand.contact.whatsapp} brandName={brand.shortName} demo={demo} />}
         </StoreShell>
       </body>
     </html>

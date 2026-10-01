@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { formatMoney } from "@/core/commerce/money";
+import { orderMessage, whatsappUrl } from "@/core/contact/whatsapp";
+import { brand, commerceSettings } from "@/server/brand";
 import { getCart } from "@/server/cart";
 import { isDemoMode } from "@/server/commerce";
 import { copy } from "@/ui/copy";
+import { subtotalNote } from "@/ui/cart/subtotal-note";
+import { WhatsAppIcon } from "@/ui/layout/whatsapp-icon";
 
 export const metadata: Metadata = { title: copy.checkout.title, robots: { index: false, follow: false } };
 export const dynamic = "force-dynamic";
@@ -25,6 +29,8 @@ export default async function CheckoutPage({ searchParams }: { searchParams: Sea
   const cart = await getCart();
   const demo = isDemoMode();
   const { status } = await searchParams;
+  // Pedido por WhatsApp: a mensagem sai daqui, com preços e estoque recalculados no servidor.
+  const whatsappNumber = commerceSettings.orderChannel === "whatsapp" ? brand.contact.whatsapp : undefined;
   // Carrinho com avisos bloqueia o pagamento mesmo que a pessoa chegue aqui por link direto.
   const statusMessage =
     (typeof status === "string" ? STATUS[status] : undefined) ??
@@ -93,9 +99,24 @@ export default async function CheckoutPage({ searchParams }: { searchParams: Sea
                 {formatMoney(cart.subtotal)}
               </span>
             </div>
-            <p className="meta mt-1">{copy.cart.subtotalNote}</p>
+            <p className="meta mt-1">{subtotalNote(commerceSettings.orderChannel)}</p>
 
-            {demo ? (
+            {whatsappNumber && cart.checkoutReady ? (
+              <div className="mt-6">
+                <a
+                  href={whatsappUrl(whatsappNumber, orderMessage({ lines: cart.lines, subtotal: cart.subtotal, demo }))}
+                  className="btn btn-primary w-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="checkout-whatsapp"
+                >
+                  <WhatsAppIcon size={20} />
+                  {copy.whatsapp.order}
+                  <span className="sr-only"> ({copy.whatsapp.newTab})</span>
+                </a>
+                <p className="meta mt-3">{copy.whatsapp.orderNote}</p>
+              </div>
+            ) : demo && !whatsappNumber ? (
               <div className="mt-6 border border-ink p-5" data-testid="checkout-demo">
                 <h3 className="font-semibold">{copy.checkout.demoTitle}</h3>
                 {copy.checkout.demoBody.map((p) => (

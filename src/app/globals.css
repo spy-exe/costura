@@ -255,6 +255,39 @@
   }
 }
 
+/*
+ * Botão fixo de conversa no WhatsApp. Verde escuro da marca WhatsApp: o verde claro (#25D366) com o
+ * ícone branco fica abaixo do contraste 3:1 exigido para ícones (WCAG 1.4.11).
+ */
+:root {
+  --whatsapp: #128c7e;
+  --whatsapp-ink: #ffffff;
+}
+.whatsapp-float {
+  position: fixed;
+  z-index: 30;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  color: var(--whatsapp-ink);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--c-ink) 22%, transparent);
+  transition: transform 150ms ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.05);
+}
+/* No celular, a barra de compra do produto fica presa à base: o botão sobe acima dela. */
+@media (max-width: 47.99rem) {
+  body:has([data-buy-bar]) .whatsapp-float {
+    bottom: calc(5.25rem + env(safe-area-inset-bottom));
+  }
+}
+
 /* O link do card cobre a área inteira; o anel de foco aparece no card. */
 [data-testid="product-card"]:has(a:focus-visible) {
   outline: 2px solid var(--c-focus);
@@ -464,5 +497,15 @@ html.lenis body {
   }
   .landing-collection {
     top: 4.25rem;
+  }
+  /* Com o botão de WhatsApp no canto inferior direito, cartões e dica de rolagem deixam o canto livre. */
+  body:has(.whatsapp-float) :is(.landing-caption, .landing-weave) {
+    right: 5.25rem;
+  }
+  body:has(.whatsapp-float) .landing-scroll-hint {
+    justify-content: flex-start;
+    left: 1rem;
+    right: 5.25rem;
+    flex-wrap: wrap;
   }
 }

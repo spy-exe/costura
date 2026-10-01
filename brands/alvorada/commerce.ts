@@ -6,5 +6,6 @@ export const commerce = {
   currency: "BRL",
   cart: { maxQuantityPerLine: 10, maxLines: 30 },
   priceFilterBoundaries: [0, 200, 350, 500],
+  orderChannel: "checkout",
   paymentMethods: [],
 } satisfies CommerceSettings;

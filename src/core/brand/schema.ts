@@ -105,6 +105,8 @@ export const brandSchema = z.object({
     email: z.email(),
     phone: z.string().optional(),
     whatsapp: z.string().regex(/^\d{12,13}$/).optional(),
+    /** Grupo ou comunidade de clientes no WhatsApp (convite chat.whatsapp.com). */
+    whatsappGroup: z.url().regex(/^https:\/\/chat\.whatsapp\.com\/[A-Za-z0-9]+$/).optional(),
     hours: z.string().optional(),
     address: z.string().optional(),
   }),
@@ -191,6 +193,13 @@ export const contentSchema = z.object({
     experience: experienceSchema.optional(),
     newArrivalsTitle: z.string().min(1),
   }),
+  /**
+   * Textos do modo demonstração (sem provedor de comércio). Padrão: marca fictícia. Uma empresa real
+   * em prévia troca para dizer que produtos e preços são ilustrativos.
+   */
+  demo: z
+    .object({ notice: z.string().min(1).max(160).optional(), footer: z.string().min(1).max(160).optional() })
+    .optional(),
   pages: z.object({
     about: z.object({ title: z.string(), intro: z.string(), sections: z.array(pageSectionSchema), image: imageRef.optional() }),
     faq: z.array(z.object({ question: z.string().min(1), answer: z.string().min(1) })),

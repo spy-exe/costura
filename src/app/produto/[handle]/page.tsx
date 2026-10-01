@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { summarize } from "@/core/catalog/query";
 import { brand } from "@/server/brand";
-import { getCatalog, getProduct } from "@/server/commerce";
+import { getCatalog, getProduct, isDemoMode } from "@/server/commerce";
 import { pageMetadata, siteUrl } from "@/server/seo";
 import { copy } from "@/ui/copy";
 import { ProductCard } from "@/ui/catalog/product-card";
@@ -80,6 +80,11 @@ export default async function ProductPage({ params, searchParams }: { params: Pa
       <ProductExperience
         product={product}
         initialColor={typeof cor === "string" ? cor : undefined}
+        whatsapp={
+          brand.contact.whatsapp
+            ? { number: brand.contact.whatsapp, url: siteUrl(`/produto/${product.handle}`), demo: isDemoMode() }
+            : undefined
+        }
         back={<BackToResults />}
         sizeGuide={
           guide ? (

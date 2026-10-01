@@ -9,7 +9,15 @@ import { CartError } from "./cart-error";
 import { CartLines } from "./cart-lines";
 
 /** Página da sacola: começa com o carrinho lido no servidor e passa a usar o estado do cliente quando carregado. */
-export function CartPageView({ initial, serverMessage }: { initial: Cart | null; serverMessage?: string }) {
+export function CartPageView({
+  initial,
+  serverMessage,
+  subtotalNote = copy.cart.subtotalNote,
+}: {
+  initial: Cart | null;
+  serverMessage?: string;
+  subtotalNote?: string;
+}) {
   const { cart: live } = useCart();
   const cart = live ?? initial;
   const lines = cart?.lines ?? [];
@@ -47,7 +55,7 @@ export function CartPageView({ initial, serverMessage }: { initial: Cart | null;
                 {formatMoney(cart.subtotal)}
               </span>
             </div>
-            <p className="meta mt-1">{copy.cart.subtotalNote}</p>
+            <p className="meta mt-1">{subtotalNote}</p>
             {!cart.checkoutReady && (
               <p id="cart-page-blocked" className="mt-4 text-sm text-danger">
                 {copy.cart.blocked}

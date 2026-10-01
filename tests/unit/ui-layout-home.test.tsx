@@ -6,11 +6,13 @@ import { CategoryRail } from "@/ui/home/category-rail";
 import { Hero } from "@/ui/home/hero";
 import { ProductRow } from "@/ui/home/product-row";
 import { Story } from "@/ui/home/story";
+import { copy } from "@/ui/copy";
 import { DemoNotice } from "@/ui/layout/demo-notice";
 import { Footer } from "@/ui/layout/footer";
 import { Header } from "@/ui/layout/header";
 import { PageShell, TextSection } from "@/ui/layout/page-shell";
 import { StoreShell } from "@/ui/layout/store-shell";
+import { WhatsAppFloat } from "@/ui/layout/whatsapp-float";
 import { summarize } from "@/core/catalog/query";
 import { fixtureCatalog } from "../fixtures/catalog";
 
@@ -45,13 +47,34 @@ describe("cabeçalho e rodapé", () => {
     await screen.findByRole("button", { name: "Sacola vazia" });
   });
 
-  it("rodapé identifica marca fictícia só no modo demonstração e lista redes quando houver", () => {
+  it("rodapé mostra a nota de demonstração só quando recebe e lista redes e WhatsApp quando houver", () => {
     const withSocial = { ...brand, social: [{ network: "instagram" as const, url: "https://instagram.com/x" }] };
-    const { rerender } = render(<Footer brand={withSocial} demo />);
+    const { rerender } = render(<Footer brand={withSocial} demoNote={copy.footer.demo} />);
     expect(screen.getByText(/Marca fictícia criada para demonstração/)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Instagram" })).toHaveAttribute("rel", "noopener noreferrer");
-    rerender(<Footer brand={brand} demo={false} />);
+    expect(screen.queryByRole("link", { name: copy.footer.whatsapp })).not.toBeInTheDocument();
+    const withWhatsApp = {
+      ...brand,
+      contact: { ...brand.contact, whatsapp: "5521999990000", whatsappGroup: "https://chat.whatsapp.com/AbC123" },
+    };
+    rerender(<Footer brand={withWhatsApp} />);
     expect(screen.queryByText(/Marca fictícia/)).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: copy.footer.whatsapp })).toHaveAttribute("href", "https://wa.me/5521999990000");
+    expect(screen.getByRole("link", { name: copy.footer.group })).toHaveAttribute("href", "https://chat.whatsapp.com/AbC123");
+  });
+
+  it("botão fixo do WhatsApp abre a conversa com saudação, em outra aba", () => {
+    render(<WhatsAppFloat number="5524999990000" brandName="Loja Teste" demo />);
+    const link = screen.getByRole("link", { name: new RegExp(copy.whatsapp.float) });
+    expect(link).toHaveAttribute("rel", "noopener noreferrer");
+    const href = new URL(link.getAttribute("href")!);
+    expect(href.origin + href.pathname).toBe("https://wa.me/5524999990000");
+    expect(href.searchParams.get("text")).toContain("versão de demonstração");
+  });
+
+  it("aviso de demonstração aceita o texto da marca", () => {
+    render(<DemoNotice text="Prévia do site da Loja Teste." />);
+    expect(screen.getByTestId("demo-notice")).toHaveTextContent("Prévia do site da Loja Teste.");
   });
 
   it("aviso de demonstração e moldura de página", () => {

@@ -10,5 +10,8 @@ const mod: BrandModule = active;
 export const brand = brandSchema.parse(mod.brand);
 export const content = contentSchema.parse(mod.content);
 export const commerceSettings = commerceSettingsSchema.parse(mod.commerce);
+if (commerceSettings.orderChannel === "whatsapp" && !brand.contact.whatsapp) {
+  throw new Error(`Marca ${brand.id}: pedido pelo WhatsApp exige contact.whatsapp`);
+}
 export const fontVariables = mod.fonts.variables;
 export const fontStyle = (mod.fonts.style ?? {}) as React.CSSProperties;

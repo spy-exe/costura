@@ -14,6 +14,12 @@ export const commerceSettingsSchema = z.object({
   }),
   /** Limites das faixas de preço do filtro, em reais. [0, 150, 300] gera "até 150", "150 a 300", "a partir de 300". */
   priceFilterBoundaries: z.array(z.number().int().nonnegative()).min(2).max(6),
+  /**
+   * Como o pedido sai da loja. "checkout": pagamento no provedor (ou explicação, na demonstração).
+   * "whatsapp": a revisão da sacola envia o pedido como mensagem para `contact.whatsapp`, e a loja
+   * combina entrega e pagamento na conversa, como a loja pequena já faz.
+   */
+  orderChannel: z.enum(["checkout", "whatsapp"]).default("checkout"),
   /** Formas de pagamento aceitas pelo checkout configurado. Vazio: o assunto não aparece. */
   paymentMethods: z.array(z.enum(["pix", "credit_card", "debit_card", "boleto"])).default([]),
   installments: z.object({ max: z.number().int().min(2).max(12), minInstallment: z.number().int().positive() }).optional(),

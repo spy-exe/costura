@@ -4,7 +4,8 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { priceCart } from "@/core/cart/pricing";
 import { indexSnapshots } from "@/core/commerce/snapshots";
 import { StoreShell } from "@/ui/layout/store-shell";
-import { ProductExperience } from "@/ui/product/product-experience";
+import { ProductExperience, type ProductWhatsApp } from "@/ui/product/product-experience";
+import { copy } from "@/ui/copy";
 import { ProductDetails } from "@/ui/product/product-details";
 import { SizeGuideDialog } from "@/ui/product/size-guide";
 import { SizeGuideTable } from "@/ui/product/size-guide-table";
@@ -14,7 +15,7 @@ const catalog = fixtureCatalog();
 const camisa = catalog.products[0]!;
 const esgotada = catalog.products[2]!;
 
-function setup(product = camisa, initialColor?: string) {
+function setup(product = camisa, initialColor?: string, whatsapp?: ProductWhatsApp) {
   const posts: unknown[] = [];
   vi.stubGlobal(
     "fetch",
@@ -30,6 +31,7 @@ function setup(product = camisa, initialColor?: string) {
       <ProductExperience
         product={product}
         initialColor={initialColor}
+        whatsapp={whatsapp}
         back={<a href="/loja">voltar</a>}
         details={<ProductDetails product={product} />}
         sizeGuide={
@@ -46,6 +48,23 @@ function setup(product = camisa, initialColor?: string) {
 afterEach(() => vi.unstubAllGlobals());
 
 describe("página de produto", () => {
+  it("comprar pelo WhatsApp leva a peça, a cor e o tamanho escolhidos", async () => {
+    setup(camisa, undefined, { number: "5524999990000", url: "https://loja.example/produto/camisa", demo: false });
+    const link = () => screen.getByRole("link", { name: new RegExp(copy.whatsapp.product) });
+    const text = () => decodeURIComponent(new URL(link().getAttribute("href")!).searchParams.get("text")!);
+    expect(link()).toHaveAttribute("target", "_blank");
+    expect(text()).toContain(`*${camisa.title}*`);
+    expect(text()).toContain("Tamanho: ainda não escolhi");
+    await userEvent.click(screen.getByRole("radio", { name: "P" }));
+    expect(text()).toContain("Tamanho: P");
+    expect(text()).toContain("https://loja.example/produto/camisa");
+  });
+
+  it("sem número configurado, não há link de WhatsApp", () => {
+    setup();
+    expect(screen.queryByTestId("product-whatsapp")).not.toBeInTheDocument();
+  });
+
   it("exige tamanho, avisa no texto e no botão e foca o grupo", async () => {
     const posts = setup();
     await userEvent.click(screen.getByTestId("add-to-cart"));

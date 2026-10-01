@@ -3,9 +3,10 @@
 import { useCallback, useState, type ReactNode } from "react";
 import { CartProvider } from "@/ui/cart/cart-context";
 import { CartDrawer } from "@/ui/cart/cart-drawer";
+import { copy } from "@/ui/copy";
 
 /** Estado de cliente compartilhado pela loja: sacola, gaveta e região de anúncios para leitores de tela. */
-export function StoreShell({ children }: { children: ReactNode }) {
+export function StoreShell({ children, subtotalNote = copy.cart.subtotalNote }: { children: ReactNode; subtotalNote?: string }) {
   const [message, setMessage] = useState("");
   const announce = useCallback((text: string) => {
     // Limpar antes garante que a mesma frase seja anunciada de novo.
@@ -16,7 +17,7 @@ export function StoreShell({ children }: { children: ReactNode }) {
   return (
     <CartProvider announce={announce}>
       {children}
-      <CartDrawer />
+      <CartDrawer subtotalNote={subtotalNote} />
       <div role="status" aria-live="polite" aria-atomic="true" className="sr-only" data-testid="announcer">
         {message}
       </div>

@@ -13,7 +13,7 @@ import { CartError } from "./cart-error";
  * Gaveta lateral com <dialog> nativo: o navegador cuida do foco preso, do fundo inerte e do Escape.
  * Ao fechar, o foco volta para quem abriu.
  */
-export function CartDrawer() {
+export function CartDrawer({ subtotalNote = copy.cart.subtotalNote }: { subtotalNote?: string }) {
   const { cart, status, drawerOpen, closeDrawer, openerRef } = useCart();
   const ref = useRef<HTMLDialogElement>(null);
 
@@ -79,7 +79,7 @@ export function CartDrawer() {
                 {formatMoney(cart.subtotal)}
               </span>
             </div>
-            <p className="meta mt-1">{copy.cart.subtotalNote}</p>
+            <p className="meta mt-1">{subtotalNote}</p>
             {!cart.checkoutReady && (
               <p id="cart-drawer-blocked" className="mt-3 text-sm text-danger">
                 {copy.cart.blocked}

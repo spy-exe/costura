@@ -3,7 +3,9 @@ import { CommerceUnavailableError } from "@/core/commerce/types";
 import type { CartServiceError } from "@/core/cart/service";
 import { getCart } from "@/server/cart";
 import { copy } from "@/ui/copy";
+import { commerceSettings } from "@/server/brand";
 import { CartPageView } from "@/ui/cart/cart-page-view";
+import { subtotalNote } from "@/ui/cart/subtotal-note";
 
 export const metadata: Metadata = { title: copy.cart.title, robots: { index: false, follow: false } };
 export const dynamic = "force-dynamic";
@@ -26,5 +28,11 @@ export default async function CartPage({ searchParams }: { searchParams: Search 
   } catch (error) {
     if (!(error instanceof CommerceUnavailableError)) throw error;
   }
-  return <CartPageView initial={initial} serverMessage={messageFrom(await searchParams)} />;
+  return (
+    <CartPageView
+      initial={initial}
+      serverMessage={messageFrom(await searchParams)}
+      subtotalNote={subtotalNote(commerceSettings.orderChannel)}
+    />
+  );
 }

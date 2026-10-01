@@ -8,10 +8,21 @@ import { formatMoney } from "@/core/commerce/money";
 import { copy } from "@/ui/copy";
 import { useCart } from "@/ui/cart/cart-context";
 import { Price } from "@/ui/catalog/price";
+import { productMessage, whatsappUrl } from "@/core/contact/whatsapp";
+import { WhatsAppIcon } from "@/ui/layout/whatsapp-icon";
+
+/** Conversa pelo WhatsApp sobre a peça, quando a marca tem número configurado. */
+export interface ProductWhatsApp {
+  number: string;
+  /** Endereço público da peça, que vai na mensagem. */
+  url: string;
+  demo: boolean;
+}
 
 interface Props {
   product: Product;
   initialColor?: string;
+  whatsapp?: ProductWhatsApp;
   /** Blocos renderizados no servidor: guia de medidas e detalhes. */
   sizeGuide?: ReactNode;
   details: ReactNode;
@@ -20,7 +31,7 @@ interface Props {
 
 const LOW_STOCK = 3;
 
-export function ProductExperience({ product, initialColor, sizeGuide, details, back }: Props) {
+export function ProductExperience({ product, initialColor, whatsapp, sizeGuide, details, back }: Props) {
   const { mutate, pending, openDrawer } = useCart();
   const sizes = useMemo(() => [...product.sizes].sort(compareSizes), [product.sizes]);
   const firstAvailableColor =
@@ -197,7 +208,7 @@ export function ProductExperience({ product, initialColor, sizeGuide, details, b
           </div>
 
           {/* No celular o botão acompanha a rolagem pelos detalhes, preso à base da tela. */}
-          <div className="sticky bottom-0 z-10 -mx-4 border-t border-line bg-bg px-4 py-3 md:static md:mx-0 md:border-0 md:p-0">
+          <div className="sticky bottom-0 z-10 -mx-4 border-t border-line bg-bg px-4 py-3 md:static md:mx-0 md:border-0 md:p-0" data-buy-bar>
             <button
               ref={submitRef}
               type="submit"
@@ -216,6 +227,25 @@ export function ProductExperience({ product, initialColor, sizeGuide, details, b
               {productAvailable && variant && !pending && <span className="sr-only">, {formatMoney(variant.price)}</span>}
             </button>
           </div>
+          {whatsapp && productAvailable && (
+            <div>
+              <a
+                href={whatsappUrl(
+                  whatsapp.number,
+                  productMessage({ title: product.title, color: colorName, size, price, url: whatsapp.url, demo: whatsapp.demo }),
+                )}
+                className="btn btn-secondary w-full"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="product-whatsapp"
+              >
+                <WhatsAppIcon size={20} />
+                {copy.whatsapp.product}
+                <span className="sr-only"> ({copy.whatsapp.newTab})</span>
+              </a>
+              <p className="meta mt-2">{copy.whatsapp.productNote}</p>
+            </div>
+          )}
         </form>
 
         {details}
