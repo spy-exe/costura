@@ -30,7 +30,7 @@ export function StaticLanding({ data }: { data: LandingData }) {
 
       <div className="wrap mt-20">
         <h2 className="display display-md">{experience.rail.title}</h2>
-        <ul className="mt-8 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-8 grid grid-cols-2 gap-x-3 gap-y-10 sm:gap-x-5 sm:gap-y-12 lg:grid-cols-4">
           {products.map((product) => (
             <li key={product.handle}>
               <Image
@@ -38,10 +38,10 @@ export function StaticLanding({ data }: { data: LandingData }) {
                 alt={product.image.alt}
                 width={product.image.width}
                 height={product.image.height}
-                sizes="(min-width: 64rem) 22vw, (min-width: 40rem) 45vw, 100vw"
+                sizes="(min-width: 64rem) 22vw, 45vw"
                 className="aspect-[4/5] w-full bg-surface object-cover"
               />
-              <div className="mt-4">
+              <div className="landing-static-caption mt-4">
                 <ProductCaption product={product} cta={experience.rail.productCta} />
               </div>
             </li>

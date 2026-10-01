@@ -105,7 +105,7 @@ export function ProductExperience({ product, initialColor, whatsapp, sizeGuide, 
                 height={image.height}
                 priority={i === 0}
                 sizes={i === 0 && images.length % 2 === 1 ? "(min-width: 64rem) 55vw, 86vw" : "(min-width: 64rem) 28vw, 86vw"}
-                className="aspect-[4/5] w-full bg-surface object-cover"
+                className="aspect-[4/5] max-h-[60svh] w-full bg-surface object-cover md:max-h-none"
                 style={image.focal ? { objectPosition: `${image.focal.x}% ${image.focal.y}%` } : undefined}
               />
               <span className="sr-only">{copy.product.imageOf(i + 1, images.length)}</span>

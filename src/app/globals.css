@@ -340,6 +340,12 @@ html.lenis body {
   font-size: min(var(--title-size), calc(100cqi / (var(--title-chars) * var(--display-glyph))));
   line-height: 0.9;
 }
+/* Duas peças por linha no celular: o título da peça desce para o tamanho de cartão de produto. */
+@media (max-width: 39.99rem) {
+  .landing-static-caption .display-md {
+    font-size: calc(1.1875rem * var(--display-scale));
+  }
+}
 /* A versão estática alinha o texto como a abertura: pela borda da tela, não pelo centro da página. */
 .landing-hero-static-frame {
   width: 100%;
