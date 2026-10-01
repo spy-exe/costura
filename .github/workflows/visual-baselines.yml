@@ -23,6 +23,9 @@ jobs:
         env: { APP_ENV: test, SITE_URL: "http://127.0.0.1:3100" }
       - run: node scripts/build-brand.mjs obra
         env: { APP_ENV: test, SITE_URL: "http://127.0.0.1:3200" }
+      # O Playwright sobe o servidor de todas as marcas configuradas, mesmo as que não têm referência visual.
+      - run: node scripts/build-brand.mjs jolook
+        env: { APP_ENV: test, SITE_URL: "http://127.0.0.1:3300" }
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test --project=alvorada-visual --project=obra-visual --update-snapshots
       - uses: actions/upload-artifact@v7

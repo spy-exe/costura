@@ -9,6 +9,11 @@ const brands = [
   { id: "alvorada", port: 3100 },
   { id: "obra", port: 3200 },
 ] as const;
+/**
+ * Jo Look: loja que vende pelo WhatsApp, em prévia. Roda o fluxo de WhatsApp, a abertura e o axe; o resto
+ * da suíte (checkout de demonstração, regressão visual) é das marcas acima.
+ */
+const whatsappBrand = { id: "jolook", port: 3300 } as const;
 
 const serverEnv = (brand: string, port: number) =>
   `BRAND=${brand} APP_ENV=test COMMERCE_TEST_CONTROLS=1 SITE_URL=http://127.0.0.1:${port} PORT=${port} HOSTNAME=127.0.0.1`;
@@ -42,6 +47,12 @@ export default defineConfig({
       metadata: { brand: b.id },
     })),
     {
+      name: `${whatsappBrand.id}-chromium`,
+      use: { ...devices["Desktop Chrome"], baseURL: `http://127.0.0.1:${whatsappBrand.port}` },
+      testMatch: /(whatsapp|landing|a11y)\.spec\.ts/,
+      metadata: { brand: whatsappBrand.id },
+    },
+    {
       name: "alvorada-mobile",
       use: { ...devices["Pixel 7"], baseURL: "http://127.0.0.1:3100" },
       testMatch: /(mobile|smoke|landing)\.spec\.ts/,
@@ -65,7 +76,7 @@ export default defineConfig({
   snapshotPathTemplate: "tests/e2e/__screenshots__/{arg}{ext}",
   webServer: process.env.E2E_SKIP_SERVER
     ? undefined
-    : brands.map((b) => ({
+    : [...brands, whatsappBrand].map((b) => ({
         command: `${serverEnv(b.id, b.port)} node .next-${b.id}/standalone/server.js`,
         url: `http://127.0.0.1:${b.port}/loja`,
         reuseExistingServer: !process.env.CI,

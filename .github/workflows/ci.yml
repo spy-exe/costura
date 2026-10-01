@@ -60,13 +60,18 @@ jobs:
         env:
           APP_ENV: test
           SITE_URL: http://127.0.0.1:3200
+      - name: Build Jo Look
+        run: node scripts/build-brand.mjs jolook
+        env:
+          APP_ENV: test
+          SITE_URL: http://127.0.0.1:3300
       - name: Navegadores do Playwright
         run: npx playwright install --with-deps chromium firefox webkit
-      - name: E2E (Chromium, Firefox, WebKit e celular)
+      - name: E2E (Chromium, Firefox, WebKit, celular e loja com WhatsApp)
         run: >-
           npx playwright test
           --project=alvorada-chromium --project=obra-chromium --project=alvorada-mobile
-          --project=alvorada-firefox --project=alvorada-webkit
+          --project=alvorada-firefox --project=alvorada-webkit --project=jolook-chromium
       - name: Regressão visual
         if: hashFiles('tests/e2e/__screenshots__/*.png') != ''
         run: npx playwright test --project=alvorada-visual --project=obra-visual
