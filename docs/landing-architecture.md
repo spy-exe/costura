@@ -120,7 +120,7 @@ Decididos uma vez por visita em `capabilities.ts` (`decideTier`). Em tempo de ex
 - texturas em WebP ou KTX2, no máximo 2048 px;
 - compressão com `gltf-transform optimize --compress meshopt` ou Draco.
 
-**Texturas das fotos:** vêm do otimizador de imagens do Next (`/_next/image`, AVIF ou WebP conforme o navegador), na largura do nível: 1024, 768 ou 640 px.
+**Texturas das fotos:** vêm do otimizador de imagens do Next (`/_next/image`, em WebP), na largura do nível: 1024, 768 ou 640 px.
 
 **Trama:** gerada no shader, sem textura. É nítida em qualquer distância e esmaece antes de virar serrilhado (derivadas `fwidth`). Cada marca escolhe tela ou sarja e a densidade de fios.
 

@@ -25,7 +25,8 @@ Medidos em produção (https://roupas-website.malha.app, Cloudflare com compress
 - O JavaScript da primeira carga é o mesmo nos três níveis: a cena não pesa no LCP.
 - O pedaço da cena (three, React Three Fiber, drei e postprocessing) tem 317 KB comprimidos. No desktop e no tablet ele é pedido quando o navegador fica ocioso depois do `load`. O celular recebe a versão editorial e não baixa a cena: na primeira carga ele transfere o mesmo JavaScript da tabela e nada depois.
 - O decodificador Draco (`public/draco/`) só é baixado quando algum GLB usa Draco. O cabide de exemplo usa Meshopt, cujo decodificador vem embutido na drei.
-- As texturas das peças vêm do otimizador de imagens do Next, em AVIF ou WebP, na largura do nível (1024, 768 ou 640 px).
+- As texturas das peças vêm do otimizador de imagens do Next, em WebP, na largura do nível (1024, 768 ou 640 px).
+- **Só WebP, sem AVIF:** com o cache de imagens frio, os encodes AVIF de uma home cheia de fotos chegaram a 22 s no CT (4 núcleos), contra 5 s em WebP. Na CI isso estourava o tempo dos testes, e em produção quem chega primeiro a uma foto nova esperava. O AVIF gerava arquivos cerca de metade menores; o WebP foi escolhido pelo tempo de resposta.
 
 ## Custo da cena por nível
 

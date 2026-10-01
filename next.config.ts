@@ -53,7 +53,9 @@ const config: NextConfig = {
     "/**": [`./data/demo/${brand}/**/*`, "./data/demo/assets.json"],
   },
   images: {
-    formats: ["image/avif", "image/webp"],
+    // Só WebP: com o cache frio, o encode AVIF de uma home cheia de fotos levou até 22 s num servidor de
+    // 4 núcleos (WebP: 5 s), e quem chega primeiro numa foto nova espera. Os arquivos ficam um pouco maiores.
+    formats: ["image/webp"],
     deviceSizes: [360, 480, 640, 768, 1024, 1280, 1600],
     imageSizes: [96, 160, 240, 320],
     remotePatterns: [{ protocol: "https", hostname: "cdn.shopify.com" }],

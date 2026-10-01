@@ -9,6 +9,7 @@ Quarta marca no core, com as fotos que a loja enviou. A identidade vem da loja f
 - **Desktop, cena ao vivo:** pano de algodão preto na parede branca, arara de cano preto e as peças da Plano C, Wanted e Hocks penduradas.
 - **Celular e tablet em pé:** o pôster de retrato é o pano preto ocupando a tela, e o título preto sumia. O core passou a inverter os tons do título quando o texto não contrasta com o tecido. Conferido no iPhone 13 (editorial) e no iPad em pé (cena), com texto e botões claros; no desktop o título continua escuro sobre a parede.
 - **Conteúdo:** "Drop da semana" aparecia três vezes seguidas na home; a arara virou "Em destaque" e a fileira da home mostra a Plano C.
+- **CI:** o smoke do celular e do WebKit estourou 30 s esperando uma foto. Com o cache de imagens frio, o encode AVIF das fotos da home chegou a 22 s no CT; pedidos iguais esperam o mesmo encode. O otimizador passou a gerar só WebP (5 s no mesmo cenário).
 
 ## Jo Look Fashion e pedido pelo WhatsApp (2026-10-01)
 
@@ -131,7 +132,7 @@ Build de produção da Alvorada em modo demonstração, servidor local no runner
 | Pendência | Impacto | O que falta | Pronto quando |
 | --- | --- | --- | --- |
 | Ligar a Shopify | A loja não vende | Loja Shopify, token Storefront, produtos com opções Cor/Tamanho, gateway em modo de teste (docs/COMMERCE.md) | Compra de teste concluída no checkout hospedado e E2E de integração verde |
-| LCP simulado acima de 2,5 s na home e na loja | Métrica de laboratório fora da meta; experiência real desconhecida | Testar imagens menores no primeiro carregamento, AVIF de qualidade menor e `sizes` mais justo; medir de novo na CI | Mediana do LCP abaixo de 2,5 s na CI |
+| LCP simulado acima de 2,5 s na home e na loja | Métrica de laboratório fora da meta; experiência real desconhecida | Testar imagens menores no primeiro carregamento e `sizes` mais justo (AVIF descartado: encode lento com cache frio, ver performance.md); medir de novo na CI | Mediana do LCP abaixo de 2,5 s na CI |
 | Beacon do Cloudflare bloqueado | Erro no console em produção | Desligar a injeção do Web Analytics para `roupas-website.malha.app` no painel da Cloudflare | Console sem erro em produção |
 | Revisão com leitor de tela | Conformidade AA não confirmada | Rodada manual com NVDA e VoiceOver nos fluxos de compra | Relatório anexado aqui |
 | Limitador de abuso em memória | Não vale com várias instâncias por marca | Armazenamento compartilhado se escalar | Teste com duas instâncias |
