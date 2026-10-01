@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Plus } from "lucide-react";
 import { brand, content } from "@/server/brand";
 import { pageMetadata } from "@/server/seo";
+import { whatsappUrl } from "@/core/contact/whatsapp";
+import { copy } from "@/ui/copy";
 import { PageShell, TextSection } from "@/ui/layout/page-shell";
 
 export const metadata: Metadata = pageMetadata({ title: "Atendimento", path: "/atendimento" });
@@ -16,17 +18,26 @@ export default function ServicePage() {
   return (
     <PageShell title="Atendimento" intro="Dúvidas sobre peças, medidas ou uma compra: fale com a gente pelos canais abaixo.">
       <TextSection heading="Contato">
-        <p>
-          E-mail:{" "}
-          <a className="link" href={`mailto:${contact.email}`}>
-            {contact.email}
-          </a>
-        </p>
+        {contact.email && (
+          <p>
+            E-mail:{" "}
+            <a className="link" href={`mailto:${contact.email}`}>
+              {contact.email}
+            </a>
+          </p>
+        )}
         {contact.whatsapp && (
           <p>
             WhatsApp:{" "}
-            <a className="link" href={`https://wa.me/${contact.whatsapp}`} rel="noopener noreferrer">
+            <a className="link" href={whatsappUrl(contact.whatsapp)} rel="noopener noreferrer">
               {formatPhone(contact.whatsapp)}
+            </a>
+          </p>
+        )}
+        {contact.whatsappGroup && (
+          <p>
+            <a className="link" href={contact.whatsappGroup} rel="noopener noreferrer">
+              {copy.footer.group}
             </a>
           </p>
         )}

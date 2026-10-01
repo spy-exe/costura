@@ -101,15 +101,18 @@ export const brandSchema = z.object({
      */
     displayGlyphWidth: z.number().min(0.25).max(1.2).default(0.6),
   }),
-  contact: z.object({
-    email: z.email(),
-    phone: z.string().optional(),
-    whatsapp: z.string().regex(/^\d{12,13}$/).optional(),
-    /** Grupo ou comunidade de clientes no WhatsApp (convite chat.whatsapp.com). */
-    whatsappGroup: z.url().regex(/^https:\/\/chat\.whatsapp\.com\/[A-Za-z0-9]+$/).optional(),
-    hours: z.string().optional(),
-    address: z.string().optional(),
-  }),
+  contact: z
+    .object({
+      /** Opcional: muita loja pequena atende só pelo WhatsApp. Pelo menos um dos dois é obrigatório. */
+      email: z.email().optional(),
+      phone: z.string().optional(),
+      whatsapp: z.string().regex(/^\d{12,13}$/).optional(),
+      /** Grupo ou comunidade de clientes no WhatsApp (convite chat.whatsapp.com). */
+      whatsappGroup: z.url().regex(/^https:\/\/chat\.whatsapp\.com\/[A-Za-z0-9]+$/).optional(),
+      hours: z.string().optional(),
+      address: z.string().optional(),
+    })
+    .refine((c) => c.email !== undefined || c.whatsapp !== undefined, { message: "Informe e-mail ou WhatsApp de contato" }),
   social: z
     .array(z.object({ network: z.enum(["instagram", "tiktok", "youtube", "pinterest"]), url: externalUrl }))
     .default([]),

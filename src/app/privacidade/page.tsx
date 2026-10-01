@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { whatsappUrl } from "@/core/contact/whatsapp";
 import { brand } from "@/server/brand";
 import { pageMetadata } from "@/server/seo";
 import { PageShell, TextSection } from "@/ui/layout/page-shell";
@@ -33,9 +34,15 @@ export default function PrivacyPage() {
       <TextSection heading="Contato">
         <p>
           Dúvidas sobre dados pessoais:{" "}
-          <a className="link" href={`mailto:${brand.contact.email}`}>
-            {brand.contact.email}
-          </a>
+          {brand.contact.email ? (
+            <a className="link" href={`mailto:${brand.contact.email}`}>
+              {brand.contact.email}
+            </a>
+          ) : (
+            <a className="link" href={whatsappUrl(brand.contact.whatsapp!)} rel="noopener noreferrer">
+              WhatsApp
+            </a>
+          )}
           .
         </p>
       </TextSection>
