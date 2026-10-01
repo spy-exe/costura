@@ -340,12 +340,6 @@ html.lenis body {
   font-size: min(var(--title-size), calc(100cqi / (var(--title-chars) * var(--display-glyph))));
   line-height: 0.9;
 }
-/* Duas peças por linha no celular: o título da peça desce para o tamanho de cartão de produto. */
-@media (max-width: 39.99rem) {
-  .landing-static-caption .display-md {
-    font-size: calc(1.1875rem * var(--display-scale));
-  }
-}
 /* A versão estática alinha o texto como a abertura: pela borda da tela, não pelo centro da página. */
 .landing-hero-static-frame {
   width: 100%;
@@ -513,5 +507,144 @@ html.lenis body {
     left: 1rem;
     right: 5.25rem;
     flex-wrap: wrap;
+  }
+}
+
+/*
+ * Versão editorial da abertura (celular, movimento reduzido, sem WebGL). Rolagem nativa: nada aqui
+ * acompanha a posição da rolagem. Movimento só no celular e só uma vez: o título entra no carregamento
+ * e cada bloco entra ao chegar à tela (static-landing.tsx). Com menos movimento pedido, tudo fica parado.
+ */
+:root {
+  --ease-settle: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --rail-rod: color-mix(in srgb, var(--c-ink) 45%, transparent);
+}
+.landing-ed-rule {
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin-bottom: 1.25rem;
+  background: var(--c-accent);
+}
+
+/* Arara: no celular, peças lado a lado com encaixe, penduradas num varão com ganchos. */
+.landing-ed-rail-list {
+  display: flex;
+  gap: 0.875rem;
+  margin: 1.5rem 0 0;
+  padding: 1.75rem 1rem 0.5rem;
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 1rem;
+  scrollbar-width: none;
+  /* O varão rola junto com as peças. */
+  background: linear-gradient(var(--rail-rod), var(--rail-rod)) no-repeat 0 0.75rem / 100% 2px local;
+}
+.landing-ed-rail-list::-webkit-scrollbar {
+  display: none;
+}
+/* Espaço depois da última peça: o padding final de um contêiner de rolagem não é confiável em todo navegador. */
+.landing-ed-rail-list::after {
+  content: "";
+  flex: 0 0 1px;
+}
+.landing-ed-rail-item {
+  position: relative;
+  flex: 0 0 78%;
+  scroll-snap-align: start;
+}
+.landing-ed-rail-item::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  width: 1rem;
+  height: 1.5rem;
+  margin-left: -0.5rem;
+  border: 2px solid var(--rail-rod);
+  border-bottom: 0;
+  border-radius: 1rem 1rem 0 0;
+}
+.landing-ed-rail-item img {
+  box-shadow: 0 0.75rem 1.5rem -0.75rem color-mix(in srgb, var(--c-ink) 35%, transparent);
+}
+@media (min-width: 48rem) {
+  .landing-ed-rail-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 1.25rem;
+    max-width: 96rem;
+    margin-inline: auto;
+    padding: 0 2rem;
+    overflow: visible;
+    background: none;
+  }
+  .landing-ed-rail-list::after,
+  .landing-ed-rail-item::before {
+    display: none;
+  }
+}
+@media (min-width: 64rem) {
+  .landing-ed-rail-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 80rem) {
+  .landing-ed-rail-list {
+    padding-inline: 3rem;
+  }
+}
+
+/* Blocos que entram ao chegar à tela: o JavaScript só marca os que estavam abaixo dela. */
+@media (prefers-reduced-motion: no-preference) {
+  .landing-editorial [data-reveal="pending"] {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  .landing-editorial [data-reveal="in"] {
+    transition:
+      opacity 700ms var(--ease-settle),
+      transform 700ms var(--ease-settle);
+  }
+}
+
+/* Entrada do título, uma vez, no celular: linha por linha. Só "backwards": depois, nada fica preso. */
+@media (prefers-reduced-motion: no-preference) and (pointer: coarse) and (max-width: 47.99rem) {
+  .landing-editorial picture img {
+    animation: landing-ed-settle 1600ms var(--ease-settle) backwards;
+  }
+  .landing-ed-enter :is([data-hero-line], [data-hero-meta]) {
+    animation: landing-ed-rise 900ms var(--ease-settle) backwards;
+  }
+  .landing-ed-enter > p[data-hero-meta] {
+    animation-delay: 60ms;
+  }
+  .landing-ed-enter [data-hero-line]:nth-child(1) {
+    animation-delay: 140ms;
+  }
+  .landing-ed-enter [data-hero-line]:nth-child(2) {
+    animation-delay: 220ms;
+  }
+  .landing-ed-enter [data-hero-line]:nth-child(3) {
+    animation-delay: 300ms;
+  }
+  .landing-ed-enter [data-hero-line]:nth-child(4) {
+    animation-delay: 380ms;
+  }
+  .landing-ed-enter > div[data-hero-meta] {
+    animation-delay: 520ms;
+  }
+}
+@keyframes landing-ed-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.875rem);
+  }
+}
+@keyframes landing-ed-settle {
+  from {
+    transform: scale(1.06);
   }
 }

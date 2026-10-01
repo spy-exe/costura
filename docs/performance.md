@@ -23,7 +23,7 @@ Medidos em produção (https://roupas-website.malha.app, Cloudflare com compress
 | low (tempo real) | 159 KB | 369 KB (317 KB da cena 3D, 52 KB de movimento) | 191 KB (pôster e 4 texturas de 640 px) | 5 KB (cabide com Meshopt) |
 
 - O JavaScript da primeira carga é o mesmo nos três níveis: a cena não pesa no LCP.
-- O pedaço da cena (three, React Three Fiber, drei e postprocessing) tem 317 KB comprimidos. No desktop ele é pedido quando o navegador fica ocioso depois do `load`; no celular, na primeira rolagem ou toque, com prazo de 4 s.
+- O pedaço da cena (three, React Three Fiber, drei e postprocessing) tem 317 KB comprimidos. No desktop e no tablet ele é pedido quando o navegador fica ocioso depois do `load`. O celular recebe a versão editorial e não baixa a cena: na primeira carga ele transfere o mesmo JavaScript da tabela e nada depois.
 - O decodificador Draco (`public/draco/`) só é baixado quando algum GLB usa Draco. O cabide de exemplo usa Meshopt, cujo decodificador vem embutido na drei.
 - As texturas das peças vêm do otimizador de imagens do Next, em AVIF ou WebP, na largura do nível (1024, 768 ou 640 px).
 

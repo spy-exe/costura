@@ -114,6 +114,52 @@ describe("versão estática", () => {
     expect(collectionLinks.some((a) => a.getAttribute("href") === data.collection.href)).toBe(true);
   });
 
+  it("a arara é uma lista rotulada, com contador da peça à vista", async () => {
+    const data = await landingData();
+    render(<StaticLanding data={data} />);
+    const list = screen.getByRole("list", { name: data.experience.rail.title });
+    expect(within(list).getAllByRole("listitem")).toHaveLength(data.products.length);
+    expect(screen.getByText(`1 / ${data.products.length}`)).toBeInTheDocument();
+  });
+
+  it("no celular, só os blocos abaixo da tela esperam para entrar, e entram uma vez", async () => {
+    const observed: Element[] = [];
+    let notify: ((entries: Partial<IntersectionObserverEntry>[]) => void) | undefined;
+    vi.stubGlobal(
+      "IntersectionObserver",
+      class {
+        constructor(cb: (entries: Partial<IntersectionObserverEntry>[]) => void) {
+          notify = cb;
+        }
+        observe(el: Element) {
+          observed.push(el);
+        }
+        unobserve() {}
+        disconnect() {}
+      },
+    );
+    vi.stubGlobal("matchMedia", (query: string) => ({
+      matches: query.includes("pointer: coarse"),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+    }));
+    window.matchMedia = globalThis.matchMedia;
+    // Tudo abaixo da tela, menos o primeiro bloco.
+    let first = true;
+    vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (this: HTMLElement) {
+      const top = this.hasAttribute("data-reveal") && !first ? window.innerHeight + 200 : 0;
+      if (this.hasAttribute("data-reveal")) first = false;
+      return { top } as DOMRect;
+    });
+    const { container } = render(<StaticLanding data={await landingData()} />);
+    const blocks = Array.from(container.querySelectorAll<HTMLElement>("[data-reveal]"));
+    expect(blocks[0]!.dataset.reveal).not.toBe("pending");
+    const pending = blocks.filter((b) => b.dataset.reveal === "pending");
+    expect(pending.length).toBe(blocks.length - 1);
+    act(() => notify!(pending.map((target) => ({ target, isIntersecting: true }))));
+    expect(blocks.filter((b) => b.dataset.reveal === "in")).toHaveLength(pending.length);
+  });
+
   it("usa o pôster quando existe", async () => {
     const data = { ...(await landingData()), poster: { landscape: "/p-l.webp", portrait: "/p-p.webp" } };
     const { container } = render(<StaticLanding data={data} />);

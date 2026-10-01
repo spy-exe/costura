@@ -22,7 +22,7 @@ A mesma cena serve às duas marcas. Luz, tecido e fundo vêm de `brand.stage`, e
 | Cabide | Latão escovado | Preto fosco |
 | Título | Serifa, caixa normal | Archivo expandido, caixa alta |
 
-Comprimento da rolagem: 6 telas no desktop, 5,5 no tablet e 4 no celular.
+Comprimento da rolagem: 6 telas no desktop, 5,5 no tablet e 4 no nível baixo. O celular não tem seção fixa: recebe a versão editorial, com o mesmo roteiro (ver "Celular, movimento reduzido e aparelhos sem WebGL").
 
 ---
 
@@ -34,7 +34,7 @@ Comprimento da rolagem: 6 telas no desktop, 5,5 no tablet e 4 no celular.
 - **Luz:** principal rasante pelo lado (Alvorada) ou de cima (OBRA), revelando as dobras. Preenchimento frio e fraco. Softboxes no ambiente dão o brilho acetinado das fibras.
 - **Título:** à esquerda, em 1 a 4 linhas curtas, a maior tipografia da página. O tamanho é o da escala da marca, limitado para a linha mais longa caber na coluna de texto (34% da largura na paisagem). Abaixo, o texto de apoio e dois botões ("Ver a coleção" e "Toda a loja"). No pé, a dica de rolagem.
 - **Interação:** o mouse move a câmera em até ±12 cm com amortecimento, e o ponteiro sobre o pano empurra o tecido localmente. A dica de rolagem some nos primeiros 3%.
-- **Celular:** a câmera fica mais perto e o pano preenche a tela como fundo do título, com o varão acima do quadro. Numa tela estreita não cabem pano e título lado a lado.
+- **Retrato (tablet em pé, ou celular com `?qualidade=`):** a câmera fica mais perto e o pano preenche a tela como fundo do título, com o varão acima do quadro. Numa tela estreita não cabem pano e título lado a lado.
 
 ## Cena 02: Trama (12 a 30%)
 
@@ -78,16 +78,18 @@ Comprimento da rolagem: 6 telas no desktop, 5,5 no tablet e 4 no celular.
 
 ---
 
-## Movimento reduzido e aparelhos sem WebGL
+## Celular, movimento reduzido e aparelhos sem WebGL
 
-Com `prefers-reduced-motion` ou economia de dados, não há seção fixa nem câmera. A abertura vira uma composição estática com o mesmo roteiro, na mesma ordem:
+No celular, com `prefers-reduced-motion` ou com economia de dados, não há seção fixa nem câmera. A abertura vira a versão editorial, com o mesmo roteiro na mesma ordem e rolagem nativa:
 
-1. Título e botões sobre a imagem do estúdio.
-2. A trama em texto.
-3. As peças da arara em lista com foto, nome, preço e link.
+1. Título e botões sobre a imagem do estúdio. No celular, as linhas do título entram uma vez no carregamento (900 ms, 80 ms entre linhas) e a foto assenta de um zoom de 6%.
+2. A trama em texto, abaixo de um traço na cor da marca.
+3. As peças da arara com foto, nome, preço e link. No celular, um carrossel com encaixe, a próxima peça na borda, contador e um varão com ganchos; em telas maiores, grade.
 4. O título da coleção.
 
-Sem WebGL, a experiência usa a mesma versão estática. Quando existirem quadros pré-renderizados da marca, ela usa esses quadros controlados pela rolagem.
+No celular, cada bloco entra uma vez ao chegar à tela (700 ms, subindo 24 px). Com movimento reduzido, nada anima.
+
+Sem WebGL, a experiência usa a mesma versão editorial. Quando existirem quadros pré-renderizados da marca, ela usa esses quadros controlados pela rolagem.
 
 ## Pausa
 

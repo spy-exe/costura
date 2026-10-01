@@ -68,14 +68,22 @@ Decididos uma vez por visita em `capabilities.ts` (`decideTier`). Em tempo de ex
 | --- | --- | --- |
 | high | Desktop largo, 6+ núcleos, 4+ GB | Sombras 2048, profundidade de campo, vinheta, granulação, poeira, DPR até 1,75, 6 telas de rolagem, Lenis |
 | medium | Tablet, notebook modesto, até 4 núcleos | Sombras 1024, poeira, DPR até 1,5, 5,5 telas, Lenis |
-| low | Celular, 2 GB ou menos | Sem sombras nem pós-processamento, malha menor, DPR até 1,25, 4 telas, rolagem nativa; a cena carrega na primeira rolagem |
+| low | Computador com 2 núcleos ou 2 GB, ou tablet modesto | Sem sombras nem pós-processamento, malha menor, DPR até 1,25, 4 telas, rolagem nativa; a cena carrega na primeira rolagem |
 | sequence | Sem WebGL ou com GPU emulada por software, com quadros pré-renderizados da marca | Canvas 2D desenhando o quadro da rolagem |
 | poster | A cena falhou em tempo de execução | Imagem parada sob as mesmas camadas DOM |
-| static | Movimento reduzido, economia de dados, ou sem WebGL (ou com GPU por software) e sem quadros | Composição estática, sem seção fixa |
+| static | Celular (toque e menos de 768 px), movimento reduzido, economia de dados, ou sem WebGL (ou com GPU por software) e sem quadros | Versão editorial: rolagem nativa, sem seção fixa (ver abaixo) |
 
 **GPU emulada por software conta como sem WebGL:** SwiftShader (Chrome sem GPU ou com a GPU bloqueada), llvmpipe (Linux sem driver) e WARP (Windows) têm WebGL2, mas rodam a cena a poucos quadros por segundo e travam a thread principal. É também o caso do Lighthouse e do PageSpeed Insights, que rodam sem GPU. A detecção lê o nome do renderizador uma vez por visita.
 
 **O rebaixamento em tempo de execução nunca volta ao estático:** trocar o layout no meio da rolagem faria o conteúdo pular.
+
+**Celular recebe a versão editorial:** a cena presa à rolagem ficava instável no toque. O embalo do dedo brigava com a linha do tempo, a barra do navegador mudava a altura da tela no meio da cena e a GPU do celular varia muito. Quem testou chamou de "parallax bugado". No celular, a abertura é a versão editorial (`static-landing.tsx`), com rolagem 100% nativa e nada acompanhando a posição da rolagem:
+- o título entra uma vez no carregamento, linha por linha, e a foto do pôster assenta de um leve zoom, só com CSS;
+- trama, arara e coleção aparecem uma vez quando chegam à tela (IntersectionObserver), e só os blocos que estavam abaixo dela esperam, então nada pisca;
+- a arara é um carrossel com encaixe nativo (`scroll-snap`), a próxima peça aparece na borda, há um contador "1 / 4" e um varão com ganchos desenhado em CSS;
+- com movimento reduzido nada anima, e em telas maiores a arara vira grade.
+
+`?qualidade=low` ainda força a cena no celular, para comparação.
 
 **Pausa:** `store.paused` congela o relógio do tecido e da poeira; o resto da cena segue a rolagem. O botão fica no canto superior direito da seção, com `aria-pressed` e rótulo fixo.
 
@@ -90,7 +98,7 @@ Decididos uma vez por visita em `capabilities.ts` (`decideTier`). Em tempo de ex
 1. O servidor entrega o HTML com a seção, o pôster (quando existe) e todos os textos. Isso é o LCP.
 2. Na hidratação, `useSyncExternalStore` devolve `"static"` no servidor e o nível real no navegador. A primeira pintura é igual nas duas versões, sem salto.
 3. `cinematic/motion.ts` (GSAP, ScrollTrigger e Lenis) é importado assim que a seção monta.
-4. `three/scene-root.tsx` (three, React Three Fiber, drei, postprocessing) é importado com `next/dynamic` sem SSR. No desktop, quando o navegador fica ocioso depois do `load`; no celular, na primeira rolagem ou toque, com prazo de 4 s.
+4. `three/scene-root.tsx` (three, React Three Fiber, drei, postprocessing) é importado com `next/dynamic` sem SSR. No desktop e no tablet, quando o navegador fica ocioso depois do `load`; no nível baixo, na primeira rolagem ou toque, com prazo de 4 s. Celular não carrega a cena.
 5. A cena compila os shaders (`compileAsync`) antes de avisar que está pronta. Só então o canvas entra em fade de 700 ms sobre o pôster.
 6. Fora da tela, o laço de desenho para (`frameloop="never"`), e cada material, geometria e textura é descartado ao desmontar.
 

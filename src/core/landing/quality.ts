@@ -95,13 +95,18 @@ export const QUALITY: Record<RealtimeTier, QualitySettings> = {
 /** Rolagem da versão de quadros pré-renderizados, igual à do celular. */
 export const SEQUENCE_SCROLL_LENGTH = QUALITY.low.scrollLength;
 
+/** Abaixo desta largura, com toque, o aparelho é tratado como celular. */
+const PHONE_WIDTH = 768;
+
 export function decideTier(c: Capabilities): QualityTier {
   if (c.reducedMotion || c.saveData) return "static";
   if (!c.webgl2 || c.softwareRenderer) return c.hasSequence ? "sequence" : "static";
+  // Celular: versão editorial, com rolagem nativa. A cena presa à rolagem fica instável no toque (o
+  // embalo do dedo briga com a linha do tempo, a barra do navegador muda a altura da tela, a GPU varia).
+  if (c.coarsePointer && c.width < PHONE_WIDTH) return "static";
   const cores = c.hardwareConcurrency ?? 4;
   const memory = c.deviceMemory ?? 4;
   if (memory <= 2 || cores <= 2) return "low";
-  if (c.coarsePointer && c.width < 768) return "low";
   if (c.coarsePointer || c.width < 1200 || cores <= 4 || memory < 4) return "medium";
   return "high";
 }

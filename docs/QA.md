@@ -10,6 +10,7 @@ Prévia para uma loja real de Vassouras (RJ), terceira marca no mesmo core.
 - **Desktop (1440 × 900), cena ao vivo no nível baixo:** abertura, trama, cortina, arara e coleção com a direção de arte da marca (pano rosa das pétalas, arara terracota).
 - **Testes:** unidade das mensagens (peça, pedido, número inválido, tamanho não escolhido), componente (botão fixo, link do produto acompanhando o tamanho, rodapé com WhatsApp e grupo) e E2E da marca (botão fixo, produto, pedido pela revisão da sacola e bloqueio quando o preço muda), além do axe nas páginas dela.
 - **Defeito encontrado e corrigido:** o script de pôster capturava os botões de pausa e de WhatsApp junto com a cena.
+- **Celular sem cena 3D:** quem testou no celular reclamou da abertura presa à rolagem ("parallax bugado"). O celular passou a receber a versão editorial: rolagem nativa, título que entra uma vez, blocos que aparecem ao chegar à tela e arara em carrossel com encaixe. Conferido no iPhone 13 emulado: entrada do título em quadros de 80, 350 e 1.400 ms, blocos marcados e revelados durante a rolagem, carrossel indo de 1 / 4 para 2 / 4, sem erro de página, nas duas marcas.
 - **Não executado:** envio real da mensagem (os testes leem o link sem abrir o WhatsApp) e celular físico.
 
 ## Abertura cinematográfica

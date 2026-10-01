@@ -156,7 +156,9 @@ describe("nível de qualidade", () => {
     expect(decideTier({ ...desktop, width: 1024 })).toBe("medium");
     expect(decideTier({ ...desktop, coarsePointer: true, width: 1024 })).toBe("medium");
     expect(decideTier({ ...desktop, hardwareConcurrency: 4 })).toBe("medium");
-    expect(decideTier({ ...desktop, coarsePointer: true, width: 390 })).toBe("low");
+    // Celular fica na versão editorial, com rolagem nativa, mesmo com GPU boa ou memória pouca.
+    expect(decideTier({ ...desktop, coarsePointer: true, width: 390 })).toBe("static");
+    expect(decideTier({ ...desktop, coarsePointer: true, width: 430, deviceMemory: 2 })).toBe("static");
     expect(decideTier({ ...desktop, deviceMemory: 2 })).toBe("low");
     expect(decideTier({ ...desktop, hardwareConcurrency: undefined, deviceMemory: undefined })).toBe("medium");
   });
