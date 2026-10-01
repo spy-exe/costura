@@ -37,6 +37,10 @@ test("sacola aberta e diálogo de filtros também passam no axe", async ({ page 
   await page.goto(`/produto/${product.handle}?cor=${v.color}`);
   await choose(page, product, v.color, v.size);
   await addToCart(page);
+  // O cursor fica onde estava o botão de adicionar, às vezes sobre um botão da gaveta: sem isso, o axe
+  // mede o contraste no meio da transição de hover.
+  await page.mouse.move(0, 0);
+  await page.waitForFunction(() => document.getAnimations().every((a) => a.playState !== "running"));
   expect(await axe(page)).toEqual([]);
 });
 
