@@ -3,6 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { formatMoney } from "@/core/commerce/money";
 import { summarize } from "@/core/catalog/query";
+import { heroTone } from "@/core/landing/tone";
 import type { Catalog } from "@/core/commerce/types";
 import type { LandingData, SequenceManifest } from "@/ui/landing/types";
 import { brand, content } from "./brand";
@@ -43,6 +44,7 @@ export function getLandingData(catalog: Catalog): LandingData | null {
     ];
   });
   const collection = catalog.collections.find((c) => c.handle === experience.collection.handle);
+  const assets = generatedAssets();
 
   return {
     experience,
@@ -54,6 +56,8 @@ export function getLandingData(catalog: Catalog): LandingData | null {
       href: `/colecao/${experience.collection.handle}`,
       ctaLabel: experience.collection.ctaLabel,
     },
-    ...generatedAssets(),
+    // Só com pôster há garantia de pano atrás do título; sem ele, o fundo é a cor da página.
+    heroTone: assets.poster ? heroTone(brand.colors.ink, stage.fabric.color) : "normal",
+    ...assets,
   };
 }

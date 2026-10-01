@@ -498,6 +498,25 @@ html.lenis body {
   .landing-collection {
     top: 4.25rem;
   }
+  /*
+   * Pano escuro atrás do título (data-hero-tone="inverted", core/landing/tone.ts): o bloco troca os tons.
+   * Dois níveis porque uma variável não pode se definir a partir de si mesma no mesmo elemento.
+   */
+  [data-hero-tone="inverted"] :is(.landing-sticky, .landing-hero-static-frame) {
+    --tone-ink: var(--c-bg);
+    --tone-bg: var(--c-ink);
+  }
+  [data-hero-tone="inverted"] :is(.landing-hero > *, .landing-hero-static-frame > *, .landing-scroll-hint) {
+    --c-ink: var(--tone-ink);
+    --c-bg: var(--tone-bg);
+    --c-muted: color-mix(in srgb, var(--tone-ink) 74%, var(--tone-bg));
+    --c-accent: var(--tone-ink);
+    --c-accent-ink: var(--tone-bg);
+    color: var(--c-ink);
+  }
+  [data-hero-tone="inverted"] .landing-scroll-hint {
+    color: var(--c-muted);
+  }
   /* Com o botão de WhatsApp no canto inferior direito, cartões e dica de rolagem deixam o canto livre. */
   body:has(.whatsapp-float) :is(.landing-caption, .landing-weave) {
     right: 5.25rem;

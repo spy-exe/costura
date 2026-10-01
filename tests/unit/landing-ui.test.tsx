@@ -86,6 +86,10 @@ describe("dados da abertura no servidor", () => {
     (content.home as { experience?: unknown }).experience = original;
   });
 
+  it("tom do título: a marca de teste tem pano claro e texto escuro", async () => {
+    expect((await landingData()).heroTone).toBe("normal");
+  });
+
   it("monta a URL de textura pelo otimizador de imagens", () => {
     expect(textureUrl("/demo/a b.jpg", 768)).toBe("/_next/image?url=%2Fdemo%2Fa%20b.jpg&w=768&q=75");
   });

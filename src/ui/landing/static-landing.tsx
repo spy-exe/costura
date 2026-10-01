@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { CollectionCopy, HeroCopy, WeaveCopy } from "./copy-blocks";
 import { RailCarousel } from "./editorial/rail-carousel";
-import type { LandingData } from "./types";
+import { PORTRAIT_LAYOUT, type LandingData } from "./types";
 
 /**
  * Celular sem preferência por menos movimento: só aí os blocos entram ao aparecer na tela. É a mesma
@@ -50,11 +50,17 @@ export function StaticLanding({ data }: { data: LandingData }) {
   }, []);
 
   return (
-    <section ref={section} aria-labelledby="landing-title" data-landing="static" className="landing-editorial">
+    <section
+      ref={section}
+      aria-labelledby="landing-title"
+      data-landing="static"
+      data-hero-tone={data.heroTone}
+      className="landing-editorial"
+    >
       <div className="relative isolate flex min-h-[calc(100svh-var(--header-h))] items-center overflow-hidden">
         {poster && (
           <picture className="absolute inset-0 -z-10">
-            <source media="(orientation: portrait)" srcSet={poster.portrait} />
+            <source media={PORTRAIT_LAYOUT} srcSet={poster.portrait} />
             <Image src={poster.landscape} alt="" fill priority sizes="100vw" className="object-cover" />
           </picture>
         )}

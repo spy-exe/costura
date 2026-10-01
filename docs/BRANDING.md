@@ -25,7 +25,7 @@ mkdir -p public/brands/minha-marca
 | `typography` | Peso, espaçamento, caixa, escala e largura (`font-stretch`) dos títulos. `displayGlyphWidth` é a largura de um caractere do título em em (o maior valor medido entre as linhas da abertura); com ela o título da abertura é dimensionado para caber na coluna de texto |
 | `contact`, `social` | Canais reais de atendimento: e-mail ou WhatsApp (pelo menos um), telefone, horário, endereço. Com `whatsapp` (DDI + DDD + número, só dígitos), a loja ganha o botão fixo de conversa e o "Comprar pelo WhatsApp" no produto; `whatsappGroup` (convite `chat.whatsapp.com`) aparece no rodapé e no atendimento. Redes só com URL https |
 | `navigation` | Até 8 links principais e até 4 grupos no rodapé, sempre caminhos internos |
-| `stage` | Direção de arte da abertura cinematográfica: fundo, chão, névoa, tecido, luz, cabide e granulação (exige `content.home.experience`). Ver [landing-architecture.md](landing-architecture.md) |
+| `stage` | Tecido escuro é aceito: no retrato, o título inverte os tons sozinho quando não contrasta com o pano. Direção de arte da abertura cinematográfica: fundo, chão, névoa, tecido, luz, cabide e granulação (exige `content.home.experience`). Ver [landing-architecture.md](landing-architecture.md) |
 
 Logos com texto precisam ter o texto convertido em curvas: SVG dentro de `<img>` não carrega fonte.
 

@@ -9,7 +9,7 @@ import { copy } from "@/ui/copy";
 import { CollectionCopy, HeroCopy, ProductCaption, WeaveCopy } from "../copy-blocks";
 import { createLandingStore, LandingStoreContext } from "../store";
 import { SceneBoundary } from "./scene-boundary";
-import type { LandingData } from "../types";
+import { PORTRAIT_LAYOUT, type LandingData } from "../types";
 
 // A cena e o sequenciador de quadros vêm em pedaços separados, fora do caminho da primeira pintura.
 const SceneRoot = dynamic(() => import("../three/scene-root"), { ssr: false });
@@ -142,6 +142,7 @@ export function CinematicLanding({ data, tier, onDowngrade, onFailure }: Props) 
       className="landing-cinematic"
       data-landing="cinematic"
       data-tier={tier}
+      data-hero-tone={data.heroTone}
       data-ready={ready || undefined}
       data-scene-failed={sceneFailed || undefined}
       style={{ height: `calc(${scrollLength * 100}svh)` }}
@@ -152,7 +153,7 @@ export function CinematicLanding({ data, tier, onDowngrade, onFailure }: Props) 
         <div className="landing-canvas" data-landing-canvas aria-hidden>
           {poster && (
             <picture className="landing-poster">
-              <source media="(orientation: portrait)" srcSet={poster.portrait} />
+              <source media={PORTRAIT_LAYOUT} srcSet={poster.portrait} />
               <Image src={poster.landscape} alt="" fill priority sizes="100vw" className="object-cover" />
             </picture>
           )}

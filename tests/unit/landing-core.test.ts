@@ -3,6 +3,7 @@ import { SCENES, railCaptionRange, railFocus, railX, sample, type Orientation } 
 import { damp } from "@/core/landing/damp";
 import { clamp01, easeInOutCubic, easeOutBack, easeOutExpo, lerp, linear, segment } from "@/core/landing/easing";
 import { QUALITY, decideTier, downgrade, isRealtime, type Capabilities } from "@/core/landing/quality";
+import { heroTone } from "@/core/landing/tone";
 
 const orientations: Orientation[] = ["landscape", "portrait"];
 const distance = (a: readonly number[], b: readonly number[]) => Math.hypot(...a.map((v, i) => v - b[i]!));
@@ -180,5 +181,13 @@ describe("nível de qualidade", () => {
     expect(QUALITY.low.scrollLength).toBeLessThan(QUALITY.high.scrollLength);
     expect(isRealtime("medium")).toBe(true);
     expect(isRealtime("poster")).toBe(false);
+  });
+});
+
+describe("tom do título sobre o pano", () => {
+  it("inverte só quando o texto não contrasta com o tecido", () => {
+    expect(heroTone("#22261F", "#E7DFCE")).toBe("normal");
+    expect(heroTone("#141414", "#9C8A63")).toBe("normal");
+    expect(heroTone("#0E0E0E", "#1A1A1A")).toBe("inverted");
   });
 });

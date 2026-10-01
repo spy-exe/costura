@@ -87,6 +87,8 @@ Decididos uma vez por visita em `capabilities.ts` (`decideTier`). Em tempo de ex
 
 **Pausa:** `store.paused` congela o relógio do tecido e da poeira; o resto da cena segue a rolagem. O botão fica no canto superior direito da seção, com `aria-pressed` e rótulo fixo.
 
+**Título sobre pano escuro:** no retrato, o título fica por cima do pano. Quando a cor do texto da marca não contrasta 4,5:1 com a cor do tecido (`core/landing/tone.ts`), a seção ganha `data-hero-tone="inverted"` e o bloco do título e a dica de rolagem trocam os tons só ali: texto e botões claros sobre o pano. A troca redefine as variáveis de cor em dois níveis de elemento, porque uma variável não pode se definir a partir de si mesma. Só vale com pôster, que garante o pano atrás do texto. O pôster de retrato usa o mesmo corte de proporção do layout (`PORTRAIT_LAYOUT`, 9:10).
+
 **Título que cabe na coluna:** `HeroCopy` publica o tamanho da linha mais longa em `--title-chars`, e o CSS limita o título a `100cqi / (--title-chars × --display-glyph)`, com a coluna de texto como contêiner. A marca informa a largura de um caractere do título em `typography.displayGlyphWidth`.
 
 **Falha da cena:** uma barreira de erro (`SceneBoundary`) envolve a cena e o sequenciador. Contexto WebGL recusado, shader que não compila, modelo ou pedaço de JavaScript que não carrega: a cena some, o pôster continua sob as mesmas camadas de texto e a seção ganha `data-scene-failed`. O nível vai direto para quadros ou pôster, sem tentar níveis menores, porque a falha não é de desempenho. Sem a barreira, o React Three Fiber relançaria o erro e a homepage inteira viraria a tela de erro.

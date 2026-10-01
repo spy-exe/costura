@@ -1,3 +1,4 @@
+import type { HeroTone } from "@/core/landing/tone";
 import type { ExperienceContent, StageConfig } from "@/core/brand/schema";
 
 /** Peça da arara, já com preço formatado no servidor. */
@@ -11,6 +12,12 @@ export interface LandingProduct {
 }
 
 /** O que a página entrega à abertura. Tudo serializável: passa do servidor para o cliente. */
+/**
+ * Corte entre o layout de retrato e o de paisagem da abertura: o mesmo do CSS (globals.css, "Retrato") e
+ * da câmera (three/director.tsx). O pôster de retrato só aparece com o layout de retrato.
+ */
+export const PORTRAIT_LAYOUT = "(max-aspect-ratio: 9/10)";
+
 export interface LandingData {
   experience: ExperienceContent;
   stage: StageConfig;
@@ -18,6 +25,8 @@ export interface LandingData {
   collection: { title: string; description: string; href: string; ctaLabel: string };
   poster?: { landscape: string; portrait: string };
   sequence?: SequenceManifest;
+  /** Tons do título no retrato, quando ele fica por cima do pano (core/landing/tone.ts). */
+  heroTone: HeroTone;
 }
 
 /** Quadros pré-renderizados controlados pela rolagem (ver ImageSequence). */
